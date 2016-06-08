@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS `dtb_customer` (
 CREATE TABLE IF NOT EXISTS `dtb_movies` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
+  `image` text NOT NULL,
   `genre` varchar(100) DEFAULT NULL,
   `decription` text,
   `actor` varchar(100) DEFAULT NULL,
