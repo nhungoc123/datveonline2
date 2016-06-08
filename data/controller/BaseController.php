@@ -54,32 +54,17 @@ class BaseController
             $request = explode('/', trim($path, ROOT_URLPATH));
             $mode = $request[0];
             if (count($request) > 1) {
-                // $this->controller = ucfirst($request[0]);
                 $mode = $request[1];
             }
-        // $rootPath = str_replace('/', '\/', ROOT_URLPATH);
-// var_dump($rootPath);
-        // $pos = stripos($path, $rootPath);
-        // var_dump($pos);
-
-            // $mode = substr($mode, strlen(ROOT_URLPATH));
             $pos = strpos($mode, '?');
-            var_dump($mode);
             if ($pos !== false) {
-                var_dump($pos);
                 $mode = substr($mode, 0, $pos);
             }
-            // $mode = trim($mode, "\/\.\php");
-
-            // $mode = ltrim($path, $rootPath);
-            var_dump($mode);
-            //             $mode = ltrim($mode, "views");
             $mode = trim($mode, "\/");
             $this->mode = $mode;
         } else {
             $this->mode = 'index';
         }
-        var_dump($this->mode);
         return $this->mode;
     }
 

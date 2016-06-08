@@ -9,7 +9,7 @@ define('MODEL_DIR', HTML_REALDIR . 'data/models/');
 define('HELPER_DIR', HTML_REALDIR . 'data/helpers/');
 define('VIEW_DIR', HTML_REALDIR . 'data/views/');
 // css js
-define('COMMON_DIR', HTML_REALDIR . 'public/common/');
+define('COMMON_DIR', ROOT_URLPATH . 'common/');
 
 define('DB_HOST', 'localhost');
 define('DB_PORT', '3306');
