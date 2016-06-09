@@ -1,7 +1,6 @@
 <?php
 /**
  * base of controller
- * @author Dung Le
  *
  */
 class BaseController

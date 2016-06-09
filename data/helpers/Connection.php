@@ -2,7 +2,6 @@
 /**
  * class support connect to database
  * use PDO library
- * @author Dung Le
  *
  */
 class Connection
@@ -18,7 +17,8 @@ class Connection
         $this->password = DB_PASSWORD;
         $this->port     = DB_PORT;
         $dsn = "mysql:host={$this->db_host};port={$this->port};dbname={$this->db_name}";
-        $this->_db = new PDO($dsn, $this->username, $this->password);
+        $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
+        $this->_db = new PDO($dsn, $this->username, $this->password, $options);
         $this->_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     

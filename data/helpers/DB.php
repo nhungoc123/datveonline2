@@ -3,7 +3,6 @@ require_once (HELPER_DIR . 'Connection.php');
 /**
  * class modify from eccube 
  * use PDO library
- * @author Dung Le
  *
  */
 class DB

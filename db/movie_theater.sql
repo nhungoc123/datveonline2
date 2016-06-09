@@ -7,7 +7,7 @@ USE `movie_theater`;
 CREATE TABLE IF NOT EXISTS `dtb_cinemas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
-  `decription` text,
+  `description` text,
   `total_seat` smallint(6) NOT NULL,
   `seat_in_row` smallint(6) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `dtb_movies` (
   `name` varchar(50) NOT NULL,
   `image` text NOT NULL,
   `genre` varchar(100) DEFAULT NULL,
-  `decription` text,
+  `description` text,
   `actor` varchar(100) DEFAULT NULL,
   `year` varchar(5) DEFAULT NULL,
   `durations` int(5) DEFAULT NULL,
@@ -138,8 +138,8 @@ CREATE TABLE IF NOT EXISTS `dtb_showtimes` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table movie_theater.dtb_tikets
-CREATE TABLE IF NOT EXISTS `dtb_tikets` (
+-- Dumping structure for table movie_theater.dtb_tickets
+CREATE TABLE IF NOT EXISTS `dtb_tickets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `seat_id` int(11) NOT NULL,
   `showtime_id` int(11) NOT NULL,
@@ -151,8 +151,8 @@ CREATE TABLE IF NOT EXISTS `dtb_tikets` (
   UNIQUE KEY `seat_id_showtime_id` (`seat_id`,`showtime_id`),
   KEY `seat_id` (`seat_id`),
   KEY `showtime_id` (`showtime_id`),
-  CONSTRAINT `dtb_tikets_ibfk_1` FOREIGN KEY (`seat_id`) REFERENCES `dtb_seats` (`id`) ON UPDATE CASCADE,
-  CONSTRAINT `dtb_tikets_ibfk_2` FOREIGN KEY (`showtime_id`) REFERENCES `dtb_showtimes` (`id`) ON UPDATE CASCADE
+  CONSTRAINT `dtb_tickets_ibfk_1` FOREIGN KEY (`seat_id`) REFERENCES `dtb_seats` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `dtb_tickets_ibfk_2` FOREIGN KEY (`showtime_id`) REFERENCES `dtb_showtimes` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.

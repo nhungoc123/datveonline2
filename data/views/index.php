@@ -44,13 +44,14 @@
                 <div class="col-lg-12">
                         <!--Features container Starts -->
                         <ul id="card-ul" class="features-hold baraja-container">
-                        
+                            
+                            <?php foreach ($arrMovie as $movie) {?>
                             <!-- Single Feature Starts -->
                             <li class="single-feature" title="Card style">
-                                <img src="<?php echo COMMON_DIR ?>images/5.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-                                <h4 class="feature-title color-scheme">Card style</h4>
+                                <img src="<?php echo UPLOAD_DIR ?>/<?php echo $movie['image'] ?>" alt="<?php echo $movie['name'] ?>" class="feature-image" style="max-height: 180px"/><!-- Feature Icon -->
+                                <h4 class="feature-title color-scheme"><?php echo $movie['name'] ?></h4>
                                 <p class="feature-text">
-                                    Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut.
+                                    <?php echo Common::truncate($movie['description']) ?>
                                 </p>
                                 
                                     <a href="#" class="fancy-button button-line btn-col small vertical">
@@ -62,118 +63,7 @@
                                 
                             </li>
                             <!-- Single Feature Ends -->
-                            
-                            <!-- Single Feature Starts -->
-                            <li class="single-feature" title="50+ SVG Icon included">
-                                <img src="<?php echo COMMON_DIR ?>images/2.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-                                <h4 class="feature-title color-scheme">50+ SVG Icon included</h4>
-                                <p class="feature-text">
-                                    Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
-                                </p>
-                                <a href="#" class="fancy-button button-line btn-col small zoom">
-                                    Details
-                                    <span class="icon">
-                                        <i class="fa fa-leaf"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <!-- Single Feature Ends -->
-                            
-                            <!-- Single Feature Starts -->
-                            <li class="single-feature" title="MailChimp Ready">
-                                <img src="<?php echo COMMON_DIR ?>images/3.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-                                <h4 class="feature-title color-scheme">MailChimp Ready</h4>
-                                <p class="feature-text">
-                                    Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
-                                </p>
-                                <a href="#" class="fancy-button button-line btn-col small zoom">
-                                    Details
-                                    <span class="icon">
-                                        <i class="fa fa-leaf"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <!-- Single Feature Ends -->
-                            
-                            <!-- Single Feature Starts -->
-                            <li class="single-feature" title="4 home style">
-                                <img src="<?php echo COMMON_DIR ?>images/4.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-                                <h4 class="feature-title color-scheme">4 home style</h4>
-                                <p class="feature-text">
-                                    Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
-                                </p>
-                                <a href="#" class="fancy-button button-line btn-col small zoom">
-                                    Details
-                                    <span class="icon">
-                                        <i class="fa fa-leaf"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <!-- Single Feature Ends -->
-                            
-                            <!-- Single Feature Starts -->
-                            <li class="single-feature" title="Parallax Backgrounds">
-                                <img src="<?php echo COMMON_DIR ?>images/5.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-                                <h4 class="feature-title color-scheme">Parallax Backgrounds</h4>
-                                <p class="feature-text">
-                                    Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
-                                </p>
-                                <a href="#" class="fancy-button button-line btn-col small zoom">
-                                    Details
-                                    <span class="icon">
-                                        <i class="fa fa-leaf"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <!-- Single Feature Ends -->
-                            
-                            <!-- Single Feature Starts -->
-                            <li class="single-feature" title="Ajax contact form">
-                                <img src="<?php echo COMMON_DIR ?>images/6.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-                                <h4 class="feature-title color-scheme">Ajax contact form</h4>
-                                <p class="feature-text">
-                                    Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
-                                </p>
-                                <a href="#" class="fancy-button button-line btn-col small zoom">
-                                    Details
-                                    <span class="icon">
-                                        <i class="fa fa-leaf"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <!-- Single Feature Ends -->
-                            
-                            <!-- Single Feature Starts -->
-                            <li class="single-feature" title="unlimited Google fonts">
-                                <img src="<?php echo COMMON_DIR ?>images/7.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-                                <h4 class="feature-title color-scheme">unlimited Google fonts</h4>
-                                <p class="feature-text">
-                                    Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
-                                </p>
-                                <a href="#" class="fancy-button button-line btn-col small zoom">
-                                    Details
-                                    <span class="icon">
-                                        <i class="fa fa-leaf"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <!-- Single Feature Ends -->
-                            
-                            <!-- Single Feature Starts -->
-                            <li class="single-feature" title="Feature heading">
-                                <img src="<?php echo COMMON_DIR ?>images/8.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-                                <h4 class="feature-title color-scheme">Feature heading</h4>
-                                <p class="feature-text">
-                                    Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
-                                </p>
-                                <a href="#" class="fancy-button button-line btn-col small zoom">
-                                    Details
-                                    <span class="icon">
-                                        <i class="fa fa-leaf"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <!-- Single Feature Ends -->
+                            <?php } ?>
                         </ul>
                         <!--Features container Ends -->
                         
@@ -213,17 +103,18 @@
             <div class="row">
             
                 <div class="col-md-10 col-md-offset-1 center section-title">
-                    <h3>What we do best</h3>
+                    <h3>Giá Vé</h3>
                 </div>
             
                 <!-- Single Service Starts -->
                 <div class="col-md-6 col-sm-6 service animated" data-animation="fadeInLeft" data-animation-delay="700">
                     <span class="service-icon center"><i class="icon icon-basic-book-pencil fa-3x"></i></span>
                     <div class="service-desc">
-                        <h4 class="service-title color-scheme">Clean Design</h4>
+                        <h4 class="service-title color-scheme">Chỉ từ <?php echo TICKET_NORMAL?>k - <?php echo TICKET_VIP?>k</h4>
                         <p class="service-description justify">
-                            Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
-                            Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                            Ngày thường, chỉ từ <?php echo TICKET_NORMAL?>k cho một ghế và <?php echo TICKET_VIP?>k cho ghế vip, bạn có thể xem hàng loạt phim boom tấn hấp dẫn.
+                            <br/>
+                            Thời gian: từ thứ 3 đến thứ 6.
                         </p>
                     </div>
                 </div>
@@ -233,10 +124,15 @@
                 <div class="col-md-6 col-sm-6 service animated" data-animation="fadeInUp" data-animation-delay="700">
                     <span class="service-icon center"><i class="icon icon-basic-paperplane fa-3x"></i></span>
                     <div class="service-desc">
-                        <h4 class="service-title color-scheme">Full responsive</h4>
+                        <h4 class="service-title color-scheme">Cuối tuần thả ga</h4>
                         <p class="service-description justify">
-                            Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
-                            Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                            Bạn rảnh rỗi vào cuối tuần và có ý định xem những phim boom tấn hấp dẫn, hãy đến với chúng tôi.
+                            <br/>
+                            Ghế thường: <?php echo TICKET_WEEKEN?>k
+                            <br/>
+                            Ghế VIP: <?php echo TICKET_VIP_WEEKEN?>k
+                            <br/>
+                            Thời gian: thứ 7 - chủ nhật.
                         </p>
                     </div>
                 </div>
@@ -244,12 +140,17 @@
                 
                 <!-- Single Service Starts -->
                 <div class="col-md-6 col-sm-6 service animated" data-animation="fadeInRight" data-animation-delay="700">
-                    <span class="service-icon center"><i class="icon icon-basic-accelerator fa-3x"></i></span>
+                    <span class="service-icon center"><i class="icon icon-basic-heart fa-3x"></i></span>
                     <div class="service-desc">
-                        <h4 class="service-title color-scheme">Ajax contact form</h4>
+                        <h4 class="service-title color-scheme">Couple</h4>
                         <p class="service-description justify">
-                            Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
-                            Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                            Chương trình khuyến mãi dành cho các cặp đôi đang yêu nhau: cuối tuần vẫn tính như ngày thường.
+                            <br/>
+                            Ghế thường: <?php echo TICKET_NORMAL?>k
+                            <br/>
+                            Ghế VIP: <?php echo TICKET_VIP?>k
+                            <br/>
+                            Thời gian: thứ 7 - chủ nhật.
                         </p>
                     </div>
                 </div>
@@ -259,10 +160,11 @@
                 <div class="col-md-6 col-sm-6 service animated" data-animation="fadeInUp" data-animation-delay="700">
                     <span class="service-icon center"><i class="icon icon-basic-lightbulb fa-3x"></i></span>
                     <div class="service-desc">
-                        <h4 class="service-title color-scheme">Mailchimp ready</h4>
+                        <h4 class="service-title color-scheme">Happy Day</h4>
                         <p class="service-description justify">
-                            Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
-                            Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                            Xem phim thỏa sức chỉ với <?php echo TICKET_HAPPY?>k. Chương trình khuyến mãi cho tất cả các loại ghế.
+                            <br/>
+                            Thời gian: thứ 2 hàng tuần.
                         </p>
                     </div>
                 </div>
@@ -285,7 +187,7 @@
                     </div>
                     
                     <div class="col-md-10 step-details">
-                            <h3 class="step-title color-scheme">Work flow title here</h3>
+                            <h3 class="step-title color-scheme">Các Bước Mua vé</h3>
                             <p class="step-description">Cillum laboris <strong>consequat</strong>, qui elit retro next level 
                             skateboard freegan hella. Cillum laboris consequat qui elit retro next level 
                             skateboard freegan hella. Cillum laboris consequat skateboard freegan hella</p>
@@ -324,7 +226,7 @@
                     </div>
                     
                     <div class="col-md-10 step-details">
-                            <h3 class="step-title color-scheme">Work flow title here</h3>
+                            <h3 class="step-title color-scheme">Thanh toán</h3>
                             <p class="step-description">Cillum laboris <strong>consequat</strong>, qui elit retro next level 
                             skateboard freegan hella. Cillum laboris consequat qui elit retro next level 
                             skateboard freegan hella. Cillum laboris consequat skateboard freegan hella</p>
@@ -372,7 +274,7 @@
         <div class="container screenshots animated" data-animation="fadeInUp" data-animation-delay="1000">
             <div class="row porfolio-container">
                 <div class="col-md-10 col-md-offset-1 center section-title">
-                    <h3>Our Latest Projects</h3>
+                    <h3>Sự Kiện</h3>
                 </div>
                 <!-- Single screenshot starts -->
                 <div class="col-md-4 col-sm-4 col-xs-6">
@@ -570,10 +472,10 @@
         <div class="container pricing">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 center section-title">
-                    <h3>Plans & pricing</h3>
+                    <h3>Phim Sắp Chiếu</h3>
                 </div>
                 <!-- Single Price Starts -->
-                <div class="col-md-3 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="500">
+                <div class="col-md-4 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="500">
                     <div class="single-pricing">
                     
                         <div class="pricing-head">
@@ -610,7 +512,7 @@
                 
                 
                 <!-- Single Price Starts -->
-                <div class="col-md-3 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="700">
+                <div class="col-md-4 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="700">
                     <div class="single-pricing best-pricing"> <!-- this is best-pricing -->
                     
                         <div class="pricing-head">
@@ -646,7 +548,7 @@
                 <!-- Single Price Ends -->
                 
                 <!-- Single Price Starts -->
-                <div class="col-md-3 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="900">
+                <div class="col-md-4 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="900">
                     <div class="single-pricing">
                     
                         <div class="pricing-head">
@@ -680,43 +582,6 @@
                     </div>
                 </div>
                 <!-- Single Price Ends -->
-                
-                <!-- Single Price Starts -->
-                <div class="col-md-3 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="1100">
-                    <div class="single-pricing">
-                    
-                        <div class="pricing-head">
-                            <h4 class="pricing-heading color-scheme">Ultra</h4>
-                            <div class="price">
-                                <h3>
-                                    <span class="dollar">$</span>
-                                    100
-                                    <span class="month">/month</span>
-                                </h3>
-                            </div>
-                        </div>
-                        
-                        <ul class="package-features">
-                            <li><span class="color-scheme fa fa-check"></span>Unlimited Downloads</li>
-                            <li><span class="color-scheme fa fa-check"></span>Unlimited Uploads</li>
-                            <li><span class="color-scheme fa fa-check"></span>Unlimited Email Accounts</li>
-                            <li><span class="color-scheme fa fa-check"></span>Email Forwards</li>
-                            <li><span class="color-scheme fa fa-check"></span>Cloud Storage</li>
-                            <li><span class="color-scheme fa fa-check"></span>Voice call</li>
-                            <li><span class="color-scheme fa fa-check"></span>Screen Share</li>
-                        </ul>
-                        <div class="sign-up">
-                            <a href="#" class="fancy-button button-line btn-col zoom">
-                                Sign up
-                                <span class="icon">
-                                    <i class="fa fa-thumbs-o-up"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Price Ends -->
-                
             </div>
         </div>
     </section>

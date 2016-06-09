@@ -1,7 +1,6 @@
 <?php
 /**
  * class support common
- * @author Dung Le
  *
  */
 class Common
@@ -44,8 +43,18 @@ class Common
         return trim($string);
     }
 
-    public function generateToke()
+    public function generateToken()
     {
         return md5(uniqid(rand(), true));
+    }
+
+    public function truncate($text, $chars = 100, $letter = '...')
+    {
+        if (strlen($text) > $chars) {
+            $text = mb_substr($text, 0, $chars, "utf-8");
+            $text = $text . $letter;
+        }
+        
+        return $text;
     }
 }

@@ -11,4 +11,18 @@ abstract class BaseModel
     {
         // TODO: implement here
     }
+
+    /**
+     * set param to model
+     * Prevent XSS via xssafe function.
+     *
+     * @param  array $arrData array data
+     * @return void
+     */
+    public function setParam($arrData = array())
+    {
+        foreach ($arrData as $key => $val) {
+            $this->{$key} = Common::xssafe($val);
+        }
+    }
 }

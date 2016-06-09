@@ -19,8 +19,8 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="current"><a href="#header">Lịch chiếu</a></li>
                                 <li><a href="#section-feature">Phim</a></li>
-                                <li><a href="#section-services">Giá vé</a></li>
-                                <li><a href="#step-1">Khuyến mãi</a></li>
+                                <li><a href="#section-services">Giá vé & Khuyến mãi</a></li>
+                                <li><a href="#step-1">Hướng dẫn</a></li>
                                 <li><a href="#section-screenshots">Sự kiện</a></li>
                                 <li><a href="#section-pricing">Pricing</a></li>
                                 <li><a href="#section-download">Download</a></li>

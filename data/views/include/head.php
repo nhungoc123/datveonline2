@@ -2,8 +2,9 @@
 <html lang="en-US">
 <head>
     <title>Movie Theater - Thế giới phim</title>
-    
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <!-- <meta charset="utf-8"> -->
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
