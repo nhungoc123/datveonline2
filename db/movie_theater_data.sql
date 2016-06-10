@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `dtb_cinemas` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Dumping data for table movie_theater.dtb_cinemas: ~3 rows (approximately)
+-- Dumping data for table movie_theater.dtb_cinemas: ~2 rows (approximately)
 DELETE FROM `dtb_cinemas`;
 /*!40000 ALTER TABLE `dtb_cinemas` DISABLE KEYS */;
 INSERT INTO `dtb_cinemas` (`id`, `name`, `decription`, `total_seat`, `seat_in_row`, `created_at`, `updated_at`) VALUES
@@ -46,11 +46,14 @@ CREATE TABLE IF NOT EXISTS `dtb_customer` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table movie_theater.dtb_customer: ~0 rows (approximately)
 DELETE FROM `dtb_customer`;
 /*!40000 ALTER TABLE `dtb_customer` DISABLE KEYS */;
+INSERT INTO `dtb_customer` (`id`, `name`, `tel`, `email`, `created_at`, `updated_at`) VALUES
+	(1, 'Dung Le', '123456789', 'a@a.com', '2016-06-10 16:45:23', '2016-06-10 16:45:33'),
+	(2, 'Nhu Ngoc', '123456789', 'aa@a.com', '2016-06-10 16:45:23', '2016-06-10 16:45:33');
 /*!40000 ALTER TABLE `dtb_customer` ENABLE KEYS */;
 
 
@@ -98,13 +101,13 @@ CREATE TABLE IF NOT EXISTS `dtb_movie_cinemas` (
   CONSTRAINT `dtb_movie_cinemas_ibfk_2` FOREIGN KEY (`cinema_id`) REFERENCES `dtb_cinemas` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Dumping data for table movie_theater.dtb_movie_cinemas: ~5 rows (approximately)
+-- Dumping data for table movie_theater.dtb_movie_cinemas: ~4 rows (approximately)
 DELETE FROM `dtb_movie_cinemas`;
 /*!40000 ALTER TABLE `dtb_movie_cinemas` DISABLE KEYS */;
 INSERT INTO `dtb_movie_cinemas` (`id`, `movie_id`, `cinema_id`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES
 	(1, 1, 1, '2016-06-09', '2016-07-09', '2016-06-09 15:26:47', '2016-06-09 15:26:47'),
 	(2, 2, 2, '2016-06-09', '2016-06-16', '2016-06-09 15:27:08', '2016-06-09 15:27:08'),
-	(3, 3, 3, '2016-06-10', '2016-08-09', '2016-06-09 15:27:26', '2016-06-09 15:27:26'),
+	(3, 3, 3, '2016-08-10', '2016-10-13', '2016-06-09 15:27:26', '2016-06-10 13:46:31'),
 	(4, 4, 1, '2016-05-10', '2016-08-09', '2016-06-09 15:27:26', '2016-06-09 16:37:28'),
 	(5, 5, 3, '2016-05-10', '2016-08-09', '2016-06-09 15:27:26', '2016-06-09 16:37:29');
 /*!40000 ALTER TABLE `dtb_movie_cinemas` ENABLE KEYS */;
@@ -119,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `dtb_performances` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
--- Dumping data for table movie_theater.dtb_performances: ~11 rows (approximately)
+-- Dumping data for table movie_theater.dtb_performances: ~10 rows (approximately)
 DELETE FROM `dtb_performances`;
 /*!40000 ALTER TABLE `dtb_performances` DISABLE KEYS */;
 INSERT INTO `dtb_performances` (`id`, `performance_time`, `created_at`, `updated_at`) VALUES
@@ -159,6 +162,11 @@ CREATE TABLE IF NOT EXISTS `dtb_rate` (
 -- Dumping data for table movie_theater.dtb_rate: ~0 rows (approximately)
 DELETE FROM `dtb_rate`;
 /*!40000 ALTER TABLE `dtb_rate` DISABLE KEYS */;
+INSERT INTO `dtb_rate` (`customer_id`, `movie_id`, `cinema_id`, `date_rate`, `rate_times`, `rate`, `created_at`, `updated_at`) VALUES
+	(1, 1, 1, '2016-06-10', 1, 5, '2016-06-10 16:46:12', '2016-06-10 16:46:12'),
+	(1, 2, 2, '2016-06-10', 2, 4, '2016-06-10 16:46:12', '2016-06-10 16:46:12'),
+	(2, 1, 1, '2016-06-10', 2, 4, '2016-06-10 16:46:12', '2016-06-10 16:46:12'),
+	(2, 2, 2, '2016-06-10', 1, 4, '2016-06-10 16:46:12', '2016-06-10 16:46:12');
 /*!40000 ALTER TABLE `dtb_rate` ENABLE KEYS */;
 
 
@@ -176,7 +184,7 @@ CREATE TABLE IF NOT EXISTS `dtb_seats` (
   CONSTRAINT `dtb_seats_ibfk_1` FOREIGN KEY (`cinema_id`) REFERENCES `dtb_cinemas` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Dumping data for table movie_theater.dtb_seats: ~3 rows (approximately)
+-- Dumping data for table movie_theater.dtb_seats: ~2 rows (approximately)
 DELETE FROM `dtb_seats`;
 /*!40000 ALTER TABLE `dtb_seats` DISABLE KEYS */;
 INSERT INTO `dtb_seats` (`id`, `row`, `column`, `type`, `cinema_id`, `created_at`, `updated_at`) VALUES
@@ -200,7 +208,7 @@ CREATE TABLE IF NOT EXISTS `dtb_showtimes` (
   CONSTRAINT `dtb_showtimes_ibfk_2` FOREIGN KEY (`performance_id`) REFERENCES `dtb_performances` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
--- Dumping data for table movie_theater.dtb_showtimes: ~19 rows (approximately)
+-- Dumping data for table movie_theater.dtb_showtimes: ~17 rows (approximately)
 DELETE FROM `dtb_showtimes`;
 /*!40000 ALTER TABLE `dtb_showtimes` DISABLE KEYS */;
 INSERT INTO `dtb_showtimes` (`id`, `movie_cinema_id`, `performance_id`, `created_at`, `updated_at`) VALUES
