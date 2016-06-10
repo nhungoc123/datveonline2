@@ -28,7 +28,7 @@ $(window).ready(function() {
 /* ----------------------------- 
 Scroll into viewPort Animation
 ----------------------------- */
-$(document).ready(function() {	
+$(document).ready(function() {
 	'use strict';
 	$('.animated').appear(function() {
 		var element = $(this),
@@ -82,7 +82,7 @@ $(document).ready(function() {
 				baraja.fan({
 					speed : 1500,
 					easing : 'ease-out',
-					range : 100,
+					range : 90,
 					direction : 'right',
 					origin : { x : 50, y : 200 },
 					center : true
@@ -92,12 +92,12 @@ $(document).ready(function() {
 				baraja.fan({
 					speed : 500,
 					easing : 'ease-out',
-					range : 100,
+					range : 90,
 					direction : 'right',
 					origin : { x : 50, y : 200 },
 					center : true
 				});
-			}); 
+			});
 		} else {
 			sectionFeature.appear(function(){
 				baraja.fan({
@@ -133,7 +133,7 @@ $(document).ready(function() {
 	// close Features
 	$('#feature-close').on( 'click', function( event ) {
 		baraja.close();
-	});	
+	});
 });
 
 /* ----------------------------- 

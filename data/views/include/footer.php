@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h4 class="footer-title"><!-- Footer Title -->
-                        <a class="site-name" href="#"><span>E</span>gret</a>
+                        <a class="site-name" href="#"><span>M</span>ovie</a>
                     </h4>
                     
                     <!-- Social Links -->

@@ -1086,3 +1086,23 @@ margin-right: 8px;
 	padding-top: 15px;
 }
 
+
+#section-list {
+	margin-top: 80px;
+    background-color: #333333;
+    color: #e5e5e5;
+    margin-bottom: 20px;
+}
+
+.dash-bottom {
+    border-bottom: 1px solid;
+}
+
+.item {
+	margin-bottom: 40px;
+}
+
+.list {
+	padding-top: 50px;
+    padding-bottom: 190px;
+}

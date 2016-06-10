@@ -4,9 +4,9 @@ require_once (CONTROLLER_DIR . 'BaseController.php');
 /**
 * 
 */
-class HomeController extends BaseController
+class MovieController extends BaseController
 {
-    private $view_prefix = '';
+    private $view_prefix = 'movie/';
 
     function __construct()
     {
@@ -18,8 +18,7 @@ class HomeController extends BaseController
         $this->loadModel('MovieModel');
         $model = new MovieModel();
 
-        $arrRet['arrMovie'] = $model->getMovie('showing', 8);
-        $arrRet['arrUpcoming'] = $model->getMovie('upcoming', 3);
+        $arrRet['arrList'] = $model->getMovie();
         $this->loadView($this->view_prefix . $this->mode, $arrRet);
     }
 }

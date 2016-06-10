@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../require.php';
 
-$request = explode('/', trim($_SERVER['REQUEST_URI'], ROOT_URLPATH));
+$request = explode('/', ltrim($_SERVER['REQUEST_URI'], ROOT_URLPATH));
 $controller = 'Home';
 if (count($request) > 1) {
     $controller = ucfirst($request[0]);

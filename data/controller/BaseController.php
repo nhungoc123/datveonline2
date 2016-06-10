@@ -50,7 +50,7 @@ class BaseController
     {
         if (!empty($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] != '/') {
             $path =  $_SERVER['REQUEST_URI'];
-            $request = explode('/', trim($path, ROOT_URLPATH));
+            $request = explode('/', ltrim($path, ROOT_URLPATH));
             $mode = $request[0];
             if (count($request) > 1) {
                 $mode = $request[1];
@@ -61,7 +61,9 @@ class BaseController
             }
             $mode = trim($mode, "\/");
             $this->mode = $mode;
-        } else {
+        }
+        
+        if ($this->mode == '') {
             $this->mode = 'index';
         }
         return $this->mode;

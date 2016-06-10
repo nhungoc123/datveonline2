@@ -22,7 +22,7 @@
                                     <i class="fa fa-calendar"></i>
                                 </span>
                             </a>
-                            <a href="#" class="fancy-button button-line button-white zoom">
+                            <a href="/movie/" class="fancy-button button-line button-white zoom">
                                 Phim
                                 <span class="icon">
                                     <i class="fa fa-film"></i>
@@ -96,7 +96,45 @@
         </div>
     </section>
     <!--=== Features section Ends ===-->
-    
+
+    <!--=== Upcoming section Starts ===-->
+    <?php if (count($arrUpcoming) > 0) {?>
+    <section id="section-upcoming" class="pricing-wrap">
+        <div class="container pricing">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 center section-title">
+                    <h3 style="color: #F4F4F4">Phim Sắp Chiếu</h3>
+                </div>
+
+                <?php foreach ($arrUpcoming as $movie) {?>
+                <!-- Single Upcoming Starts -->
+                <div class="col-md-4 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="500">
+                    <div class="single-pricing">
+                        <div class="pricing-head">
+                            <img src="<?php echo UPLOAD_DIR ?>/<?php echo $movie['image'] ?>" alt="<?php echo $movie['name'] ?>" class="feature-image"/>
+                            <h4 class="feature-title color-scheme"><?php echo $movie['name'] ?></h4>
+                        </div>
+                        
+                        <p class="feature-text">
+                            <?php echo Common::truncate($movie['description']) ?>
+                        </p>
+
+                        <a href="#" class="fancy-button button-line btn-col small vertical">
+                            Details
+                            <span class="icon">
+                                <i class="fa fa-leaf"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Single Upcoming Ends -->
+                <?php }?>
+            </div>
+        </div>
+    </section>
+    <?php }?>
+    <!--=== Upcoming section Ends ===-->
+
     <!--=== Services section Starts ===-->
     <section id="section-services" class="services-wrap">
         <div class="container services">
@@ -465,127 +503,6 @@
         </div>
     </section>
     <!--=== Testimonials section Ends ===-->
-    
-    
-    <!--=== Pricing section Starts ===-->
-    <section id="section-pricing" class="pricing-wrap">
-        <div class="container pricing">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1 center section-title">
-                    <h3>Phim Sắp Chiếu</h3>
-                </div>
-                <!-- Single Price Starts -->
-                <div class="col-md-4 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="500">
-                    <div class="single-pricing">
-                    
-                        <div class="pricing-head">
-                            <h4 class="pricing-heading color-scheme">Basic</h4>
-                            <div class="price">
-                                <h3>
-                                    <span class="dollar">$</span>
-                                    40
-                                    <span class="month">/month</span>
-                                </h3>
-                            </div>
-                        </div>
-                        
-                        <ul class="package-features">
-                            <li><span class="color-scheme fa fa-check"></span>Unlimited Downloads</li>
-                            <li><span class="color-scheme fa fa-check"></span>Unlimited Uploads</li>
-                            <li><span class="color-scheme fa fa-check"></span>Unlimited Email Accounts</li>
-                            <li><span class="color-scheme fa fa-check"></span>Email Forwards</li>
-                            <li><span class="color-scheme fa fa-close"></span>Cloud Storage</li>
-                            <li><span class="color-scheme fa fa-close"></span>Voice call</li>
-                            <li><span class="color-scheme fa fa-close"></span>Screen Share</li>
-                        </ul>
-                        <div class="sign-up">
-                            <a href="#" class="fancy-button button-line btn-col zoom">
-                                Sign up
-                                <span class="icon">
-                                    <i class="fa fa-thumbs-o-up"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Price Ends -->
-                
-                
-                <!-- Single Price Starts -->
-                <div class="col-md-4 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="700">
-                    <div class="single-pricing best-pricing"> <!-- this is best-pricing -->
-                    
-                        <div class="pricing-head">
-                            <h4 class="pricing-heading color-scheme">Advance</h4>
-                            <div class="price">
-                                <h3>
-                                    <span class="dollar">$</span>
-                                    60
-                                    <span class="month">/month</span>
-                                </h3>
-                            </div>
-                        </div>
-                        
-                        <ul class="package-features">
-                            <li><span class="color-scheme fa fa-check"></span>Unlimited Downloads</li>
-                            <li><span class="color-scheme fa fa-check"></span>Unlimited Uploads</li>
-                            <li><span class="color-scheme fa fa-check"></span>Unlimited Email Accounts</li>
-                            <li><span class="color-scheme fa fa-check"></span>Email Forwards</li>
-                            <li><span class="color-scheme fa fa-check"></span>Cloud Storage</li>
-                            <li><span class="color-scheme fa fa-close"></span>Voice call</li>
-                            <li><span class="color-scheme fa fa-close"></span>Screen Share</li>
-                        </ul>
-                        <div class="sign-up">
-                            <a href="#" class="fancy-button button-line btn-col vertical">
-                                Sign up
-                                <span class="icon">
-                                    <i class="fa fa-hand-o-up"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Price Ends -->
-                
-                <!-- Single Price Starts -->
-                <div class="col-md-4 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="900">
-                    <div class="single-pricing">
-                    
-                        <div class="pricing-head">
-                            <h4 class="pricing-heading color-scheme">Premium</h4>
-                            <div class="price">
-                                <h3>
-                                    <span class="dollar">$</span>
-                                    80
-                                    <span class="month">/month</span>
-                                </h3>
-                            </div>
-                        </div>
-                        
-                        <ul class="package-features">
-                            <li><span class="color-scheme fa fa-check"></span>Unlimited Downloads</li>
-                            <li><span class="color-scheme fa fa-check"></span>Unlimited Uploads</li>
-                            <li><span class="color-scheme fa fa-check"></span>Unlimited Email Accounts</li>
-                            <li><span class="color-scheme fa fa-check"></span>Email Forwards</li>
-                            <li><span class="color-scheme fa fa-check"></span>Cloud Storage</li>
-                            <li><span class="color-scheme fa fa-check"></span>Voice call</li>
-                            <li><span class="color-scheme fa fa-close"></span>Screen Share</li>
-                        </ul>
-                        <div class="sign-up">
-                            <a href="#" class="fancy-button button-line btn-col rotate">
-                                Sign up
-                                <span class="icon">
-                                    <i class="fa fa-thumbs-o-up"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Price Ends -->
-            </div>
-        </div>
-    </section>
-    <!--=== Pricing section Ends ===-->
     
     <!--=== Subscribe section Starts ===-->
     <section id="section-subscribe" class="subscribe-wrap">

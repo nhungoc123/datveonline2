@@ -441,7 +441,8 @@ jQuery.fn.reverse = [].reverse;
 					val = settings.center ? settings.range / 2 : settings.range,
 					angle = val - stepAngle * pos,
 					position = stepTranslation * ( self.itemsCount - pos - 1 );
-
+console.log(val);
+console.log(angle);
 				if( settings.direction === 'left' ) {
 					
 					angle *= -1;
