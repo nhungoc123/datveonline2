@@ -1,11 +1,7 @@
 <?php include VIEW_DIR . 'include/head.php';?>
 
     <!--=== Header section Starts ===-->
-    <div id="header" class="header-section">
-        
         <?php include VIEW_DIR . 'include/header.php';?>
-
-    </div>
 
     <!--=== List section Starts ===-->
     <section id="section-list" class="feature-wrap">

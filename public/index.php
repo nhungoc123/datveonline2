@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/../require.php';
-
 $request = explode('/', ltrim($_SERVER['REQUEST_URI'], ROOT_URLPATH));
 $controller = 'Home';
 if (count($request) > 1) {

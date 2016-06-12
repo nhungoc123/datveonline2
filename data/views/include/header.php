@@ -17,7 +17,7 @@
                         <!-- Main Navigation menu Starts -->
                         <div class="collapse navbar-collapse navbar-responsive-collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="current"><a href="#header">Lịch chiếu</a></li>
+                                <li class="current"><a href="/#header">Lịch chiếu</a></li>
                                 <li><a href="/#section-feature">Phim đang chiếu</a></li>
                                 <li><a href="/#section-upcoming">Phim sắp chiếu</a></li>
                                 

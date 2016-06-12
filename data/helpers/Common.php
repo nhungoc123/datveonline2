@@ -48,7 +48,7 @@ class Common
         return md5(uniqid(rand(), true));
     }
 
-    public function truncate($text, $chars = 100, $letter = '...')
+    public static function truncate($text, $chars = 100, $letter = '...')
     {
         if (strlen($text) > $chars) {
             $text = mb_substr($text, 0, $chars, "utf-8");
