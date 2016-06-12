@@ -54,8 +54,8 @@
                                     <?php echo Common::truncate($movie['description']) ?>
                                 </p>
                                 
-                                    <a href="#" class="fancy-button button-line btn-col small vertical">
-                                        Details
+                                    <a href="/movie/" class="fancy-button button-line btn-col small vertical">
+                                        Xem danh sách
                                         <span class="icon">
                                             <i class="fa fa-leaf"></i>
                                         </span>
