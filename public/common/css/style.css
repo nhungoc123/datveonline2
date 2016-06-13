@@ -255,6 +255,7 @@ font-weight: 700;
 	position:fixed;
 	width: 100%;
 	z-index: 1025;
+	display: block;
 }
 
 .sticky-section {
@@ -1088,7 +1089,8 @@ margin-right: 8px;
 
 
 #section-list {
-	position:relative;
+	padding-top: 80px;
+	position: relative;
     background-color: #333333;
     color: #e5e5e5;
     margin-bottom: 20px;
@@ -1105,4 +1107,7 @@ margin-right: 8px;
 .list {
 	padding-top: 50px;
     padding-bottom: 190px;
+}
+.trailer {
+	padding-left: 29px;
 }

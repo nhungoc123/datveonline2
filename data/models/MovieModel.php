@@ -93,4 +93,17 @@ class MovieModel extends BaseModel
         $arrData = $DB->select($select, $from, $where);
         return $arrData;
     }
+
+    public function getMovieById($id)
+    {
+        $select = 'DISTINCT m.*, AVG(r.rate) AS avg_rate, mc.start_date, mc.end_date';
+        $from = $this->buildFormMovieList();
+        $where = 'm.id = ?';
+        $where .= ' GROUP BY m.id';
+
+        $DB = new DB();
+        $arrData = $DB->select($select, $from, $where, array($id));
+        
+        return $arrData;
+    }
 }
