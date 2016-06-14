@@ -52,7 +52,7 @@ class MovieModel extends BaseModel
         return '(mc.start_date > now()) and (mc.end_date is null or mc.end_date > now())';
     }
 
-    private function buildFormMovieList()
+    private function buildFromMovie()
     {
         $from = $this->buildFrom();
         $from .= ' left join dtb_rate r on m.id = r.movie_id and mc.cinema_id = r.cinema_id';
@@ -77,7 +77,7 @@ class MovieModel extends BaseModel
 
             default:
                 $select = 'DISTINCT m.*, TRUNCATE(AVG(r.rate), 1) AS avg_rate, mc.start_date, mc.end_date';
-                $from = $this->buildFormMovieList();
+                $from = $this->buildFromMovie();
                 $where .= ' GROUP BY m.id';
                 break;
         }
@@ -97,12 +97,24 @@ class MovieModel extends BaseModel
     public function getMovieById($id)
     {
         $select = 'DISTINCT m.*, TRUNCATE(AVG(r.rate), 1) AS avg_rate, mc.start_date, mc.end_date';
-        $from = $this->buildFormMovieList();
+        $from = $this->buildFromMovie();
         $where = 'm.id = ?';
         $where .= ' GROUP BY m.id';
 
         $DB = new DB();
         $arrData = $DB->select($select, $from, $where, array($id));
+        return $arrData;
+    }
+
+    public function getMovieWithShowtime()
+    {
+        $select = 'DISTINCT m.id, m.name, mc.cinema_id, p.performance_time';
+        $from = $this->buildFrom();
+        $from .= ' join dtb_performances p on p.id = st.performance_id';
+        $where = $this->buildWhereMovieShowing();
+
+        $DB = new DB();
+        $arrData = $DB->select($select, $from, $where);
         return $arrData;
     }
 }

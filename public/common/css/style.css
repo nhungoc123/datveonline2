@@ -1087,9 +1087,10 @@ margin-right: 8px;
 	padding-top: 15px;
 }
 
+/* Coustomize section */
 
 #section-list {
-	padding-top: 80px;
+	padding-top: 20px;
 	position: relative;
     background-color: #333333;
     color: #e5e5e5;
@@ -1123,18 +1124,25 @@ margin-right: 8px;
     text-align: left;
     float: left;
 }
+
 .right {
     width: 69%;
     text-align: left;
     float: right;
 }
+
 .movie-detail {
     margin: 10px auto;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 150%;
 }
+
 .modal-content {
     background-color: #333333;
     color: #e5e5e5;
+}
+
+.header-space {
+	height: 80px;
 }

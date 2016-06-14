@@ -1,6 +1,8 @@
 <?php include VIEW_DIR . 'include/head.php';?>
     <!--=== Header section Starts ===-->
     <?php include VIEW_DIR . 'include/header.php';?>
+    <div class="header-space">
+    </div>
 
     <!--=== List section Starts ===-->
     <div id="section-list" class="feature-wrap">
@@ -81,8 +83,6 @@ $(function() {
             type: "POST",
             url: url,
             data: {id: id},
-            // dataType: 'json',
-            // contentType: 'application/json'
         }).done(function(data) {
             var data = jQuery.parseJSON(data);
             if (data.success == true) {
@@ -118,6 +118,7 @@ $(function() {
                 });
             }
         });
+        // $(posting).modal();
     });
 
     $('#myModal').on('hidden.bs.modal', function () {
