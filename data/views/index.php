@@ -22,7 +22,7 @@
                                     <i class="fa fa-calendar"></i>
                                 </span>
                             </a>
-                            <a href="/movie/" class="fancy-button button-line button-white zoom">
+                            <a href="<?php echo HTTP_HOST;?>movie/" class="fancy-button button-line button-white zoom">
                                 Phim
                                 <span class="icon">
                                     <i class="fa fa-film"></i>
@@ -54,7 +54,7 @@
                                     <?php echo Common::truncate($movie['description']) ?>
                                 </p>
                                 
-                                    <a href="/movie/" class="fancy-button button-line btn-col small vertical">
+                                    <a href="<?php echo HTTP_HOST;?>movie/" class="fancy-button button-line btn-col small vertical">
                                         Xem danh sách
                                         <span class="icon">
                                             <i class="fa fa-leaf"></i>
@@ -106,21 +106,20 @@
                     <h3 style="color: #F4F4F4">Phim Sắp Chiếu</h3>
                 </div>
 
-                <?php foreach ($arrUpcoming as $movie) {?>
+                <?php foreach ($arrUpcoming as $key => $movie) {?>
                 <!-- Single Upcoming Starts -->
-                <div class="col-md-4 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="500">
+                <div class="col-md-4 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="<?php echo 500 + $key*500;?>">
                     <div class="single-pricing">
                         <div class="pricing-head">
                             <img src="<?php echo UPLOAD_DIR ?>/<?php echo $movie['image'] ?>" alt="<?php echo $movie['name'] ?>" class="feature-image"/>
                             <h4 class="feature-title color-scheme"><?php echo $movie['name'] ?></h4>
                         </div>
-                        
                         <p class="feature-text">
                             <?php echo Common::truncate($movie['description']) ?>
                         </p>
 
-                        <a href="#" class="fancy-button button-line btn-col small vertical">
-                            Details
+                        <a href="<?php echo HTTP_HOST;?>movie/" class="fancy-button button-line btn-col small vertical">
+                            Xem danh sách
                             <span class="icon">
                                 <i class="fa fa-leaf"></i>
                             </span>

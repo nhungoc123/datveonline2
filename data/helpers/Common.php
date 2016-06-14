@@ -51,7 +51,7 @@ class Common
     public static function truncate($text, $chars = 100, $letter = '...')
     {
         if (strlen($text) > $chars) {
-            $text = mb_substr($text, 0, $chars, "utf-8");
+            $text = mb_substr($text, 0, $chars - strlen($letter), "utf-8");
             $text = $text . $letter;
         }
         

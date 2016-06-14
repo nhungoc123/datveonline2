@@ -76,7 +76,7 @@ class MovieModel extends BaseModel
                 break;
 
             default:
-                $select = 'DISTINCT m.*, AVG(r.rate) AS avg_rate, mc.start_date, mc.end_date';
+                $select = 'DISTINCT m.*, TRUNCATE(AVG(r.rate), 1) AS avg_rate, mc.start_date, mc.end_date';
                 $from = $this->buildFormMovieList();
                 $where .= ' GROUP BY m.id';
                 break;
@@ -96,14 +96,13 @@ class MovieModel extends BaseModel
 
     public function getMovieById($id)
     {
-        $select = 'DISTINCT m.*, AVG(r.rate) AS avg_rate, mc.start_date, mc.end_date';
+        $select = 'DISTINCT m.*, TRUNCATE(AVG(r.rate), 1) AS avg_rate, mc.start_date, mc.end_date';
         $from = $this->buildFormMovieList();
         $where = 'm.id = ?';
         $where .= ' GROUP BY m.id';
 
         $DB = new DB();
         $arrData = $DB->select($select, $from, $where, array($id));
-        
         return $arrData;
     }
 }

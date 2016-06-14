@@ -1106,8 +1106,35 @@ margin-right: 8px;
 
 .list {
 	padding-top: 50px;
-    padding-bottom: 190px;
+    padding-bottom: 50px;
 }
 .trailer {
 	padding-left: 29px;
+}
+
+.feature-text {
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+.left {
+    width: 28%;
+    padding-right: 3%;
+    text-align: left;
+    float: left;
+}
+.right {
+    width: 69%;
+    text-align: left;
+    float: right;
+}
+.movie-detail {
+    margin: 10px auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+}
+.modal-content {
+    background-color: #333333;
+    color: #e5e5e5;
 }
