@@ -48,7 +48,7 @@
                             <?php foreach ($arrMovie as $movie) {?>
                             <!-- Single Feature Starts -->
                             <li class="single-feature" title="Card style">
-                                <img src="<?php echo UPLOAD_DIR ?>/<?php echo $movie['image'] ?>" alt="<?php echo $movie['name'] ?>" class="feature-image" style="max-height: 180px"/><!-- Feature Icon -->
+                                <img src="<?php echo UPLOAD_DIR ?><?php echo $movie['image'] ?>" alt="<?php echo $movie['name'] ?>" class="feature-image" style="max-height: 180px"/><!-- Feature Icon -->
                                 <h4 class="feature-title color-scheme"><?php echo $movie['name'] ?></h4>
                                 <p class="feature-text">
                                     <?php echo Common::truncate($movie['description']) ?>
@@ -111,7 +111,7 @@
                 <div class="col-md-4 col-sm-6 single-pricing-wrap center animated" data-animation="bounceInLeft" data-animation-delay="<?php echo 500 + $key*500;?>">
                     <div class="single-pricing">
                         <div class="pricing-head">
-                            <img src="<?php echo UPLOAD_DIR ?>/<?php echo $movie['image'] ?>" alt="<?php echo $movie['name'] ?>" class="feature-image"/>
+                            <img src="<?php echo UPLOAD_DIR ?><?php echo $movie['image'] ?>" alt="<?php echo $movie['name'] ?>" class="feature-image"/>
                             <h4 class="feature-title color-scheme"><?php echo $movie['name'] ?></h4>
                         </div>
                         <p class="feature-text">
@@ -600,3 +600,6 @@
     <!--=== Contact section Ends ===-->
 
 <?php include VIEW_DIR . 'include/footer.php';?>
+
+</body>
+</html>

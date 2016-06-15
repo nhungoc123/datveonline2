@@ -57,4 +57,22 @@ class Common
         
         return $text;
     }
+
+    public static function convKeyValue(array $data, $key = 'id', $value = 'name')
+    {
+        $arrRet = array();
+        foreach ($data as $v) {
+            $arrRet[$v[$key]] = $v[$value];
+        }
+        return $arrRet;
+    }
+
+    public static function convIdToKey(array $data, $key = 'id')
+    {
+        $arrRet = array();
+        foreach ($data as $v) {
+            $arrRet[$v[$key]] = $v;
+        }
+        return $arrRet;
+    }
 }

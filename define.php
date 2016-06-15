@@ -18,7 +18,7 @@ define('VIEW_DIR', HTML_REALDIR . 'data/views/');
 // css js
 define('COMMON_DIR', ROOT_URLPATH . 'common/');
 // upload folder
-define('UPLOAD_DIR', ROOT_URLPATH . 'common/images/upload');
+define('UPLOAD_DIR', ROOT_URLPATH . 'common/images/upload/');
 
 define('TICKET_NORMAL', 50);
 define('TICKET_VIP', 80);
@@ -27,3 +27,6 @@ define('TICKET_WEEKEN', 80);
 define('TICKET_VIP_WEEKEN', 100);
 
 define('TICKET_HAPPY', 50);
+
+// Max DAY of showtime, should 1 or 2 day.
+define('MAX_DAY', 2);

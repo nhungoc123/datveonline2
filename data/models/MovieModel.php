@@ -35,6 +35,11 @@ class MovieModel extends BaseModel
         $this->arrError = array();
     }
 
+    private function buildSelect()
+    {
+        return 'DISTINCT m.*, DATE_FORMAT(mc.start_date, \'%d-%m-%Y\') as start_date, DATE_FORMAT(mc.end_date, \'%d-%m-%Y\') as end_date';
+    }
+
     private function buildFrom()
     {
         return 'dtb_showtimes st 
@@ -44,41 +49,47 @@ class MovieModel extends BaseModel
 
     private function buildWhereMovieShowing()
     {
-        return '(mc.start_date is null or mc.start_date <= now()) and (mc.end_date is null or mc.end_date >= now())';
+        return '(mc.start_date is null or mc.start_date <= CURDATE()) and (mc.end_date is null or mc.end_date >= CURDATE())';
     }
 
     private function buildWhereMovieUpcoming()
     {
-        return '(mc.start_date > now()) and (mc.end_date is null or mc.end_date > now())';
+        return '(mc.start_date > CURDATE()) and (mc.end_date is null or mc.end_date > CURDATE())';
     }
 
-    private function buildFromMovie()
+    private function buildFromWithRate()
     {
         $from = $this->buildFrom();
         $from .= ' left join dtb_rate r on m.id = r.movie_id and mc.cinema_id = r.cinema_id';
         return $from;
     }
 
-    public function getMovie($type = null, $limit = null, $orderBy = 'mc.start_date')
+    public function getMovie($type = null, $limit = null, $orderBy = null)
     {
         $DB = new DB();
+        $select = $this->buildSelect();
         $from = $this->buildFrom();
-        $select = 'DISTINCT m.*';
-
         $where = '1 = 1';
+
         switch ($type) {
+            // get movie with showtime
+            case 'showtimes':
+                $select = 'm.*, DATE_FORMAT(mc.start_date, \'%d-%m-%Y\') as start_date, DATE_FORMAT(mc.end_date, \'%d-%m-%Y\') as end_date, st.performance_id';
+            // get showing
             case 'showing':
                 $where = $this->buildWhereMovieShowing();
                 break;
-                
+
+            // get upcoming movie
             case 'upcoming':
                 $where = $this->buildWhereMovieUpcoming();
                 break;
 
             default:
-                $select = 'DISTINCT m.*, TRUNCATE(AVG(r.rate), 1) AS avg_rate, mc.start_date, mc.end_date';
-                $from = $this->buildFromMovie();
+                $select .= ', TRUNCATE(AVG(r.rate), 1) AS avg_rate';
+                $from = $this->buildFromWithRate();
                 $where .= ' GROUP BY m.id';
+                $orderBy = 'mc.start_date';
                 break;
         }
         if (strlen($orderBy) > 0) {
@@ -90,14 +101,15 @@ class MovieModel extends BaseModel
             $limit = ' LIMIT '.$limit;
             $where .= $limit;
         }
+        // var_dump($select, $from, $where);
         $arrData = $DB->select($select, $from, $where);
         return $arrData;
     }
 
     public function getMovieById($id)
     {
-        $select = 'DISTINCT m.*, TRUNCATE(AVG(r.rate), 1) AS avg_rate, mc.start_date, mc.end_date';
-        $from = $this->buildFromMovie();
+        $select = 'DISTINCT m.*, TRUNCATE(AVG(r.rate), 1) AS avg_rate, DATE_FORMAT(mc.start_date, \'%d-%m-%Y\') as start_date, DATE_FORMAT(mc.end_date, \'%d-%m-%Y\') as end_date';
+        $from = $this->buildFromWithRate();
         $where = 'm.id = ?';
         $where .= ' GROUP BY m.id';
 
@@ -106,15 +118,13 @@ class MovieModel extends BaseModel
         return $arrData;
     }
 
-    public function getMovieWithShowtime()
+    public function convShowtimeMovie(array $arrData)
     {
-        $select = 'DISTINCT m.id, m.name, mc.cinema_id, p.performance_time';
-        $from = $this->buildFrom();
-        $from .= ' join dtb_performances p on p.id = st.performance_id';
-        $where = $this->buildWhereMovieShowing();
+        $arrTmp = array();
+        foreach ($arrData as $key => $value) {
+            $arrTmp[$value['id']][] = $value['performance_id'];
+        }
 
-        $DB = new DB();
-        $arrData = $DB->select($select, $from, $where);
-        return $arrData;
+        return $arrTmp;
     }
 }

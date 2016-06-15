@@ -18,8 +18,8 @@ class HomeController extends BaseController
         $this->loadModel('MovieModel');
         $model = new MovieModel();
 
-        $arrRet['arrMovie'] = $model->getMovie('showing', 8);
-        $arrRet['arrUpcoming'] = $model->getMovie('upcoming', 3);
+        $arrRet['arrMovie'] = $model->getMovie('showing', 8, 'mc.start_date');
+        $arrRet['arrUpcoming'] = $model->getMovie('upcoming', 3, 'mc.start_date');
         $this->loadView($this->view_prefix . $this->mode, $arrRet);
     }
 }

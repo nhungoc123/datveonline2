@@ -52,5 +52,3 @@
 <!--==== Custom Script files ====-->
 <script type="text/javascript" src="<?php echo COMMON_DIR ?>js/custom.js"></script>
 
-</body>
-</html>

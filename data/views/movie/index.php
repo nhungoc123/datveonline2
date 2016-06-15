@@ -10,7 +10,7 @@
         <?php foreach ($arrList as $movie) {?>
             <div class="col-sm-12 row item">
                 <div class="col-sm-3 left">
-                    <img src="<?php echo UPLOAD_DIR ?>/<?php echo $movie['image'] ?>" alt="<?php echo $movie['name'] ?>" class="feature-image"/><!-- Feature Icon -->
+                    <img src="<?php echo UPLOAD_DIR ?><?php echo $movie['image'] ?>" alt="<?php echo $movie['name'] ?>" class="feature-image"/><!-- Feature Icon -->
                 </div>
                 <div class="col-sm-9 right">
                     <div class="section-title">
@@ -148,3 +148,6 @@ function trumcate(str, length, ending) {
 };
 
 </script>
+
+</body>
+</html>
