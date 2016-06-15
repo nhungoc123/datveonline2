@@ -54,8 +54,8 @@
                                     <?php echo Common::truncate($movie['description']) ?>
                                 </p>
                                 
-                                    <a href="<?php echo HTTP_HOST;?>movie/" class="fancy-button button-line btn-col small vertical">
-                                        Xem danh sách
+                                    <a href="#" data-toggle="modal" data-target="#myModal" data-id="<?php echo $movie['id'];?>" class="open-model fancy-button button-line btn-col small vertical">
+                                        Chi tiết
                                         <span class="icon">
                                             <i class="fa fa-leaf"></i>
                                         </span>
@@ -118,8 +118,8 @@
                             <?php echo Common::truncate($movie['description']) ?>
                         </p>
 
-                        <a href="<?php echo HTTP_HOST;?>movie/" class="fancy-button button-line btn-col small vertical">
-                            Xem danh sách
+                        <a href="#" data-toggle="modal" data-target="#myModal" data-id="<?php echo $movie['id'];?>" class="open-model fancy-button button-line btn-col small vertical">
+                            Chi tiết
                             <span class="icon">
                                 <i class="fa fa-leaf"></i>
                             </span>
@@ -598,8 +598,61 @@
         </div>
     </section>
     <!--=== Contact section Ends ===-->
+<?php include VIEW_DIR . 'movie/movie-detail.php';?>
 
 <?php include VIEW_DIR . 'include/footer.php';?>
+<script type="text/javascript">
+$(document).ready(function() {
+	'use strict';
+    $('#myModal').on('show.bs.modal', function(e) {
+        // e.preventDefault();
+        var id = $(e.relatedTarget).data('id');
+        var url = "<?php echo HTTP_HOST . 'movie/get?id='?>" + id;
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {id: id},
+        }).done(function(data) {
+            var data = jQuery.parseJSON(data);
+            if (data.success == true) {
+                $.each(data.movie, function(key, value) {
+                    var trailer = value.trailer;
+                    if (trailer.indexOf('watch?v=') == -1 && trailer.indexOf('embed') == -1) {
+                        trailer = trailer.replace('youtu.be', 'youtube.com/embed');
+                    } else {
+                        trailer = trailer.replace('watch?v=', 'embed/');
+                    }
+                    $('iframe.embed-responsive-item').attr('src', trailer);
 
+                    var html = '<div class="col-sm-8">';
+                    html += '<div class="row"><div class="left">Khởi chiếu</div><div class="right">';
+                    html += convertNullToString(value.start_date) + '</div></div>';
+                    html += '<div class="row"><div class="left">Thể loại</div><div class="right">';
+                    html += convertNullToString(value.genre) + '</div></div>';
+                    html += '<div class="row"><div class="left">Diễn viên</div><div class="right">';
+                    html += convertNullToString(value.actor) + '</div></div>';
+                    html += '<div class="row"><div class="left">Thời lượng</div><div class="right">';
+                    html += convertNullToString(value.durations) + ' phút</div></div>';
+                    html += '<div class="row"><div class="left">Đánh giá</div><div class="right">';
+
+                    var avg_rate = '5 / 5';
+                    if (value.avg_rate != null) {
+                        avg_rate = value.avg_rate + ' / 5';
+                    }
+                    html += avg_rate + '</div></div></div>';
+
+                    html += '<div class="col-sm-4"><div class="row">' + trumcate(value.description) + '</div></div>';
+                    $('.movie-detail').html(html);
+                    $('.modal-title').text(value.name);
+                });
+            }
+        });
+    });
+
+    $('#myModal').on('hidden.bs.modal', function () {
+        $('iframe.embed-responsive-item').attr('src', '');
+    });
+});
+</script>
 </body>
 </html>

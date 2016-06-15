@@ -302,3 +302,23 @@ $(document).ready(function() {
 
 });
 			
+function convertNullToString(value) {
+    if (value == null) {
+        return '';
+    }
+    return value;
+}
+
+function trumcate(str, length, ending) {
+    if (length == null) {
+        length = 200;
+    }
+    if (ending == null) {
+        ending = '...';
+    }
+    if (str.length > length) {
+        return str.substring(0, length - ending.length) + ending;
+    } else {
+        return str;
+    }
+};

@@ -11,20 +11,19 @@
                                     <span class="icon-bar"></span>
                             </button>
                             <!--=== Site Name ===-->
-                            <a class="site-name navbar-brand" href="#"><span>M</span>ovie</a>
+                            <a class="site-name navbar-brand" href="<?php echo HTTP_HOST;?>"><span>M</span>ovie</a>
                         </div>
                         
                         <!-- Main Navigation menu Starts -->
                         <div class="collapse navbar-collapse navbar-responsive-collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="current"><a id="header" href="../#header">Lịch chiếu</a></li>
+                                <li class="current"><a id="header" href="../#header">Home</a></li>
                                 <li><a href="/#section-feature">Phim đang chiếu</a></li>
                                 <li><a href="/#section-upcoming">Phim sắp chiếu</a></li>
                                 
                                 <li><a href="/#section-services">Giá vé & Khuyến mãi</a></li>
-                                <li><a href="/#step-1">Hướng dẫn</a></li>
-                                <li><a href="/#section-screenshots">Sự kiện</a></li>
-                                <li><a href="/#section-download">Download</a></li>
+                                <li><a href="<?php echo HTTP_HOST;?>movie/">Danh sách phim</a></li>
+                                <li><a href="/#section-contact">Liên hệ</a></li>
                             </ul>
                         </div>
                         <!-- Main Navigation menu ends-->
