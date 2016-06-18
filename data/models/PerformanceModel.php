@@ -24,6 +24,6 @@ class PerformanceModel extends BaseModel
     public function getPerformance()
     {
         $DB = new DB();
-        return $DB->select('*', 'dtb_performances');
+        return $DB->select('id, TIME_FORMAT(performance_time, \'%H:%i\') as performance_time', 'dtb_performances');
     }
 }

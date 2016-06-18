@@ -1,4 +1,29 @@
 <?php include VIEW_DIR . 'include/head.php';?>
+<style type="text/css">
+    .list .search {
+        margin-bottom: 10px;
+    }
+    .list .search .input-group {
+        float: right;
+    }
+    .list .rate .col-sm-3 {
+        text-align: right;
+    }
+    .btn-primary {
+        color: #ffffff;
+        background: #7F8C8D;
+        border-color: #606c6c;
+    }
+
+    .btn-primary:hover {
+        color: #ffffff;
+        background: #303636;
+        border-color: #606c6c;
+    }
+    .section-title {
+        margin-bottom: 10px;
+    }
+</style>
     <!--=== Header section Starts ===-->
     <?php include VIEW_DIR . 'include/header.php';?>
     <div class="header-space">
@@ -7,12 +32,29 @@
     <!--=== List section Starts ===-->
     <div id="section-list" class="feature-wrap">
         <div class="container list">
+            <div class="col-sm-12 row search">
+                <form class="form-inline" role="form" action="?" name="form" id="form" method="POST">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="search" />
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </span>
+                </div>
+                </form>
+            </div>
+        <?php if (count($arrList) == 0) {?>
+        <div class="col-sm-12">
+            <p>
+                Không có kết quả.
+            </p>
+        </div>
+        <?php } ?>
         <?php foreach ($arrList as $movie) {?>
             <div class="col-sm-12 row item">
                 <div class="col-sm-3 left">
                     <img src="<?php echo UPLOAD_DIR ?><?php echo $movie['image'] ?>" alt="<?php echo $movie['name'] ?>" class="feature-image"/><!-- Feature Icon -->
                 </div>
-                <div class="col-sm-9 right">
+                <div class="col-sm-9 row right">
                     <div class="section-title">
                         <a class="open-model" href="#" data-toggle="modal" data-target="#myModal" data-id="<?php echo $movie['id'];?>">
                             <h3>
@@ -21,7 +63,12 @@
                         </a>
                     </div>
                     <div class="rate">
-                        Đánh giá: <?php echo ($movie['avg_rate']) ? $movie['avg_rate'] : 5; ?> / 5
+                        <div class="col-sm-9" style="padding-left: 0px;">
+                            Đánh giá: <?php echo ($movie['avg_rate']) ? $movie['avg_rate'] : 5; ?> / 5
+                        </div>
+                        <div class="col-sm-3" style="padding-right: 0px;">
+                            <a href="<?php echo HTTP_HOST;?>showtime/" class="btn btn-primary">Xem lịch chiếu</a>
+                        </div>
                     </div>
                     <div class="genre">
                         Thể loại: <?php echo $movie['genre']; ?>

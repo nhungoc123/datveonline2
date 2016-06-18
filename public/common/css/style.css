@@ -1119,14 +1119,14 @@ margin-right: 8px;
 }
 
 .left {
-    width: 28%;
-    padding-right: 3%;
+    /*width: 28%;*/
+    /*padding-right: 3%;*/
     text-align: left;
     float: left;
 }
 
 .right {
-    width: 69%;
+    /*width: 69%;*/
     text-align: left;
     float: right;
 }

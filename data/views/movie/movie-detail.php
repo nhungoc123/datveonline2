@@ -18,7 +18,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-        <button type="button" class="btn btn-primary">Xem lịch chiếu</button>
+        <a href="<?php echo HTTP_HOST;?>showtime/" type="button" class="btn btn-primary" >Xem lịch chiếu</a>
       </div>
     </div>
   </div>

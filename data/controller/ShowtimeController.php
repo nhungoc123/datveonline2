@@ -23,16 +23,17 @@ class ShowtimeController extends BaseController
         $arrPerformance = $PerformanceModel->getPerformance();
         $arrRet['arrPerformance'] = Common::convKeyValue($arrPerformance, 'id', 'performance_time');
 
-        $arrShowtime = $MovieModel->getMovie('showtimes');
-        $arrShowtime = $MovieModel->convShowtimeMovie($arrShowtime);
-
-        $arrMovie = $MovieModel->getMovie('showing', null, 'mc.start_date');
+        $arrMovie = $MovieModel->getMovie();
         $arrMovie = Common::convIdToKey($arrMovie);
 
-        $now = new DateTime();
         $arrDate = array();
-        for ($i=0; $i < MAX_DAY; $i++) { 
-            $arrDate[] = $now->modify("+$i days")->format('d-m-Y');
+        for ($i=0; $i < MAX_DAY; $i++) {
+            $now = new DateTime();
+            if ($i <= 1) {
+                $arrDate[] = $now->modify("+$i day")->format('d-m-Y');
+            } else {
+                $arrDate[] = $now->modify("+$i days")->format('d-m-Y');
+            }
         }
 
         $arrTmp = array();
@@ -43,13 +44,13 @@ class ShowtimeController extends BaseController
                 }
             }
         }
-// var_dump($arrMovie);
         $arrRet['arrDate'] = $arrDate;
+
+        $arrShowtime = $MovieModel->getMovie('showtimes');
+        $arrShowtime = $MovieModel->convShowtimeMovie($arrShowtime, $arrDate);
         $arrRet['arrShowtime'] = $arrShowtime;
 
         $arrRet['arrMovie'] = $arrTmp;
-        // var_dump($arrRet);
-        // die;
         $this->loadView($this->view_prefix . $this->mode, $arrRet);
     }
 }

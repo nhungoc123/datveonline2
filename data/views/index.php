@@ -16,7 +16,7 @@
                         <p class="intro-message">Thế giới phim với hàng loạt phim boom tấn</p>
                         
                         <div class="home-buttons">
-                            <a href="#" class="fancy-button button-line button-white vertical">
+                            <a href="<?php echo HTTP_HOST;?>showtime/" class="fancy-button button-line button-white vertical">
                                 Xem lịch chiếu
                                 <span class="icon">
                                     <i class="fa fa-calendar"></i>

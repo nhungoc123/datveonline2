@@ -17,8 +17,15 @@ class MovieController extends BaseController
     {
         $this->loadModel('MovieModel');
         $model = new MovieModel();
+        $arrSearch = array();
+        if (isset($_POST['search']) && !empty($_POST['search'])) {
+            $arrSearch['name'] = $_POST['search'];
+            $arrSearch['genre'] = $_POST['search'];
+            // $arrSearch['actor'] = $_POST['search'];
+        }
+        list($where, $arrValue) = $model->buildSearch($arrSearch);
+        $arrRet['arrList'] = $model->getMovie('all', null, null, $where, $arrValue);
 
-        $arrRet['arrList'] = $model->getMovie();
         $this->loadView($this->view_prefix . $this->mode, $arrRet);
     }
 

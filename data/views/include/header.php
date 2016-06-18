@@ -23,6 +23,7 @@
                                 
                                 <li><a href="/#section-services">Giá vé & Khuyến mãi</a></li>
                                 <li><a href="<?php echo HTTP_HOST;?>movie/">Danh sách phim</a></li>
+                                <li><a href="<?php echo HTTP_HOST;?>showtime/">Lịch chiếu</a></li>
                                 <li><a href="/#section-contact">Liên hệ</a></li>
                             </ul>
                         </div>

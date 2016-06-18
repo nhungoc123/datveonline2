@@ -47,6 +47,11 @@ class MovieModel extends BaseModel
             join dtb_movies m on m.id = mc.movie_id';
     }
 
+    private function buildWhereMovieList()
+    {
+        return '(mc.end_date is null or mc.end_date >= CURDATE())';
+    }
+
     private function buildWhereMovieShowing()
     {
         return '(mc.start_date is null or mc.start_date <= CURDATE()) and (mc.end_date is null or mc.end_date >= CURDATE())';
@@ -64,25 +69,49 @@ class MovieModel extends BaseModel
         return $from;
     }
 
-    public function getMovie($type = null, $limit = null, $orderBy = null)
+    public function buildSearch($arrSearch)
+    {
+        $where = '';
+        $arrValue = array();
+        $cnt = 0;
+        if (count($arrSearch) > 0) {
+            foreach ($arrSearch as $key => $value) {
+                if (strlen($value) < 1) {
+                    continue;
+                }
+                if ($cnt == 0) {
+                    $where .= " m.{$key} LIKE ?";
+                    $cnt++;
+                } else {
+                    $where .= " OR m.{$key} LIKE ?";
+                }
+                $arrValue[] = sprintf("%%%s%%", $value);
+            }
+        }
+        $where = $where ? $where : '1 = 1';
+        return array($where, $arrValue);
+    }
+
+    public function getMovie($type = null, $limit = null, $orderBy = null, $where = '1 = 1', $arrValue = array())
     {
         $DB = new DB();
         $select = $this->buildSelect();
         $from = $this->buildFrom();
-        $where = '1 = 1';
 
         switch ($type) {
             // get movie with showtime
             case 'showtimes':
                 $select = 'm.*, DATE_FORMAT(mc.start_date, \'%d-%m-%Y\') as start_date, DATE_FORMAT(mc.end_date, \'%d-%m-%Y\') as end_date, st.performance_id';
+                $where .= ' AND '. $this->buildWhereMovieList();
+                break;
             // get showing
             case 'showing':
-                $where = $this->buildWhereMovieShowing();
+                $where .= ' AND '. $this->buildWhereMovieShowing();
                 break;
 
             // get upcoming movie
             case 'upcoming':
-                $where = $this->buildWhereMovieUpcoming();
+                $where .= ' AND '. $this->buildWhereMovieUpcoming();
                 break;
 
             default:
@@ -101,8 +130,7 @@ class MovieModel extends BaseModel
             $limit = ' LIMIT '.$limit;
             $where .= $limit;
         }
-        // var_dump($select, $from, $where);
-        $arrData = $DB->select($select, $from, $where);
+        $arrData = $DB->select($select, $from, $where, $arrValue);
         return $arrData;
     }
 
@@ -118,13 +146,17 @@ class MovieModel extends BaseModel
         return $arrData;
     }
 
-    public function convShowtimeMovie(array $arrData)
+    public function convShowtimeMovie(array $arrData, array $arrDate)
     {
         $arrTmp = array();
-        foreach ($arrData as $key => $value) {
-            $arrTmp[$value['id']][] = $value['performance_id'];
+        foreach ($arrDate as $k => $date) {
+            foreach ($arrData as $key => $movie) {
+                if (strtotime($movie['start_date']) <= strtotime($date) &&
+                    strtotime($movie['end_date']) >= strtotime($date)) {
+                    $arrTmp[$date][$movie['id']][] = $movie['performance_id'];
+                }
+            }
         }
-
         return $arrTmp;
     }
 }
