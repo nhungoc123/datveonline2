@@ -76,13 +76,18 @@ $(document).ready(function() {
 	var $el 			= $( '#card-ul' ),
 		sectionFeature  = $('#section-feature'),
 		baraja 			= $el.baraja();
-	
+	// modify range
+	var count = $el.children().length;
+	var range = 15*count;
+	if (count >= 5) {
+		range = 90;
+	}
 		if ( $(window).width() > 480) {
 			sectionFeature.appear(function(){
 				baraja.fan({
 					speed : 1500,
 					easing : 'ease-out',
-					range : 90,
+					range : range,
 					direction : 'right',
 					origin : { x : 50, y : 200 },
 					center : true
@@ -92,7 +97,7 @@ $(document).ready(function() {
 				baraja.fan({
 					speed : 500,
 					easing : 'ease-out',
-					range : 90,
+					range : range,
 					direction : 'right',
 					origin : { x : 50, y : 200 },
 					center : true
