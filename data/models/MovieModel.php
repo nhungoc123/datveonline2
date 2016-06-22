@@ -37,14 +37,15 @@ class MovieModel extends BaseModel
 
     private function buildSelect()
     {
-        return 'DISTINCT m.*, DATE_FORMAT(mc.start_date, \'%d-%m-%Y\') as start_date, DATE_FORMAT(mc.end_date, \'%d-%m-%Y\') as end_date';
+        return 'DISTINCT m.*, DATE_FORMAT(mc.start_date, \'%d-%m-%Y\') as start_date, DATE_FORMAT(mc.end_date, \'%d-%m-%Y\') as end_date, TRUNCATE(AVG(r.rate), 1) AS avg_rate, st.performance_id, st.id as showtimes_id';
     }
 
     private function buildFrom()
     {
         return 'dtb_showtimes st 
             join dtb_movie_cinemas mc on st.movie_cinema_id = mc.id 
-            join dtb_movies m on m.id = mc.movie_id';
+            join dtb_movies m on m.id = mc.movie_id
+            left join dtb_rate r on m.id = r.movie_id and mc.cinema_id = r.cinema_id';
     }
 
     private function buildWhereMovieList()
@@ -97,29 +98,33 @@ class MovieModel extends BaseModel
         $DB = new DB();
         $select = $this->buildSelect();
         $from = $this->buildFrom();
+        $groupBy = 'm.id';
 
         switch ($type) {
             // get movie with showtime
             case 'showtimes':
-                $select = 'm.*, DATE_FORMAT(mc.start_date, \'%d-%m-%Y\') as start_date, DATE_FORMAT(mc.end_date, \'%d-%m-%Y\') as end_date, st.performance_id';
-                $where .= ' AND '. $this->buildWhereMovieList();
+                $select = 'm.*, DATE_FORMAT(mc.start_date, \'%d-%m-%Y\') as start_date, DATE_FORMAT(mc.end_date, \'%d-%m-%Y\') as end_date, st.performance_id, st.id as showtimes_id';
+                $where .= ' AND ' . $this->buildWhereMovieList();
+                $groupBy = 'm.id, st.performance_id';
                 break;
+
             // get showing
             case 'showing':
-                $where .= ' AND '. $this->buildWhereMovieShowing();
+                $where .= ' AND ' . $this->buildWhereMovieShowing();
                 break;
 
             // get upcoming movie
             case 'upcoming':
-                $where .= ' AND '. $this->buildWhereMovieUpcoming();
+                $where .= ' AND ' . $this->buildWhereMovieUpcoming();
                 break;
 
             default:
-                $select .= ', TRUNCATE(AVG(r.rate), 1) AS avg_rate';
-                $from = $this->buildFromWithRate();
-                $where .= ' GROUP BY m.id';
+                $where .= ' AND ' . $this->buildWhereMovieList();
                 $orderBy = 'mc.start_date';
                 break;
+        }
+        if (strlen($groupBy) > 0) {
+            $where .= ' GROUP BY ' . $groupBy;
         }
         if (strlen($orderBy) > 0) {
             $orderBy = ' ORDER BY '.$orderBy;
@@ -136,8 +141,8 @@ class MovieModel extends BaseModel
 
     public function getMovieById($id)
     {
-        $select = 'DISTINCT m.*, TRUNCATE(AVG(r.rate), 1) AS avg_rate, DATE_FORMAT(mc.start_date, \'%d-%m-%Y\') as start_date, DATE_FORMAT(mc.end_date, \'%d-%m-%Y\') as end_date';
-        $from = $this->buildFromWithRate();
+        $select = $this->buildSelect();
+        $from = $this->buildFrom();
         $where = 'm.id = ?';
         $where .= ' GROUP BY m.id';
 

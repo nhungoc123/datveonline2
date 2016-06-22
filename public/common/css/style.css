@@ -1119,14 +1119,11 @@ margin-right: 8px;
 }
 
 .left {
-    /*width: 28%;*/
-    /*padding-right: 3%;*/
     text-align: left;
     float: left;
 }
 
 .right {
-    /*width: 69%;*/
     text-align: left;
     float: right;
 }
@@ -1145,4 +1142,28 @@ margin-right: 8px;
 
 .header-space {
 	height: 80px;
+}
+
+.w29 {
+	width: 29%;
+}
+.w70 {
+	width: 70%;
+}
+
+#section-list .btn-primary, .detail .btn-primary {
+    color: #ffffff;
+    background: #7F8C8D;
+    border-color: #606c6c;
+}
+
+#section-list .btn-primary:hover, .detail .btn-primary:hover {
+    color: #ffffff;
+    background: #303636;
+    border-color: #606c6c;
+}
+#section-list .btn-primary:focus, .detail .btn-primary:focus {
+    color: #ffffff;
+    background: #303636;
+    border-color: #606c6c;
 }

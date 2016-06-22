@@ -9,20 +9,10 @@
     .list .rate .col-sm-3 {
         text-align: right;
     }
-    .btn-primary {
-        color: #ffffff;
-        background: #7F8C8D;
-        border-color: #606c6c;
-    }
-
-    .btn-primary:hover {
-        color: #ffffff;
-        background: #303636;
-        border-color: #606c6c;
-    }
     .section-title {
         margin-bottom: 10px;
     }
+
 </style>
     <!--=== Header section Starts ===-->
     <?php include VIEW_DIR . 'include/header.php';?>
@@ -120,15 +110,15 @@ $(function() {
                     $('iframe.embed-responsive-item').attr('src', trailer);
 
                     var html = '<div class="col-sm-8">';
-                    html += '<div class="row"><div class="left">Khởi chiếu</div><div class="right">';
+                    html += '<div class="row"><div class="w29 left">Khởi chiếu</div><div class="w70 right">';
                     html += convertNullToString(value.start_date) + '</div></div>';
-                    html += '<div class="row"><div class="left">Thể loại</div><div class="right">';
+                    html += '<div class="row"><div class="w29 left">Thể loại</div><div class="w70 right">';
                     html += convertNullToString(value.genre) + '</div></div>';
-                    html += '<div class="row"><div class="left">Diễn viên</div><div class="right">';
+                    html += '<div class="row"><div class="w29 left">Diễn viên</div><div class="w70 right">';
                     html += convertNullToString(value.actor) + '</div></div>';
-                    html += '<div class="row"><div class="left">Thời lượng</div><div class="right">';
+                    html += '<div class="row"><div class="w29 left">Thời lượng</div><div class="w70 right">';
                     html += convertNullToString(value.durations) + ' phút</div></div>';
-                    html += '<div class="row"><div class="left">Đánh giá</div><div class="right">';
+                    html += '<div class="row"><div class="w29 left">Đánh giá</div><div class="w70 right">';
 
                     var avg_rate = '5 / 5';
                     if (value.avg_rate != null) {

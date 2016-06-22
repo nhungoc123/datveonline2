@@ -181,7 +181,13 @@
 								<div class="panel-body">
 									<ul class="list-inline">
 									<?php foreach ($arrShowtime[$key][$k] as $showtime) { ?>
-									<li><a href="#" class="btn btn-default"> <?php echo $arrPerformance[$showtime] ?></a></li>
+                    <?php $nowtime = time();
+                      $disable = '';
+                    if ($nowtime >= strtotime($arrPerformance[$showtime])) {
+                      $disable = 'disabled';
+                    }
+                    ?>
+									<li ><a href="/seat/?st=<?php echo $v['showtimes_id'];?>&pf=<?php echo $showtime;?>" class="btn btn-default <?php echo $disable ?>"><?php echo $arrPerformance[$showtime] ?></a></li>
 									<?php } ?>
 									</ul>
 								</div>
