@@ -118,6 +118,25 @@ class DB
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+        public function selectOne($cols, $from, $where = '', $arrWhereVal = array())
+    {
+        $sqlse = "SELECT $cols";
+        $sqlse .= " FROM $from";
+
+        if (strlen($where) > 0) {
+            $sqlse .= " WHERE $where";
+        }
+
+        $stmt = $this->conn->prepare($sqlse);
+
+        if (empty($arrWhereVal)) {
+            $stmt->execute();
+        } else {
+            $stmt->execute($arrWhereVal);
+        }
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function delete($table, $where = '', $arrWhereVal = array())
     {
         if (strlen($where) <= 0) {

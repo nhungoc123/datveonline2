@@ -1,5 +1,7 @@
 <?php
 require_once (CONTROLLER_DIR . 'BaseController.php');
+require_once (MODEL_DIR . 'MovieModel.php');
+require_once (MODEL_DIR . 'PerformanceModel.php');
 
 /**
 * 
@@ -15,10 +17,10 @@ class ShowtimeController extends BaseController
 
     public function index()
     {
-        $this->loadModel('MovieModel');
+        // $this->loadModel('MovieModel');
         $MovieModel = new MovieModel();
 
-        $this->loadModel('PerformanceModel');
+        // $this->loadModel('PerformanceModel');
         $PerformanceModel = new PerformanceModel();
         $arrPerformance = $PerformanceModel->getPerformance();
         $arrRet['arrPerformance'] = Common::convKeyValue($arrPerformance, 'id', 'performance_time');

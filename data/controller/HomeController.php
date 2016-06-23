@@ -1,5 +1,6 @@
 <?php
 require_once (CONTROLLER_DIR . 'BaseController.php');
+require_once (MODEL_DIR . 'MovieModel.php');
 
 /**
 * 
@@ -15,7 +16,7 @@ class HomeController extends BaseController
 
     public function index()
     {
-        $this->loadModel('MovieModel');
+        // $this->loadModel('MovieModel');
         $model = new MovieModel();
 
         $arrRet['arrMovie'] = $model->getMovie('showing', 8, 'mc.start_date');

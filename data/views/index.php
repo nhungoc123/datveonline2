@@ -16,13 +16,13 @@
                         <p class="intro-message">Thế giới phim với hàng loạt phim boom tấn</p>
                         
                         <div class="home-buttons">
-                            <a href="<?php echo HTTP_HOST;?>showtime/" class="fancy-button button-line button-white vertical">
+                            <a href="<?php echo HTTP_HOST;?>showtime/#section-showtime" class="fancy-button button-line button-white vertical">
                                 Xem lịch chiếu
                                 <span class="icon">
                                     <i class="fa fa-calendar"></i>
                                 </span>
                             </a>
-                            <a href="<?php echo HTTP_HOST;?>movie/" class="fancy-button button-line button-white zoom">
+                            <a href="<?php echo HTTP_HOST;?>movie/#section-list" class="fancy-button button-line button-white zoom">
                                 Phim
                                 <span class="icon">
                                     <i class="fa fa-film"></i>

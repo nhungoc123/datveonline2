@@ -1,5 +1,6 @@
 <?php
 require_once (CONTROLLER_DIR . 'BaseController.php');
+require_once (MODEL_DIR . 'MovieModel.php');
 
 /**
 * 
@@ -15,7 +16,7 @@ class MovieController extends BaseController
 
     public function index()
     {
-        $this->loadModel('MovieModel');
+        // $this->loadModel('MovieModel');
         $model = new MovieModel();
         $arrSearch = array();
         if (isset($_POST['search']) && !empty($_POST['search'])) {
@@ -34,7 +35,7 @@ class MovieController extends BaseController
         $arrRet['success'] = false;
         $id = json_decode($_POST['id']);
 
-        $this->loadModel('MovieModel');
+        // $this->loadModel('MovieModel');
         $model = new MovieModel();
         $arrData = $model->getMovieById($id);
         if (count($arrData) > 0) {

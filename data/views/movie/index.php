@@ -23,7 +23,7 @@
     <div id="section-list" class="feature-wrap">
         <div class="container list">
             <div class="col-sm-12 row search">
-                <form class="form-inline" role="form" action="?" name="form" id="form" method="POST">
+                <form class="form-inline" role="form" action="#section-list" name="form" id="form" method="POST">
                 <div class="input-group">
                     <input class="form-control" type="text" name="search" />
                     <span class="input-group-btn">
@@ -89,6 +89,7 @@ $(function() {
     $('#header').click(function() {
         window.location.href = "/#header";
     });
+
 	$('#myModal').on('show.bs.modal', function(e) {
         // e.preventDefault();
         var id = $(e.relatedTarget).data('id');

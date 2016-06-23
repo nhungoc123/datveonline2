@@ -1,0 +1,194 @@
+#seat-layout {
+    position: relative;
+    padding: 20px 0 20px 0;
+    min-height: 470px;
+}
+/*#seat-layout .room-name {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    width: 100px;
+    margin-left: -54px;
+}*/
+.seat-map {
+    width: auto;
+    border: none;
+    display: inline;
+    overflow: scroll;
+}
+.seat-map tr td {
+    min-width: 30px
+}
+.seat-map .index {
+    width: 20px;
+    padding: 0
+}
+.seat-map .seat {
+    width: 32px;
+    height: 35px;
+    background: url("/common/images/seat.png") center 13px no-repeat;
+    background-size: 32px 24px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: lighter;
+    color: #fff;
+    padding: 3px 3px 0 3px;
+    border-bottom: 1px solid #ccc;
+}
+.seat-map .seat.vip {
+    background: url("/common/images/seat-vip.png") center 13px no-repeat;
+    background-size: 32px 24px
+}
+.seat-map .seat.chosen,
+.seat-map .seat:hover {
+    cursor: pointer;
+    background: url("/common/images/seat-selected.png") center 13px no-repeat;
+    background-size: 32px 24px
+}
+.seat-map .seat.other-seat {
+    background: url("/common/images/seat-disable.png") center 13px no-repeat;
+    background-size: 32px 24px
+}
+.seat-map .seat.unavailable {
+    background: url("/common/images/seat-unavailable.png") center 13px no-repeat;
+    background-size: 32px 24px
+}
+.seat-map .seat.disable,
+.seat-map .seat.disabled {
+    background: url("/common/images/seat-disable.png") center 13px no-repeat;
+    background-size: 32px 24px
+}
+.seat-map .couple {
+    padding: 10px 2px 0 3px;
+    height: 35px;
+    position: relative;
+    border-bottom: 1px solid #ccc
+}
+.seat-map .couple>div {
+    width: 50%;
+    font-size: 10px;
+    font-weight: lighter;
+    color: #fff;
+    padding: 10px 2px 0 3px;
+    height: 35px;
+    position: absolute;
+    top: 6px
+}
+.seat-map .couple>div.c-left {
+    box-sizing: border-box;
+    padding-right: 11px;
+    text-align: right;
+    float: left;
+    background: url("/common/images/seat.png") right 8px no-repeat;
+    background-size: 32px 24px;
+    display: block;
+    left: 4px
+}
+.seat-map .couple>div.c-right {
+    box-sizing: border-box;
+    padding-left: 12px;
+    text-align: left;
+    float: right;
+    background: url("/common/images/seat.png") left 8px no-repeat;
+    background-size: 32px 24px;
+    display: block;
+    right: 4px
+}
+.seat-map .couple.vip .c-left,
+.seat-map .couple.vip .c-right {
+    background-image: url("/common/images/seat-vip.png")
+}
+.seat-map .couple.chosen,
+.seat-map .couple:hover {
+    cursor: pointer
+}
+.seat-map .couple.chosen .c-left,
+.seat-map .couple:hover .c-left,
+.seat-map .couple.chosen .c-right,
+.seat-map .couple:hover .c-right {
+    background-image: url("/common/images/seat-selected.png")
+}
+.seat-map .couple.unavailable .c-left,
+.seat-map .couple.unavailable .c-right {
+    background-image: url("/common/images/seat-unavailable.png")
+}
+.seat-map .couple.disabled .c-left,
+.seat-map .couple.other-seat .c-left,
+.seat-map .couple.disabled .c-right,
+.seat-map .couple.other-seat .c-right {
+    background-image: url(/common/images/seat-disable.png)
+}
+.seat-map .space {
+    width: 32px;
+    height: 35px
+}
+.seat-map .index {
+    width: 32px;
+    height: 35px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: lighter;
+    color: #484848;
+    padding: 15px 2px 0 3px
+}
+.seat-map .entrance {
+    width: 52px;
+    background: #f5f5f5 url("/common/images/entrance.png") center bottom no-repeat;
+    background-size: 32px 12px
+}
+.seat-map .aisle {
+    background-color: #f5f5f5
+}
+.seat-legend {
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 740px;
+    height: 40px;
+    color: #989898
+}
+.seat-legend>strong {
+    min-height: 40px;
+    float: left
+}
+.seat-legend>span {
+    float: left;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 18px;
+    padding: 2px 0 2px 24px;
+    margin-left: 8px;
+    font-size: 12px
+}
+.seat-legend .seat-legend-normal {
+    background-image: url(/common/images/seat.png)
+}
+.seat-legend .seat-legend-couple {
+    background-image: url(/common/images/seat-couple.png);
+    padding-left: 46px
+}
+.seat-legend .seat-legend-vip {
+    background-image: url(/common/images/seat-vip.png)
+}
+.seat-legend .seat-legend-selected {
+    background-image: url(/common/images/seat-selected.png)
+}
+.seat-legend .seat-legend-unavailable {
+    background-image: url(/common/images/seat-unavailable.png)
+}
+.seat-legend .seat-legend-disable {
+    background-image: url(/common/images/seat-disable.png)
+}
+.seat-legend .seat-legend-entrance {
+    background-image: url(/common/images/entrance.png);
+    background-size: auto 14px;
+    padding-left: 42px
+}
+.seat-legend .seat-legend-other-area {
+    background-image: url(/common/images/seat-other-area.png)
+}
+
+.main #seat-layout {
+    background: url("/common/images/screen.png") center 100px no-repeat;
+    background-size: 400px 15px;
+    text-align: center
+}

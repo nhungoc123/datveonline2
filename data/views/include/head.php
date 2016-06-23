@@ -31,6 +31,7 @@
     <!--=== Color Scheme, three colors are available red.css, orange.css and gray.css ===-->
     <link rel="stylesheet" id="scheme-source" href="<?php echo COMMON_DIR ?>css/schemes/gray.css" />
     
+    <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/checkout.css" />
     <!--=== Internet explorer fix ===-->
     <!-- [if lt IE 9]>
         <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

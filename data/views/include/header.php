@@ -17,13 +17,12 @@
                         <!-- Main Navigation menu Starts -->
                         <div class="collapse navbar-collapse navbar-responsive-collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="current"><a id="header" href="../#header">Home</a></li>
+                                <li id="header" class="current"><a href="../#header">Home</a></li>
                                 <li><a href="/#section-feature">Phim đang chiếu</a></li>
                                 <li><a href="/#section-upcoming">Phim sắp chiếu</a></li>
-                                
                                 <li><a href="/#section-services">Giá vé & Khuyến mãi</a></li>
-                                <li><a href="<?php echo HTTP_HOST;?>movie/">Danh sách phim</a></li>
-                                <li><a href="<?php echo HTTP_HOST;?>showtime/">Lịch chiếu</a></li>
+                                <li id="movie"><a href="<?php echo HTTP_HOST;?>movie/#section-list">Danh sách phim</a></li>
+                                <li id="showtime"><a href="<?php echo HTTP_HOST;?>showtime/#section-showtime">Lịch chiếu</a></li>
                                 <li><a href="/#section-contact">Liên hệ</a></li>
                             </ul>
                         </div>

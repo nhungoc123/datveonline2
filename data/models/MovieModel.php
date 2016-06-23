@@ -81,12 +81,15 @@ class MovieModel extends BaseModel
                     continue;
                 }
                 if ($cnt == 0) {
-                    $where .= " m.{$key} LIKE ?";
+                    $where .= " (m.{$key} LIKE ?";
                     $cnt++;
                 } else {
                     $where .= " OR m.{$key} LIKE ?";
                 }
                 $arrValue[] = sprintf("%%%s%%", $value);
+            }
+            if (strlen($where) > 0) {
+                $where .= ')';
             }
         }
         $where = $where ? $where : '1 = 1';
@@ -135,6 +138,7 @@ class MovieModel extends BaseModel
             $limit = ' LIMIT '.$limit;
             $where .= $limit;
         }
+        // var_dump($select, $from, $where, $arrValue);
         $arrData = $DB->select($select, $from, $where, $arrValue);
         return $arrData;
     }
