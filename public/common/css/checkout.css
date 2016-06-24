@@ -126,9 +126,9 @@
     width: 32px;
     height: 35px;
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: lighter;
-    color: #484848;
+    color: #F4F4F4;
     padding: 15px 2px 0 3px
 }
 .seat-map .entrance {

@@ -41,6 +41,8 @@ class SeatController extends BaseController
         $TicketModel = new TicketModel($showtime, $date);
         $arrTickets = $TicketModel->getTickets();
 
+        $arrTickets = Common::convIdToKey($arrTickets, 'seat_id');
+
         if (count($arrTickets) == 0) {
             // create tickets
             $TicketModel->createTickets($arrSeat, $showtime, $date);
@@ -52,11 +54,29 @@ class SeatController extends BaseController
         // var_dump($arrSeat, $arrTickets);
         // exit;
 
-        $arrRet = array(
-            'arrSeat' => $arrSeat,
-            'arrTickets' => $arrTickets,
+        $row = (int) ($Cinema['total_seat']/$Cinema['seat_in_row']);
+        $column = $Cinema['seat_in_row'];
+
+        $arrTicketPrice = array(
+            'NORMAL' => TICKET_NORMAL,
+            'VIP' => TICKET_VIP,
+            'NORMAL_NIGHT' => TICKET_NORMAL_NIGHT,
+            'VIP_NIGHT' => TICKET_VIP_NIGHT,
+            'WEEKEN' => TICKET_WEEKEN
+            'VIP_WEEKEN' => TICKET_VIP_WEEKEN
+            'WEEKEN_NIGHT' => TICKET_WEEKEN_NIGHT
+            'VIP_WEEKEN_NIGHT' => TICKET_VIP_WEEKEN_NIGHT
             );
 
+        $arrRet = array(
+            'Cinema' => $Cinema,
+            'arrSeat' => $arrSeat,
+            'arrTickets' => $arrTickets,
+            'row' => $row,
+            'column' => $column,
+            );
+// var_dump($arrRet);
+// die;
         $this->loadView($this->view_prefix . $this->mode, $arrRet);
     }
 }

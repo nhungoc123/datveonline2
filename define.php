@@ -21,12 +21,21 @@ define('COMMON_DIR', ROOT_URLPATH . 'common/');
 define('UPLOAD_DIR', ROOT_URLPATH . 'common/images/upload/');
 
 define('TICKET_NORMAL', 50);
-define('TICKET_VIP', 80);
+define('TICKET_VIP', 70);
 
-define('TICKET_WEEKEN', 80);
+define('TICKET_NORMAL_NIGHT', 60);
+define('TICKET_VIP_NIGHT', 80);
+
+define('TICKET_WEEKEN', 70);
 define('TICKET_VIP_WEEKEN', 100);
+
+define('TICKET_WEEKEN_NIGHT', 80);
+define('TICKET_VIP_WEEKEN_NIGHT', 110);
 
 define('TICKET_HAPPY', 50);
 
 // Max DAY of showtime, should 1 or 2 day.
 define('MAX_DAY', 2);
+
+define('VIP', 'VIP');
+define('NORMAL', 'NORMAL');

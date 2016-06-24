@@ -41,7 +41,7 @@ class SeatModel extends BaseModel
     {
         $where = 'cinema_id = ?';
         $arrValue = array($this->cinema_id);
-        return $this->DB->select('*', $this->table, $where, $arrValue);
+        return $this->DB->select('id, dtb_seats.row, dtb_seats.column, dtb_seats.type, cinema_id', $this->table, $where, $arrValue);
     }
 
     public function getMax($column = 'id')
