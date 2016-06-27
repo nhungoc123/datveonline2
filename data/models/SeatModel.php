@@ -79,7 +79,7 @@ class SeatModel extends BaseModel
         $total = 0;
 
         if ($nowDay == HAPPYDAY) {
-            $total = $price * count($arrTicketSeat);
+            $total = TICKET_NORMAL * count($arrTicketSeat);
         }
         foreach ($arrTicketSeat as $key => $value) {
             $price = TICKET_NORMAL;
