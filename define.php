@@ -39,3 +39,9 @@ define('MAX_DAY', 2);
 
 define('VIP', 'VIP');
 define('NORMAL', 'NORMAL');
+
+// 6H chiều
+define('NIGHT_TIME', 18);
+
+// CN: 0, T2: 1, T3: 2, T4: 3, T5: 4, T6: 5, T7: 6
+define('HAPPYDAY', 1);

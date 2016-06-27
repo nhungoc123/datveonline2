@@ -192,3 +192,80 @@
     background-size: 400px 15px;
     text-align: center
 }
+
+.payment {
+    padding: 20px 0 20px 0;
+}
+
+.payment h2 {
+    margin-bottom: 30px;
+}
+
+.confirmation {
+    display:none;
+    clear: both;
+    color: #e5e5e5;
+}
+
+.confirmation p span {
+    margin-right: 8px;
+}
+
+.payment-form {
+    color:#f9f9f9;
+}
+
+.payment-form .input-field {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 50px;
+}
+
+.textarea-field, .input-field {
+    border: 1px solid #111;
+}
+
+.payment-form .form-item {
+    width: 100%;
+    padding: 5px 15px;
+    border-color:#ffffff;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: none;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.payment-form .form-item::-webkit-input-placeholder {
+    color: #f9f9f9;
+}
+
+.payment-form .form-item:-moz-placeholder {
+    color: #f9f9f9;
+}
+
+.payment-form .form-item::-moz-placeholder {
+    color: #f9f9f9;
+}
+
+.payment-form .form-item:-ms-input-placeholder {
+    color: #f9f9f9;
+}
+
+.payment-form .subform {
+    margin-top: 20px;
+}
+
+.payment-form .form-item:hover, .payment-form .form-item:focus {
+    border-color:#ccc;
+    box-shadow: none;
+}
+
+.payment-form .price {
+    padding: 10px 0px 10px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+}

@@ -165,9 +165,9 @@
                         <p class="service-description justify">
                             Bạn rảnh rỗi vào cuối tuần và có ý định xem những phim boom tấn hấp dẫn, hãy đến với chúng tôi.
                             <br/>
-                            Ghế thường: <?php echo TICKET_WEEKEN?>k
+                            Ghế thường: <?php echo TICKET_NORMAL + 5?>k
                             <br/>
-                            Ghế VIP: <?php echo TICKET_VIP_WEEKEN?>k
+                            Ghế VIP: <?php echo TICKET_VIP + 10?>k
                             <br/>
                             Thời gian: thứ 7 - chủ nhật.
                         </p>
@@ -179,15 +179,15 @@
                 <div class="col-md-6 col-sm-6 service animated" data-animation="fadeInRight" data-animation-delay="700">
                     <span class="service-icon center"><i class="icon icon-basic-heart fa-3x"></i></span>
                     <div class="service-desc">
-                        <h4 class="service-title color-scheme">Couple</h4>
+                        <h4 class="service-title color-scheme">Night Out</h4>
                         <p class="service-description justify">
-                            Chương trình khuyến mãi dành cho các cặp đôi đang yêu nhau: cuối tuần vẫn tính như ngày thường.
+                            Đêm đến dân tràng cảm xúc với những thước phim đặc sắc.
                             <br/>
-                            Ghế thường: <?php echo TICKET_NORMAL?>k
+                            Ghế thường: <?php echo TICKET_NORMAL + 5?>k
                             <br/>
-                            Ghế VIP: <?php echo TICKET_VIP?>k
+                            Ghế VIP: <?php echo TICKET_VIP + 10?>k
                             <br/>
-                            Thời gian: thứ 7 - chủ nhật.
+                            Thời gian: tối thứ 3 - thứ 6.
                         </p>
                     </div>
                 </div>

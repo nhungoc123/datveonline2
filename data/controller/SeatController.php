@@ -3,6 +3,8 @@ require_once (CONTROLLER_DIR . 'BaseController.php');
 require_once (MODEL_DIR . 'SeatModel.php');
 require_once (MODEL_DIR . 'CinemaModel.php');
 require_once (MODEL_DIR . 'TicketModel.php');
+require_once (MODEL_DIR . 'MovieModel.php');
+require_once (MODEL_DIR . 'PerformanceModel.php');
 /**
 * 
 */
@@ -24,9 +26,21 @@ class SeatController extends BaseController
         $showtime = $_GET['st'];
         $date = $_GET['date'];
 
+        // get performance
+        $PerformanceModel = new PerformanceModel();
+        $arrPerformance = $PerformanceModel->getPerformance();
+        $arrPerformance = Common::convKeyValue($arrPerformance, 'id', 'performance_time');
+
         // get cinema
         $CinemaModel = new CinemaModel();
         $Cinema = $CinemaModel->getCinemas($showtime);
+
+        // movie
+        $MovieModel = new MovieModel();
+        $where = 'st.id = ?';
+        $arrValue = array(sprintf("%d", $showtime));
+        $Movie = $MovieModel->getMovie('all', null, null, $where, $arrValue);
+        $Movie[0]['date'] = $date;
 
         // get seat
         $SeatModel = new SeatModel($Cinema);
@@ -51,8 +65,6 @@ class SeatController extends BaseController
 
         // change id to index (key)
         $arrSeat = Common::convIdToKey($arrSeat);
-        // var_dump($arrSeat, $arrTickets);
-        // exit;
 
         $row = (int) ($Cinema['total_seat']/$Cinema['seat_in_row']);
         $column = $Cinema['seat_in_row'];
@@ -60,12 +72,12 @@ class SeatController extends BaseController
         $arrTicketPrice = array(
             'NORMAL' => TICKET_NORMAL,
             'VIP' => TICKET_VIP,
-            'NORMAL_NIGHT' => TICKET_NORMAL_NIGHT,
-            'VIP_NIGHT' => TICKET_VIP_NIGHT,
-            'WEEKEN' => TICKET_WEEKEN
-            'VIP_WEEKEN' => TICKET_VIP_WEEKEN
-            'WEEKEN_NIGHT' => TICKET_WEEKEN_NIGHT
-            'VIP_WEEKEN_NIGHT' => TICKET_VIP_WEEKEN_NIGHT
+            // 'NORMAL_NIGHT' => TICKET_NORMAL_NIGHT,
+            // 'VIP_NIGHT' => TICKET_VIP_NIGHT,
+            // 'WEEKEN' => TICKET_WEEKEN,
+            // 'VIP_WEEKEN' => TICKET_VIP_WEEKEN,
+            // 'WEEKEN_NIGHT' => TICKET_WEEKEN_NIGHT,
+            // 'VIP_WEEKEN_NIGHT' => TICKET_VIP_WEEKEN_NIGHT
             );
 
         $arrRet = array(
@@ -74,9 +86,10 @@ class SeatController extends BaseController
             'arrTickets' => $arrTickets,
             'row' => $row,
             'column' => $column,
+            'arrTicketPrice' => $arrTicketPrice,
+            'Movie' => $Movie[0],
+            'arrPerformance' => $arrPerformance
             );
-// var_dump($arrRet);
-// die;
         $this->loadView($this->view_prefix . $this->mode, $arrRet);
     }
 }

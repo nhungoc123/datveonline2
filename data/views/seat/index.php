@@ -11,28 +11,37 @@
 <!--=== List section Starts ===-->
 <div id="section-seat" class="feature-wrap">
   <div class="container seat">
-    <div class="col-md-12">
+    <div class="col-md-8">
       <div class="main">
         <div id="seat-layout">
           <div class="col-md-10 col-md-offset-1 center section-title">
             <h3 style="color: #F4F4F4"><?php echo $Cinema['name']?></h3>
           </div>
+          <div class="col-sm-12">
           <table class="seat-map small" id="seat-map">
             <tbody>
-              <tr>
+            <?php for ($index=1; $index <=$column ; $index++) { ?>
+              <?php if ($index == 1) { ?>
+                <tr>
                 <td class="index"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
+              <?php } ?>
+              <td class="aisle"></td>
+            <?php }?>
+              <td class="aisle"></td>
               </tr>
+                <!-- <td class="index"></td>
+                <td class="aisle"></td>
+                <td class="aisle"></td>
+                <td class="aisle"></td>
+                <td class="aisle"></td>
+                <td class="aisle"></td>
+                <td class="aisle"></td>
+                <td class="aisle"></td>
+                <td class="aisle"></td>
+                <td class="aisle"></td>
+                <td class="aisle"></td>
+                <td class="aisle"></td>
+              </tr> -->
 
               <?php foreach ($arrSeat as $key => $Seat) {?>
                 <?php if ($Seat['column'] == 1) { ?>
@@ -57,21 +66,67 @@
             </tbody>
           </table>
           </div>
+
+          </div>
         </div>
       </div>
 
+      <div class="col-sm-4 payment">
+            <div class="center section-title">
+                <div><h4><?php echo $Movie['name']?></h4></div>
+                <div class="right"><button class="btn btn-default disabled"><?php echo $arrPerformance[$Movie['performance_id']]?></button>
+                <button class="btn btn-default disabled"><?php echo $Movie['date']?></button>
+            </div>
+            </div>
+            <div class="confirmation">
+                <p><span class="fa fa-check"></span></p>
+            </div>
+
+            <div class="">
+              <h5>Thanh toán</h5>
+            </div>
+            <form method="post" action="?" class="payment-form" role="form" data-toggle="validator" name="form1" id="form1">
+                <input type="hidden" name="seat[]" value=""></input>
+              <div class="price">
+                <div class="seat-number">Số ghế: 0 ghế</div>
+                <div class="total-price">Thành tiền: 0 VND</div>
+              </div>
+              <div class="information">
+                <input id="name" class="input-field form-item field-name" type="text" name="customer[name]" placeholder="Name" required/>
+
+                <input id="email" class="input-field form-item field-email" type="email" required name="customer[email]" placeholder="Email" />
+
+                <input id="tel" class="input-field form-item field-tel" type="tel" required name="customer[tel]" placeholder="Tel" />
+              </div>
+              <div class="center paid">
+                <button type="submit" id="paid" class="fancy-button button-line button-white large zoom">
+                    Đặt vé
+                    <span class="icon">
+                        <i class="fa fa-paper-plane-o"></i>
+                    </span>
+                </button>
+              </div>
+            </form>
+
+          </div>
     </div>
   </div>
   <!--=== List section Ends ===-->
 
   <?php include VIEW_DIR . 'include/footer.php';?>
   <script type="text/javascript">
-  var _selected = [];
-  var _seat = <?php echo json_encode($arrSeat); ?>;
-  var _ticketPrice = <?php echo json_encode($arrTicketPrice); ?>;
-  var _now = date.getTime();
+    var _selected = [];
+    var _seat = <?php echo json_encode($arrSeat); ?>,
+        _ticketPrice = <?php echo json_encode($arrTicketPrice); ?>;
+    var date = new Date(), 
+        _nowTime = date.getTime(), 
+        _nowDay = date.getDay(), 
+        night = new Date(date.setHours(<?php echo NIGHT_TIME?>, 0, 0, 0));
+    var isWeeken = (_nowDay == 0) || (_nowDay == 6), 
+        isNight = (_nowTime >= night.getTime()),
+        isHappyDay = (_nowDay == <?php echo HAPPYDAY?>);
+    var _total = 0;
     $(function() {
-      console.log(_ticketPrice);
       $('#header').click(function() {
         window.location.href = "/#header";
       });
@@ -82,32 +137,61 @@
         if ($(this).hasClass('chosen')) {
           $(this).removeClass('chosen');
           if (tid != null && sid != null) {
-            console.log(_selected);
             _selected = $.grep(_selected, function(value) {
               return value !== tid;
             });
-            console.log(_selected);
+            _total = showChosen(sid, 'SUB');
+
+            showTotal(_selected.length, _total);
           }
         } else {
           $(this).addClass('chosen');
           if (tid != null && sid != null) {
-            console.log(tid);
             _selected.push(tid);
-            console.log(_selected);
-            showChosen(sid);
+            _total = showChosen(sid, 'ADD');
+
+            showTotal(_selected.length, _total);
           }
         }
       });
 
-      function showChosen(sid)
-      {
+      function showChosen(sid, _type = 'ADD') {
         if (_seat[sid] != null) {
           var _chosen = _seat[sid];
-          if (_chosen.type == '<?php echo VIP?>') {
-            
+          var ticketPrice = calcPrice(_chosen.type);
+          if (_type == 'ADD') {
+            _total = parseInt(_total) + parseInt(ticketPrice);
+          } else if (_total >= ticketPrice) {
+            _total = parseInt(_total) - parseInt(ticketPrice);
           }
-          console.log(_seat[sid]);
         }
+        return _total;
+      }
+
+      function calcPrice(_type) {
+        var price = _ticketPrice['NORMAL'] || 50;
+        if (!isHappyDay) {
+          if (_type == '<?php echo VIP?>') {
+            price = _ticketPrice['VIP'] || 70;
+          }
+
+          if (isNight) {
+            price = parseInt(price) + parseInt(5);
+          }
+          if (isWeeken) {
+            price = parseInt(price) + parseInt(10);
+          }
+        }
+        
+        return price;
+      }
+
+      function showTotal(_count, _total) {
+        var html = '<div class="seat-number">Số ghế: '+_count;
+        html += ' ghế</div>';
+        html += '<div class="total-price">Thành tiền: '+_total;
+        html += 'K VND</div>';
+        $('.price').html(html);
       }
     });
   </script>

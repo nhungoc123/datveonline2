@@ -1167,3 +1167,7 @@ margin-right: 8px;
     background: #303636;
     border-color: #606c6c;
 }
+
+.sub-title {
+	border: 1px solid;
+}

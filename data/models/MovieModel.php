@@ -70,7 +70,7 @@ class MovieModel extends BaseModel
         return $from;
     }
 
-    public function buildSearch($arrSearch)
+    public function buildSearch($arrSearch, $table = 'm')
     {
         $where = '';
         $arrValue = array();
@@ -81,10 +81,10 @@ class MovieModel extends BaseModel
                     continue;
                 }
                 if ($cnt == 0) {
-                    $where .= " (m.{$key} LIKE ?";
+                    $where .= " ({$table}.{$key} LIKE ?";
                     $cnt++;
                 } else {
-                    $where .= " OR m.{$key} LIKE ?";
+                    $where .= " OR {$table}.{$key} LIKE ?";
                 }
                 $arrValue[] = sprintf("%%%s%%", $value);
             }
