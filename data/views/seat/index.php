@@ -49,7 +49,7 @@
                   <td class="index"><?php echo $lineChar = chr($Seat['row']+64);?>
                 <?php } ?>
                   
-                    <td class="seat <?php if ($Seat['type'] == VIP) echo "vip";?> <?php if ($arrTickets[$key]['status']) echo "unavailable";?>" id="seat-<?php echo $lineChar.sprintf('%02d', $Seat['column']);?>" data-tid="<?php echo $arrTickets[$key]['id'] ?>" data-sid="<?php echo $key; ?>">
+                    <td class="seat <?php if ($Seat['type'] == VIP) echo "vip";?> <?php if ($arrTickets[$key]['status']) echo "unavailable";?>" id="seat-<?php echo $lineChar.sprintf('%02d', $Seat['column']);?>" data-tid='<?php echo $arrTickets[$key]["id"]; ?>' data-sid="<?php echo $key; ?>">
                     <?php echo sprintf('%02d', $Seat['column']);?>
                     </td>
 
@@ -85,18 +85,23 @@
             <div class="">
               <h5>Thanh toán</h5>
             </div>
-            <form method="post" action="?" class="payment-form" role="form" data-toggle="validator" name="form1" id="form1">
-                <input type="hidden" name="seat[]" value=""></input>
+            <form method="post" action="" class="payment-form" role="form" data-toggle="validator" name="form1" id="form1">
               <div class="price">
                 <div class="seat-number">Số ghế: 0 ghế</div>
                 <div class="total-price">Thành tiền: 0 VND</div>
               </div>
               <div class="information">
-                <input id="name" class="input-field form-item field-name" type="text" name="customer[name]" placeholder="Name" required/>
+                <p style="color: red; margin: 0px">
+                <?php 
+                foreach ($arrError as $key => $value)
+                    if (isset($arrError[$key])) echo($value.'<br/>');
+                ?>
+                <p>
+                <input id="name" class="input-field form-item field-name" type="text" name="customer[name]" placeholder="Name" value="<?php echo $arrForm['name'];?>" required/>
 
-                <input id="email" class="input-field form-item field-email" type="email" required name="customer[email]" placeholder="Email" />
+                <input id="email" class="input-field form-item field-email" type="email" required name="customer[email]" placeholder="Email" value="<?php echo $arrForm['email'];?>"/>
 
-                <input id="tel" class="input-field form-item field-tel" type="tel" required name="customer[tel]" placeholder="Tel" />
+                <input id="tel" class="input-field form-item field-tel" type="tel" required name="customer[tel]" placeholder="Tel" value="<?php echo $arrForm['tel'];?>"/>
               </div>
               <div class="center paid">
                 <button type="submit" id="paid" class="fancy-button button-line button-white large zoom">
@@ -131,7 +136,11 @@
         window.location.href = "/#header";
       });
 
+
       $('.seat').click(function(e) {
+        if ($(this).hasClass('unavailable')) {
+          return false;
+        }
           var tid = $(this).data('tid');
           var sid = $(this).data('sid');
         if ($(this).hasClass('chosen')) {
@@ -153,6 +162,23 @@
             showTotal(_selected.length, _total);
           }
         }
+        console.log(_selected);
+      });
+
+
+      $('#form1').submit(function(_e) {
+        var form = $(this);
+        if (_selected.length <= 0) {
+          alert('Xin vui lòng chọn ghế!!!');
+          return false;
+        }
+
+        $.each(_selected, function(key, _chosen) {
+          var html = '<input type="hidden" name="seat[]" value="'+_chosen;
+          html += '" />';
+          form.append(html);
+        });
+        return true;
       });
 
       function showChosen(sid, _type = 'ADD') {
@@ -193,6 +219,7 @@
         html += 'K VND</div>';
         $('.price').html(html);
       }
+
     });
   </script>
 

@@ -5,6 +5,8 @@ require_once (MODEL_DIR . 'CinemaModel.php');
 require_once (MODEL_DIR . 'TicketModel.php');
 require_once (MODEL_DIR . 'MovieModel.php');
 require_once (MODEL_DIR . 'PerformanceModel.php');
+require_once (MODEL_DIR . 'CustomerModel.php');
+require_once (MODEL_DIR . 'ShowtimeModel.php');
 /**
 * 
 */
@@ -23,8 +25,12 @@ class SeatController extends BaseController
             $this->sendRedirect(HTTP_HOST . 'showtime/#section-showtime');
         }
 
-        $showtime = $_GET['st'];
-        $date = $_GET['date'];
+        $showtime = Common::xssafe($_GET['st']);
+        $ShowtimeModel = new ShowtimeModel();
+        if (!$ShowtimeModel->existCheck($showtime)) {
+            $this->sendRedirect(HTTP_HOST . 'showtime/#section-showtime');
+        }
+        $date = Common::xssafe($_GET['date']);
 
         // get performance
         $PerformanceModel = new PerformanceModel();
@@ -50,12 +56,12 @@ class SeatController extends BaseController
             $SeatModel->createSeat();
             $arrSeat = $SeatModel->getSeat();
         }
+        // change id to index (key)
+        $arrSeat = Common::convIdToKey($arrSeat);
 
         // get tickets
         $TicketModel = new TicketModel($showtime, $date);
         $arrTickets = $TicketModel->getTickets();
-
-        $arrTickets = Common::convIdToKey($arrTickets, 'seat_id');
 
         if (count($arrTickets) == 0) {
             // create tickets
@@ -63,8 +69,60 @@ class SeatController extends BaseController
             $arrTickets = $TicketModel->getTickets();
         }
 
-        // change id to index (key)
-        $arrSeat = Common::convIdToKey($arrSeat);
+        // change seat_id to index (key)
+        $arrTickets = Common::convIdToKey($arrTickets, 'seat_id');
+
+        $arrError = array();
+        // get init param
+        $reflector = new ReflectionClass('CustomerModel');
+        $arrForm = $reflector->getDefaultProperties();
+
+        if (!empty($_POST['customer']) && !empty($_POST['seat'])) {
+            $Customer = new CustomerModel();
+            
+            // thông tin khách hàng
+            $arrCustomer = $_POST['customer'];
+            $Customer->setParam($arrCustomer);
+            // kiểm tra lỗi
+            $Customer->checkError();
+            $arrError = $Customer->arrError;
+
+            if (count($arrError) == 0) {
+                //check ticket
+                $checkTickets = Common::convIdToKey($arrTickets, 'id');
+                $arrSelect = Common::xssafe($_POST['seat']);
+                $url = HTTP_HOST . 'seat/?st='.$showtime .'&date='.$date;
+                $arrTicketSelected = array();
+                foreach ($arrSelect as $value) {
+                    if (!array_key_exists($value, $checkTickets)) {
+                        echo '<script type="text/javascript">alert("Ghế bạn chọn không phù hợp, xin hãy chọn lại");
+                        window.location.href="'.$url.'";</script>';
+                        return;
+                    }
+                    if ($checkTickets[$value]['status']) {
+                        echo '<script type="text/javascript">alert("Ghế bạn chọn đã hết thời gian chờ, xin hãy chọn ghế khác");
+                        window.location.href="'.$url.'";</script>';
+                        return;
+                    }
+                    // key: ticket id, value: seat
+                    $arrTicketSelected[$value] = $arrSeat[$checkTickets[$value]['seat_id']];
+                }
+
+                list($arrTicketPrice, $totalPayment) = $SeatModel->calcPrice($arrTicketSelected);
+                $arrCustomer['payment'] = $totalPayment;
+                $customerId = $Customer->save(Common::xssafe($arrCustomer));
+
+                // đặt vé
+                $TicketModel->bookTickets($arrTicketPrice, $customerId);
+                echo '<script type="text/javascript">alert("Bạn đã đặt vé thành công!!! Bạn có thể tiếp tục đặt vé!!!");
+                    window.location.href="'.$url.'";</script>';
+                return;
+            } else {
+                // return value to view when error
+                $arrErrorVal = $Customer->getArray($arrForm);
+                $arrForm = array_merge($arrForm, $arrErrorVal);
+             }
+        }
 
         $row = (int) ($Cinema['total_seat']/$Cinema['seat_in_row']);
         $column = $Cinema['seat_in_row'];
@@ -72,12 +130,6 @@ class SeatController extends BaseController
         $arrTicketPrice = array(
             'NORMAL' => TICKET_NORMAL,
             'VIP' => TICKET_VIP,
-            // 'NORMAL_NIGHT' => TICKET_NORMAL_NIGHT,
-            // 'VIP_NIGHT' => TICKET_VIP_NIGHT,
-            // 'WEEKEN' => TICKET_WEEKEN,
-            // 'VIP_WEEKEN' => TICKET_VIP_WEEKEN,
-            // 'WEEKEN_NIGHT' => TICKET_WEEKEN_NIGHT,
-            // 'VIP_WEEKEN_NIGHT' => TICKET_VIP_WEEKEN_NIGHT
             );
 
         $arrRet = array(
@@ -88,7 +140,9 @@ class SeatController extends BaseController
             'column' => $column,
             'arrTicketPrice' => $arrTicketPrice,
             'Movie' => $Movie[0],
-            'arrPerformance' => $arrPerformance
+            'arrPerformance' => $arrPerformance,
+            'arrForm' => $arrForm,
+            'arrError' => $arrError,
             );
         $this->loadView($this->view_prefix . $this->mode, $arrRet);
     }

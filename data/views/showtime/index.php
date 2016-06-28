@@ -180,14 +180,15 @@
 			            		<div class="panel-heading"><?php echo $v['name'];?></div>
 								<div class="panel-body">
 									<ul class="list-inline">
-									<?php foreach ($arrShowtime[$key][$k] as $showtime) { ?>
+
+									<?php foreach ($arrShowtime[$key][$k] as $showtime => $performance) { ?>
                     <?php $nowtime = time();
                       $disable = '';
-                    if ($nowtime >= strtotime($arrPerformance[$showtime])) {
+                    if ($nowtime >= strtotime($arrPerformance[$performance])) {
                       $disable = 'disabled';
                     }
                     ?>
-									<li ><a href="/seat/?st=<?php echo $v['showtimes_id'];?>&date=<?php echo $key;?>" class="btn btn-default <?php echo $disable ?>"><?php echo $arrPerformance[$showtime] ?></a></li>
+									<li ><a href="/seat/?st=<?php echo $showtime;?>&date=<?php echo $key;?>" class="btn btn-default <?php echo $disable ?>"><?php echo $arrPerformance[$performance] ?></a></li>
 									<?php } ?>
 									</ul>
 								</div>

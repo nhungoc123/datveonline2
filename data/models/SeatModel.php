@@ -69,4 +69,41 @@ class SeatModel extends BaseModel
             }
         }
     }
+
+    public function calcPrice($arrTicketSeat)
+    {
+        $nowTime = time(); // timestamp
+        // CN: 0, T2: 1, T3: 2, T4: 3, T5: 4, T6: 5, T7: 6
+        $nowDay = date('w');
+        $arrRet = array();
+        $total = 0;
+
+        if ($nowDay == HAPPYDAY) {
+            $total = $price * count($arrTicketSeat);
+        }
+        foreach ($arrTicketSeat as $key => $value) {
+            $price = TICKET_NORMAL;
+            if ($nowDay != HAPPYDAY) {
+                $isWeeken = ($nowDay == 0) || ($nowDay == 6);
+                $night = strtotime(NIGHT_TIME.':00');
+                $isNight = ($nowTime >= $night);
+                if ($value['type'] == VIP) {
+                    $price = TICKET_VIP;
+                }
+
+                if ($isNight) {
+                    $price += 5;
+                }
+
+                if ($isWeeken) {
+                    $price += 10;
+                }
+
+                $total += $price;
+            }
+            $arrRet[$key] = $price;
+        }
+
+        return array($arrRet, $total);
+    }
 }

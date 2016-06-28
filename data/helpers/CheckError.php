@@ -18,9 +18,9 @@ class CheckError
     public function checkLength(&$arrError, $title, $string, $min_num, $max_num)
     {
         if (!empty($min_num) && strlen($string) < $min_num) {
-            $arrError["$title"] = "$title is too short, minimum is $min_num characters.";
+            $arrError["$title"] = "$title quá ngắn, tối thiếu $min_num ký tự.";
         } elseif (!empty($max_num) && strlen($string) > $max_num) {
-            $arrError["$title"] = "$title is too long, maximum is $max_num characters.";
+            $arrError["$title"] = "$title quá dài, tối đa $max_num ký tự.";
         }
     }
     /**
@@ -46,7 +46,7 @@ class CheckError
     {
         $string = trim($string);
         if (empty($string)) {
-            $arrError["$title"] = "$title is empty.";
+            $arrError["$title"] = "$title không được rỗng.";
         }
     }
     /**
@@ -75,6 +75,7 @@ class CheckError
             $arrError["$title"] = "$title does not accept negative number.";
         }
     }
+
     /**
      * check Number function
      *
@@ -85,7 +86,21 @@ class CheckError
     public function checkNumber(&$arrError, $title, $val)
     {
         if (!is_numeric($val)) {
-            $arrError["$title"] = "$title only type numbers.";
+            $arrError["$title"] = "$title chỉ chấp nhận số.";
+        }
+    }
+
+    /**
+     * check email function
+     *
+     * @param array $arrError
+     * @param string $title
+     * @param string $string
+     */
+    public function checkEmail(&$arrError, $title, $val)
+    {
+        if (!filter_var($val, FILTER_VALIDATE_EMAIL)) {
+            $arrError["$title"] = "$title không đúng định dạng.";
         }
     }
 }

@@ -45,7 +45,7 @@ class MovieModel extends BaseModel
         return 'dtb_showtimes st 
             join dtb_movie_cinemas mc on st.movie_cinema_id = mc.id 
             join dtb_movies m on m.id = mc.movie_id
-            left join dtb_rate r on m.id = r.movie_id and mc.cinema_id = r.cinema_id';
+            left join dtb_rate r on m.id = r.movie_id';
     }
 
     private function buildWhereMovieList()
@@ -162,7 +162,7 @@ class MovieModel extends BaseModel
             foreach ($arrData as $key => $movie) {
                 if (strtotime($movie['start_date']) <= strtotime($date) &&
                     strtotime($movie['end_date']) >= strtotime($date)) {
-                    $arrTmp[$date][$movie['id']][] = $movie['performance_id'];
+                    $arrTmp[$date][$movie['id']][$movie['showtimes_id']] = $movie['performance_id'];
                 }
             }
         }

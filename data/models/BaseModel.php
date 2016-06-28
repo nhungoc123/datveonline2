@@ -25,4 +25,37 @@ abstract class BaseModel
             $this->{$key} = Common::xssafe($val);
         }
     }
+
+    /**
+     * 
+     * @param unknown $keyname
+     * @param unknown $value
+     */
+    public function setValue($keyname, $value)
+    {
+        $this->{$keyname} = Common::trimParam($value);
+    }
+    /**
+     * 
+     * @param unknown $keyname
+     * @return Ambigous <unknown, string>
+     */
+    public function getValue($keyname)
+    {
+        return Common::xssafe(Common::trimParam($this->{$keyname}));
+    }
+
+    /**
+     * getArray function by array keyname
+     * @param   array   $arrData with keyname
+     * @return  array   array keyname => $value
+     */
+    public function getArray($arrData)
+    {
+        $arrVal = array();
+        foreach ($arrData as $key => $val) {
+            $arrVal[$key] = Common::xssafe($this->{$key});
+        }
+        return $arrVal;
+    }
 }

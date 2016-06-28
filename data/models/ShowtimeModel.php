@@ -12,6 +12,8 @@ class ShowtimeModel extends BaseModel
 
     private $arrError;
 
+    private $table = 'dtb_showtimes';
+
     /**
      * init param
      */
@@ -26,6 +28,12 @@ class ShowtimeModel extends BaseModel
     public function getShowtime()
     {
         $DB = new DB();
-        return $DB->select('*', 'dtb_showtimes');
+        return $DB->select('*', $this->table);
+    }
+
+    public function existCheck($showtime_id)
+    {
+        $DB = new DB();
+        return count($DB->select('id', $this->table, 'id = ?', array($showtime_id))) == 1;
     }
 }

@@ -51,4 +51,16 @@ class TicketModel extends BaseModel
             $this->DB->insert($this->table, $arrTmp);
         }
     }
+
+    public function bookTickets(array $arrTicket, $customer_id)
+    {
+        $arrUpdate['status'] = 'BOOKED';
+        $arrUpdate['updated_at'] = 'now()';
+        $arrUpdate['customer_id'] = $customer_id;
+        $where = 'id = ?';
+        foreach ($arrTicket as $key => $value) {
+            $arrUpdate['price'] = $value;
+            $this->DB->update($this->table, $arrUpdate, $where, array($key));
+        }
+    }
 }

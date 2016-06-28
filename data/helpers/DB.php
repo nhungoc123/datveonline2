@@ -118,7 +118,7 @@ class DB
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-        public function selectOne($cols, $from, $where = '', $arrWhereVal = array())
+    public function selectOne($cols, $from, $where = '', $arrWhereVal = array())
     {
         $sqlse = "SELECT $cols";
         $sqlse .= " FROM $from";
