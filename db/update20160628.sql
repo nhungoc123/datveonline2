@@ -14,5 +14,5 @@ ALTER TABLE `dtb_rate`
     ADD PRIMARY KEY (`id`),
     DROP FOREIGN KEY `dtb_rate_ibfk_3`,
     DROP FOREIGN KEY `dtb_rate_ibfk_2`,
-    DROP FOREIGN KEY `dtb_rate_ibfk_1`;
-    ADD COLUMN `movie_id` INT(11) NOT NULL AFTER `id`,
+    DROP FOREIGN KEY `dtb_rate_ibfk_1`,
+    ADD COLUMN `movie_id` INT(11) NOT NULL AFTER `id`;
