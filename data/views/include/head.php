@@ -8,8 +8,11 @@
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/bootstrap.css" />
+    <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/bootstrap.css" rel="stylesheet"/>
+        <!-- <link rel="stylesheet"  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
+
     <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/font-awesome.min.css" />
+
     <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/linea-icon.css" />
     <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/fancy-buttons.css" />
     
@@ -24,12 +27,16 @@
     <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/baraja.css" />
     <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/jquery.bxslider.css" />
     
+    <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
+
     <!--=== Main Stylesheets ===-->
     <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/style.css" />
-    <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/responsive.css" />
+<link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/responsive.css" />
     
     <!--=== Color Scheme, three colors are available red.css, orange.css and gray.css ===-->
     <link rel="stylesheet" id="scheme-source" href="<?php echo COMMON_DIR ?>css/schemes/gray.css" />
+
+
     
     <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/checkout.css" />
     <!--=== Internet explorer fix ===-->

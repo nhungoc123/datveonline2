@@ -52,9 +52,10 @@
                             </h3>
                         </a>
                     </div>
-                    <div class="rate">
+                    <div class="col-sm-12 rating">
                         <div class="col-sm-9" style="padding-left: 0px;">
-                            Đánh giá: <?php echo ($movie['avg_rate']) ? $movie['avg_rate'] : 5; ?> / 5
+                            <input class="rating-disabled" value="<?php echo ($movie['avg_rate']) ? $movie['avg_rate'] : 5; ?>" type="number" min=0 max=5 step=0.5 data-size="ss"/>
+                            <span class="rate"><?php echo ($movie['avg_rate']) ? $movie['avg_rate'] : 5; ?> trên <?php echo $movie['rate_times']?></span> lượt đánh giá
                         </div>
                         <div class="col-sm-3" style="padding-right: 0px;">
                             <a href="<?php echo HTTP_HOST;?>showtime/" class="btn btn-primary">Xem lịch chiếu</a>
@@ -119,17 +120,25 @@ $(function() {
                     html += convertNullToString(value.actor) + '</div></div>';
                     html += '<div class="row"><div class="w29 left">Thời lượng</div><div class="w70 right">';
                     html += convertNullToString(value.durations) + ' phút</div></div>';
-                    html += '<div class="row"><div class="w29 left">Đánh giá</div><div class="w70 right">';
+                    html += '<div class="row"><div class="w29 left">Đánh giá</div><div class="w70 right"><span class="rate">';
 
-                    var avg_rate = '5 / 5';
+                    var avg_rate = '5';
                     if (value.avg_rate != null) {
-                        avg_rate = value.avg_rate + ' / 5';
+                        avg_rate = value.avg_rate ;
                     }
+                    avg_rate += ' trên ' + value.rate_times + '</span> lượt đánh giá';
+
                     html += avg_rate + '</div></div></div>';
 
                     html += '<div class="col-sm-4"><div class="row">' + trumcate(value.description) + '</div></div>';
                     $('.movie-detail').html(html);
                     $('.modal-title').text(value.name);
+
+                    $('#rating').val(value.avg_rate);
+                    $('#rating').attr('data-id', value.id);
+                    $('#rating').rating('refresh', {
+                        showClear:true
+                    });
                 });
             }
         });
@@ -137,6 +146,69 @@ $(function() {
 
     $('#myModal').on('hidden.bs.modal', function () {
         $('iframe.embed-responsive-item').attr('src', '');
+    });
+
+    $(".rating-disabled").rating({
+        clearButton: '',
+        disabled: true,
+        starCaptions: function(val) {
+            if (val < 3) {
+                return val;
+            } else {
+                return 'Hay';
+            }
+        },
+        starCaptionClasses: function(val) {
+            if (val < 3) {
+                return 'label label-danger';
+            } else {
+                return 'label label-success';
+            }
+        },
+    });
+
+    $("#rating").rating({
+        clearButton: '',
+        starCaptions: function(val) {
+            if (val < 3) {
+                return val;
+            } else {
+                return 'Hay';
+            }
+        },
+        starCaptionClasses: function(val) {
+            if (val < 3) {
+                return 'label label-danger';
+            } else {
+                return 'label label-success';
+            }
+        },
+        hoverOnClear: false
+    });
+
+    $('#rating').on('change', function(e) {
+        var id = $(this).data('id');
+        var url = "<?php echo HTTP_HOST . 'movie/rate?id='?>" + id;
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {id: id, rate: $(this).val()},
+        }).done(function(data) {
+            var data = jQuery.parseJSON(data);
+            if (data.success == true) {
+                var rate = data.rate;
+
+                // $('#rating').val(rate.avg_rate);
+                // $('#rating').rating('refresh', {
+                //     showClear:true
+                // });
+
+                $('.rate').text(rate.avg_rate + ' trên ' + rate.rate_times);
+            } else {
+                alert(data.msg);
+                return false;
+            }
+        });
     });
 });
 </script>

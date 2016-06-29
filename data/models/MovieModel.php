@@ -16,6 +16,8 @@ class MovieModel extends BaseModel
     private $trailer;
     private $image;
 
+    private $table = 'dtb_movies';
+
     private $arrError;
 
     /**
@@ -37,7 +39,7 @@ class MovieModel extends BaseModel
 
     private function buildSelect()
     {
-        return 'DISTINCT m.*, DATE_FORMAT(mc.start_date, \'%d-%m-%Y\') as start_date, DATE_FORMAT(mc.end_date, \'%d-%m-%Y\') as end_date, TRUNCATE(AVG(r.rate), 1) AS avg_rate, st.performance_id, st.id as showtimes_id';
+        return 'DISTINCT m.*, DATE_FORMAT(mc.start_date, \'%d-%m-%Y\') as start_date, DATE_FORMAT(mc.end_date, \'%d-%m-%Y\') as end_date, TRUNCATE(AVG(r.rate), 1) AS avg_rate, max(rate_times) as rate_times, st.performance_id, st.id as showtimes_id';
     }
 
     private function buildFrom()
@@ -167,5 +169,11 @@ class MovieModel extends BaseModel
             }
         }
         return $arrTmp;
+    }
+
+    public function existCheck($movie_id)
+    {
+        $DB = new DB();
+        return $DB->existCheck($this->table, $movie_id);
     }
 }

@@ -49,6 +49,8 @@
 <script type="text/javascript" src="<?php echo COMMON_DIR ?>js/jquery.appear.js"></script>
 <script type="text/javascript" src="<?php echo COMMON_DIR ?>js/jquery.fitvids.js"></script>
 
+<script type="text/javascript" src="<?php echo COMMON_DIR ?>js/rating/star-rating.js"></script>
+
 <!--==== Custom Script files ====-->
 <script type="text/javascript" src="<?php echo COMMON_DIR ?>js/custom.js"></script>
 

@@ -188,7 +188,7 @@
                       $disable = 'disabled';
                     }
                     ?>
-									<li ><a href="/seat/?st=<?php echo $showtime;?>&date=<?php echo $key;?>" class="btn btn-default <?php echo $disable ?>"><?php echo $arrPerformance[$performance] ?></a></li>
+									<li ><a href="<?php echo HTTP_HOST?>/seat/?st=<?php echo $showtime;?>&date=<?php echo $key;?>" class="btn btn-default <?php echo $disable ?>"><?php echo $arrPerformance[$performance] ?></a></li>
 									<?php } ?>
 									</ul>
 								</div>

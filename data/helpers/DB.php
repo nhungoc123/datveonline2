@@ -152,4 +152,9 @@ class DB
     {
         $this->conn = null;
     }
+
+    public function existCheck($table, $value = 1, $key = 'id')
+    {
+        return count($this->select($key, $table, "$key = ?", array($value))) == 1;
+    }
 }

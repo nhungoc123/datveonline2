@@ -12,6 +12,9 @@
             <iframe class="embed-responsive-item" src="" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="clearfix"></div>
+        
+        <input id="rating" value="" type="number" min=0 max=5 step=0.5 data-size="ss" >
+
         <div class="row movie-detail">
             <!-- detail here -->
         </div>
