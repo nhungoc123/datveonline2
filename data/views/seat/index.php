@@ -29,19 +29,6 @@
             <?php }?>
               <td class="aisle"></td>
               </tr>
-                <!-- <td class="index"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-                <td class="aisle"></td>
-              </tr> -->
 
               <?php foreach ($arrSeat as $key => $Seat) {?>
                 <?php if ($Seat['column'] == 1) { ?>

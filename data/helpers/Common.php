@@ -14,10 +14,10 @@ class Common
     public static function xssafe($data, $encoding='UTF-8')
     {
         if (!is_array($data)) {
-            return htmlspecialchars($data, ENT_QUOTES | ENT_HTML401, $encoding);
+            return htmlspecialchars(self::trimParam($data), ENT_QUOTES | ENT_HTML401, $encoding);
         } elseif (count($data) > 0) {
             foreach ($data as $key => $val) {
-                $data[$key] = htmlspecialchars($val, ENT_QUOTES | ENT_HTML401, $encoding);
+                $data[$key] = htmlspecialchars(self::trimParam($val), ENT_QUOTES | ENT_HTML401, $encoding);
             }
         }
         return $data;
@@ -74,5 +74,33 @@ class Common
             $arrRet[$v[$key]] = $v;
         }
         return $arrRet;
+    }
+
+    public function sendMail($to, $subject, $msg, $add_header = '', $add_msg = '')
+    {
+
+        $headers   = array();
+        $headers[] = "MIME-Version: 1.0";
+        $headers[] = "Content-type: text/plain; charset=UTF-8";
+        $from = MAIL_FROM;
+        $name = WEBNAME;
+        $headers[] = "From: $name <$from>";
+
+        $bcc = MAIL_BCC;
+        $bcc_name = explode('@', $bcc)[0];
+        $headers[] = "Bcc: $name <$bcc>";
+        
+        $reply = MAIL_REPLY;
+        $reply_name = explode('@', $reply)[0];
+
+        $headers[] = "Reply-To: $name <$reply>";
+        $headers[] = "Subject: {$subject}";
+
+        if (strlen($add_header) > 0) {
+            $headers[] = $add_header;
+        }
+
+        // Mail it
+        return mail($to, $subject, $msg, implode("\r\n", $headers), $add_msg);
     }
 }

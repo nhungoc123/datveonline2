@@ -252,60 +252,60 @@ $(document).ready(function() {
 /* ----------------------------- 
 MailCimp Plugin Script 
 ----------------------------- */
-$(document).ready(function() {
-	'use strict';
-	$('#subscription-form').ajaxChimp({
-		callback: mailchimpCallback,
-		url: 'YOUR_URL' /* Replace it with your custom URL inside '' */
-	});
+// $(document).ready(function() {
+// 	'use strict';
+// 	$('#subscription-form').ajaxChimp({
+// 		callback: mailchimpCallback,
+// 		url: 'YOUR_URL' /* Replace it with your custom URL inside '' */
+// 	});
 	
-	function mailchimpCallback(resp) {
-		 if(resp.result === 'success') {
-			$('.subscription-success')
-				.html(resp.msg)
-				.delay(500)
-				.fadeIn(1000);
+// 	function mailchimpCallback(resp) {
+// 		 if(resp.result === 'success') {
+// 			$('.subscription-success')
+// 				.html(resp.msg)
+// 				.delay(500)
+// 				.fadeIn(1000);
 
-			$('.subscription-success').fadeOut(8000);
+// 			$('.subscription-success').fadeOut(8000);
 			
-		} else if(resp.result === 'error') {
-			$('.subscription-failed')
-				.html(resp.msg)
-				.delay(500)
-				.fadeIn(1000);
+// 		} else if(resp.result === 'error') {
+// 			$('.subscription-failed')
+// 				.html(resp.msg)
+// 				.delay(500)
+// 				.fadeIn(1000);
 				
-			$('.subscription-failed').fadeOut(5000);
-		}
-		$('#subscription-form .input-email').val('');
-	};
-});
+// 			$('.subscription-failed').fadeOut(5000);
+// 		}
+// 		$('#subscription-form .input-email').val('');
+// 	};
+// });
 
 			
 
 /* ----------------------------- 
 Contact form
 ----------------------------- */			
-$(document).ready(function() {
-	'use strict';
-	$('form.contact-form').on('submit', function(e) {
-		$.post('contact/contact.php', $(this).serialize(), function(response) {
-			if ($('.confirmation p').html() != "") {
-				$('.confirmation p').replaceWith('<p><span class="fa fa-check"></span></p>');
-			}
-			$('.confirmation p').append(response).parent('.confirmation').show();
-			$('html, body').animate({
-				scrollTop: $('#section-contact').offset().top
-				},{duration:800,queue:true});
-			$('.form-item').val('');
-			setTimeout(function() {
-				$('.confirmation').hide();
-			}, 8000);
-		});
-		// disable default action
-		e.preventDefault();
-	});
+// $(document).ready(function() {
+// 	'use strict';
+// 	$('form.contact-form').on('submit', function(e) {
+// 		$.post('contact/contact.php', $(this).serialize(), function(response) {
+// 			if ($('.confirmation p').html() != "") {
+// 				$('.confirmation p').replaceWith('<p><span class="fa fa-check"></span></p>');
+// 			}
+// 			$('.confirmation p').append(response).parent('.confirmation').show();
+// 			$('html, body').animate({
+// 				scrollTop: $('#section-contact').offset().top
+// 				},{duration:800,queue:true});
+// 			$('.form-item').val('');
+// 			setTimeout(function() {
+// 				$('.confirmation').hide();
+// 			}, 8000);
+// 		});
+// 		// disable default action
+// 		e.preventDefault();
+// 	});
 
-});
+// });
 			
 function convertNullToString(value) {
     if (value == null) {

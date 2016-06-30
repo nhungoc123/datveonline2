@@ -201,16 +201,6 @@
     margin-bottom: 30px;
 }
 
-.confirmation {
-    display:none;
-    clear: both;
-    color: #e5e5e5;
-}
-
-.confirmation p span {
-    margin-right: 8px;
-}
-
 .payment-form {
     color:#f9f9f9;
 }

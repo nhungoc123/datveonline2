@@ -211,357 +211,6 @@
     </section>
     <!--=== Services section Ends ===-->
     
-    <!--=== Step-1 section Starts ===-->
-    <section id="step-1" class="section-step step-wrap">
-        <div class="container step animated" data-animation="bounceInLeft" data-animation-delay="700">
-            <div class="row">
-                <!-- Step Description Starts -->
-                <div class="col-md-8 step-desc">
-                    <div class="col-md-2 center">
-                        <div class="step-no">
-                            <span class="no-inner">1</span>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-10 step-details">
-                            <h3 class="step-title color-scheme">Các Bước Mua vé</h3>
-                            <p class="step-description">Cillum laboris <strong>consequat</strong>, qui elit retro next level 
-                            skateboard freegan hella. Cillum laboris consequat qui elit retro next level 
-                            skateboard freegan hella. Cillum laboris consequat skateboard freegan hella</p>
-                            
-                            <ul class="sub-steps"> <!-- Sub steps here -->
-                                <li>
-                                    <span class="icon fa fa-comments color-scheme"></span>
-                                    <span class="sub-text">skateboard freegan hella. Cillum laboris consequat qui elit</span>
-                                </li>
-                                <li>
-                                    <span class="icon fa fa-pencil-square-o color-scheme"></span>
-                                    <span class="sub-text">Documenting collected data</span>
-                                </li>
-                            </ul>
-                    </div> <!-- End step-details -->
-                </div>
-                <!-- Step Description Ends -->
-                <div class="col-md-4 step-img">
-                    <img src="<?php echo COMMON_DIR ?>images/note.png" alt="" /> <!-- Step Photo Here -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=== Step-1 section Ends ===-->
-    
-    <!--=== Step-2 section Starts ===-->
-    <section id="step-2" class="section-step step-even step-wrap">
-        <div class="container step animated" data-animation="bounceInRight" data-animation-delay="700">
-            <div class="row">
-                <!-- Step Description Starts -->
-                <div class="col-md-8 step-desc">
-                    <div class="col-md-2 center">
-                        <div class="step-no">
-                            <span class="no-inner">2</span>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-10 step-details">
-                            <h3 class="step-title color-scheme">Thanh toán</h3>
-                            <p class="step-description">Cillum laboris <strong>consequat</strong>, qui elit retro next level 
-                            skateboard freegan hella. Cillum laboris consequat qui elit retro next level 
-                            skateboard freegan hella. Cillum laboris consequat skateboard freegan hella</p>
-                            
-                            <ul class="sub-steps"> <!-- Sub steps here -->
-                                <li>
-                                    <span class="icon fa fa-comments color-scheme"></span>
-                                    <span class="sub-text">skateboard freegan hella. Cillum laboris consequat qui elit</span>
-                                </li>
-                                <li>
-                                    <span class="icon fa fa-pencil-square-o color-scheme"></span>
-                                    <span class="sub-text">Documenting collected data</span>
-                                </li>
-                                
-                            </ul>
-                    </div><!-- End step-details -->
-                </div>
-                <!-- Step Description Ends -->
-                <div class="col-md-4 step-img">
-                    <img src="<?php echo COMMON_DIR ?>images/desk.png" alt="" /> <!-- Step Photo Here -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=== Step-2 section Ends ===-->
-    
-    <!--=== Video section Starts ===-->
-    <section id="section-video" class="section-video-wrap">
-        <div class="section-overlay"></div>
-        <div class="container big-video center animated" data-animation="fadeInLeft" data-animation-delay="700">
-            <div class="row">
-                <div class="col-md-12 section-title">
-                    <h3>Describe with a video</h3>
-                </div>
-                <div class="col-md-10 col-md-offset-1 video-content">
-                    <iframe src="http://player.vimeo.com/video/75317749?title=0&amp;byline=0&amp;portrait=0" width="400" height="240"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=== Video section Ends ===-->
-    
-    <!--=== ScreenShots section Starts ===-->
-    <section id="section-screenshots" class="screenshots-wrap">
-        <div class="container screenshots animated" data-animation="fadeInUp" data-animation-delay="1000">
-            <div class="row porfolio-container">
-                <div class="col-md-10 col-md-offset-1 center section-title">
-                    <h3>Sự Kiện</h3>
-                </div>
-                <!-- Single screenshot starts -->
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <div class="screenshot">
-                        <div class="photo-box">
-                            <img src="<?php echo COMMON_DIR ?>images/7.jpg" alt="" />
-                            <div class="photo-overlay">
-                                <h4>Wordpress theme</h4>
-                            </div>
-                            <span class="photo-zoom">
-                                <a href="single-project.html" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single screenshot ends -->
-                
-                <!-- Single screenshot starts -->
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <div class="screenshot">
-                        <div class="photo-box">
-                            <img src="<?php echo COMMON_DIR ?>images/2.jpg" alt="" />
-                            <div class="photo-overlay">
-                                <h4>User Interface design</h4>
-                            </div>
-                            <span class="photo-zoom">
-                                <a href="single-project-2.html" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
-                            </span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <!-- Single screenshot ends -->
-                
-                <!-- Single screenshot starts -->
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <div class="screenshot">
-                        <div class="photo-box">
-                            <img src="<?php echo COMMON_DIR ?>images/3.jpg" alt="" />
-                            <div class="photo-overlay">
-                                <h4>PSD template design</h4>
-                            </div>
-                            <span class="photo-zoom">
-                                <a href="single-project.html" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
-                            </span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <!-- Single screenshot ends -->
-                
-                <!-- Single screenshot starts -->
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <div class="screenshot">
-                        <div class="photo-box">
-                            <img src="<?php echo COMMON_DIR ?>images/4.jpg" alt="" />
-                            <div class="photo-overlay">
-                                <h4>User Experience design</h4>
-                            </div>
-                            <span class="photo-zoom">
-                                <a href="single-project-2.html" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
-                            </span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <!-- Single screenshot ends -->
-                
-                <!-- Single screenshot starts -->
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <div class="screenshot">
-                        <div class="photo-box">
-                            <img src="<?php echo COMMON_DIR ?>images/5.jpg" alt="" />
-                            <div class="photo-overlay">
-                                <h4>Page builder plugin</h4>
-                            </div>
-                            <span class="photo-zoom">
-                                <a href="single-project.html" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
-                            </span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <!-- Single screenshot ends -->
-                
-                <!-- Single screenshot starts -->
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <div class="screenshot">
-                        <div class="photo-box">
-                            <img src="<?php echo COMMON_DIR ?>images/6.jpg" alt="" />
-                            <div class="photo-overlay">
-                                <h4>Corporate website</h4>
-                            </div>
-                            <span class="photo-zoom">
-                                <a href="single-project-2.html" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
-                            </span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <!-- Single screenshot ends -->
-                
-            </div>
-            
-            <div id="portfolio-loader" class="center">
-                <div class="loading-circle fa-spin"></div>
-            </div> <!--=== Portfolio loader ===-->
-            
-            <div id="portfolio-load"></div><!--=== ajax content will be loaded here ===-->
-            
-            <div class="col-md-12 center back-button">
-                <a class="backToProject fancy-button button-line bell btn-col" href="#">
-                    Back
-                    <span class="icon">
-                        <i class="fa fa-arrow-left"></i>
-                    </span>
-                </a>
-            </div><!--=== Single portfolio back button ===-->
-        </div>
-    </section>
-    <!--=== ScreenShots section Ends ===-->
-    
-    <!--=== Testimonials section Starts ===-->
-    <section id="section-testimonials" class="testimonials-wrap">
-        <div class="section-overlay"></div>
-        <div class="container testimonials center animated" data-animation="rollIn" data-animation-delay="500">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="testimonial-slider">
-                        <!-- Single Testimonial Starts -->
-                        <div class="testimonial">
-                            <p class="comment">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu sem ante. Nullam quis risus eu 
-                                purus commodo dignissim. Donec iaculis ac ex vel posuere. Sed posuere, elit vitae mattis condimentum, 
-                                quam urna fringilla magna
-                            </p>
-                            
-                            <h5 class="happy-client">Jhon Doe</h5>
-                            <span class="client-info">Executive at CDF Corp.</span>
-                        </div>
-                        <!-- Single Testimonial Ends -->
-                        
-                        <!-- Single Testimonial Starts -->
-                        <div class="testimonial">
-                            <p class="comment">
-                                Dolor sit amet, consectetur adipiscing elit. Nullam eu sem ante. Nullam quis risus eu 
-                                purus commodo dignissim. Donec iaculis ac ex vel posuere. Sed posuere, elit vitae mattis condimentum, 
-                                quam urna fringilla magna
-                            </p>
-                            
-                            <h5 class="happy-client">JB Jeniffer</h5>
-                            <span class="client-info">Developer at TTF Corp.</span>
-                        </div>
-                        <!-- Single Testimonial Ends -->
-                        
-                        <!-- Single Testimonial Starts -->
-                        <div class="testimonial">
-                            <p class="comment">
-                                Consectetur adipiscing elit. Nullam eu sem ante. Nullam quis risus eu 
-                                purus commodo dignissim. Donec iaculis ac ex vel posuere. Sed posuere, elit vitae mattis condimentum, 
-                                quam urna fringilla magna
-                            </p>
-                            
-                            <h5 class="happy-client">Chan Jhin</h5>
-                            <span class="client-info">CEO of MutiNaTakio.</span>
-                        </div>
-                        <!-- Single Testimonial Ends -->
-                    </div>
-                    <div id="bx-pager" class="client-photos">
-                        <a data-slide-index="0" href="" class="photo-hold">
-                            <span class="photo-bg">
-                                <img src="<?php echo COMMON_DIR ?>images/client_1.jpg" alt="" /> <!-- Client photo 1 -->
-                            </span>
-                        </a>
-                        <a data-slide-index="1" href="" class="photo-hold">
-                            <span class="photo-bg">
-                                <img src="<?php echo COMMON_DIR ?>images/client_2.jpg" alt="" /> <!-- Client photo 2 -->
-                            </span>
-                        </a>
-                        <a data-slide-index="2" href="" class="photo-hold">
-                            <span class="photo-bg">
-                                <img src="<?php echo COMMON_DIR ?>images/client_3.jpg" alt="" /> <!-- Client photo 3 -->
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=== Testimonials section Ends ===-->
-    
-    <!--=== Subscribe section Starts ===-->
-    <section id="section-subscribe" class="subscribe-wrap">
-        <div class="section-overlay"></div>
-        <div class="container subscribe center">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="subscription-success"></p>
-                    <p class="subscription-failed"></p>
-                    <div class="col-md-10 col-md-offset-1 center section-title">
-                        <h3>Newsletter</h3>
-                    </div>
-                    <form id="subscription-form">
-                        <input type="email" name="EMAIL" required="required" placeholder="Your Email" class="input-email" />
-                        <button type="submit" id="subscription-btn" class="fancy-button button-line button-white large zoom">
-                            Subscribe
-                            <span class="icon">
-                                <i class="fa fa-sign-in"></i>
-                            </span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=== Subscribe section Ends ===-->
-    
-    
-    <!--=== Download section Starts ===-->
-    <section id="section-download" class="download-wrap">
-        <div class="container download center">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="col-md-10 col-md-offset-1 center section-title">
-                        <h3>Download app</h3>
-                    </div>
-                    <div class="download-buttons clearfix"> <!-- Download Buttons -->
-                        <a class="fancy-button button-line no-text btn-col large zoom" href="#" title="Download from App store">
-                            <span class="icon">
-                            <i class="fa fa-apple"></i>
-                            </span>
-                        </a>
-                        <a class="fancy-button button-line btn-col no-text large zoom" href="#" title="Download from App store">
-                            <span class="icon">
-                            <i class="fa fa-android"></i>
-                            </span>
-                        </a>
-                        <a class="fancy-button button-line btn-col no-text large zoom" href="#" title="Download from App store">
-                            <span class="icon">
-                            <i class="fa fa-windows"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=== Download section Ends ===-->
-    
-    
     <!--=== Contact section Starts ===-->
     <section id="section-contact" class="contact-wrap">
     <div class="section-overlay"></div>
@@ -569,24 +218,30 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="col-md-10 col-md-offset-1 center section-title">
-                        <h3>Leave a message</h3>
+                        <h3>Để lại lời nhắn</h3>
                     </div>
                     
                     <div class="confirmation">
                         <p><span class="fa fa-check"></span></p>
                     </div>
-                    
-                    <form class="contact-form support-form">
-                        
+
+
+                    <form class="contact-form" method="post" action="?" id="contact-form">
                         <div class="col-lg-12">
-                            <input id="name" class="input-field form-item field-name" type="text" required="required" name="contact-name" placeholder="Name" />
+                            <p style="color: red; margin: 0px">
+                                <?php 
+                                foreach ($arrError as $key => $value)
+                                    if (isset($arrError[$key])) echo($value.'<br/>');
+                                ?>
+                            <p>
+                            <input class="input-field form-item" type="text" required="required" name="contact[name]" placeholder="Name" maxlength="50" value="<?php echo $arrForm['name']?>" />
 
-                            <input id="email" class="input-field form-item field-email" type="email" required="required" name="contact-email" placeholder="Email" />
+                            <input class="input-field form-item" type="email" required="required" name="contact[email]" placeholder="Email" value="<?php echo $arrForm['email']?>" />
 
-                            <input id="subject" class="input-field form-item field-subject" type="text" required="required" name="contact-subject" placeholder="Subject" />
-                            <textarea id="message" class="textarea-field form-item field-message" rows="10" name="contact-message" placeholder="Message"></textarea>
+                            <input class="input-field form-item" type="text" required="required" name="contact[subject]" placeholder="Subject" maxlength="50" value="<?php echo $arrForm['subject']?>" />
+                            <textarea class="textarea-field form-item" rows="10" required="required" name="contact[message]" placeholder="Message" min="30" maxlength="200"><?php echo $arrForm['message']?></textarea>
                         </div>
-                        <button type="submit" class="fancy-button button-line button-white large zoom subform">
+                        <button type="submit" class="fancy-button button-line button-white large zoom">
                             Send message
                             <span class="icon">
                                 <i class="fa fa-paper-plane-o"></i>
@@ -703,6 +358,12 @@ $(document).ready(function() {
                 return false;
             }
         });
+    });
+
+    $('#contact-form').submit(function(e) {
+        var form = $(this);
+        // alert(1233);
+        form.submit();
     });
 });
 </script>
