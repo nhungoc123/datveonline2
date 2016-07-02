@@ -63,4 +63,31 @@ class TicketModel extends BaseModel
             $this->DB->update($this->table, $arrUpdate, $where, array($key));
         }
     }
+
+    public function sendBookMail(array $arrTicket, $arrCustomer)
+    {
+        $total = $arrCustomer['payment'];
+        $msg = "Dear ".$arrCustomer['name'].",\r\n";
+        $msg .= "Cảm ơn quý khách đã sử dụng dịch vụ của chúng tôi!\r\n";
+        $msg .= "------------------\r\n";
+        $msg .= "Thông tin đặt hàng\r\n";
+        $msg .= "------------------\r\n";
+        $msg .= "Số ghế đã đặt: ".count($arrTicket)."\r\n";
+        $msg .= "Ghế: ";
+        foreach ($arrTicket as $key => $value) {
+            $char = chr($value['row']+64) . $value['column'];
+            $msg .= "$char ";
+        }
+        $msg .= "\r\n";
+        $msg .= "------------------\r\n";
+        $msg .= "Thành tiền: $total K\r\n";
+        $msg .= "\r\n";
+        $msg .= "Đây là email thông báo, vui lòng đừng trả lời!\r\n";
+        $msg .= "Sincerely,\r\n";
+        $msg .= "[" .WEBNAME. "] Administrator\r\n";
+        $to = $arrCustomer['name'] . "<".$arrCustomer['email'].">";
+        $subject = "[" .WEBNAME. "] Thông báo đặt vé thành công!";
+        
+        return Common::sendMail($to, $subject, $msg);
+    }
 }

@@ -76,8 +76,11 @@ class Common
         return $arrRet;
     }
 
-    public function sendMail($to, $subject, $msg, $add_header = '', $add_msg = '')
+    public static function sendMail($to, $subject, $msg, $add_header = '', $add_msg = '')
     {
+        // ini_set("SMTP", 'smtp.gmail.com' ); 
+        // ini_set('smtp_port', 465); 
+        // ini_set('sendmail_from', MAIL_FROM); 
 
         $headers   = array();
         $headers[] = "MIME-Version: 1.0";

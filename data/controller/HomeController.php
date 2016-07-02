@@ -39,15 +39,16 @@ class HomeController extends BaseController
 
             if (count($arrError) == 0) {
                 if ($Contact->contactMail()) {
-                    echo '<script type="text/javascript">alert("Cảm ơn những ý kiến đóng góp của bạn");</script>';
-                } else {
-                    echo '<script type="text/javascript">alert("Có lỗi xảy ra! Vui lòng thao tác lại!");</script>';
+                    echo '<script type="text/javascript">alert("Cảm ơn những ý kiến đóng góp của bạn");
+                     window.location.href="'.HTTP_HOST.'";</script>';
                 }
             } else {
                 // return value to view when error
                 $arrErrorVal = $Contact->getArray($arrForm);
                 $arrForm = array_merge($arrForm, $arrErrorVal);
-                echo '<script type="text/javascript">alert("Có lỗi xảy ra! Vui lòng thao tác lại!");</script>';
+                echo '<script type="text/javascript">alert("'.array_pop($arrError).'");
+                window.location.href="'.HTTP_HOST.'";</script>';
+                echo '<script type="text/javascript">document.getElementById("section-contact").scrollIntoView()</script>';
             }
         }
         $arrRet['arrForm'] = $arrForm;

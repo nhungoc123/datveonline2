@@ -114,6 +114,7 @@ class SeatController extends BaseController
 
                 // đặt vé
                 $TicketModel->bookTickets($arrTicketPrice, $customerId);
+                $TicketModel->sendBookMail($arrTicketSelected, $arrCustomer);
                 echo '<script type="text/javascript">alert("Bạn đã đặt vé thành công!!! Bạn có thể tiếp tục đặt vé!!!");
                     window.location.href="'.$url.'";</script>';
                 return;
