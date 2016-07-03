@@ -234,12 +234,12 @@
                                     if (isset($arrError[$key])) echo($value.'<br/>');
                                 ?>
                             <p>
-                            <input class="input-field form-item" type="text" required="required" name="contact[name]" placeholder="Name" maxlength="50" value="<?php echo $arrForm['name']?>" />
+                            <input class="input-field form-item" type="text" required="required" name="contact[name]" placeholder="Họ Tên" maxlength="50" value="<?php echo $arrForm['name']?>" />
 
                             <input class="input-field form-item" type="email" required="required" name="contact[email]" placeholder="Email" value="<?php echo $arrForm['email']?>" />
 
-                            <input class="input-field form-item" type="text" required="required" name="contact[subject]" placeholder="Subject" maxlength="50" value="<?php echo $arrForm['subject']?>" />
-                            <textarea class="textarea-field form-item" rows="10" required="required" name="contact[message]" placeholder="Message" min="30" maxlength="200"><?php echo $arrForm['message']?></textarea>
+                            <input class="input-field form-item" type="text" required="required" name="contact[subject]" placeholder="Tiêu đề" maxlength="50" value="<?php echo $arrForm['subject']?>" />
+                            <textarea class="textarea-field form-item" rows="10" required="required" name="contact[message]" placeholder="Lời nhắn (ít nhất 30 ký tự)" min="30" maxlength="999"><?php echo $arrForm['message']?></textarea>
                         </div>
                         <button type="submit" class="fancy-button button-line button-white large zoom">
                             Send message

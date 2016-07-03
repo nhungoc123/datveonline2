@@ -40,7 +40,7 @@ class ContactModel extends BaseModel
         $objCheck->checkLength($this->arrError, 'Tiêu đề', "$this->subject", 1, 50);
         $objCheck->checkExist($this->arrError, 'Tiêu đề', "$this->subject");
 
-        $objCheck->checkLength($this->arrError, 'Nội dung', "$this->message", 30, 200);
+        $objCheck->checkLength($this->arrError, 'Nội dung', "$this->message", 30, 999);
         $objCheck->checkExist($this->arrError, 'Nội dung', "$this->message");
 
         $objCheck->checkEmail($this->arrError, 'Email', "$this->email");

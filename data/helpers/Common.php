@@ -90,14 +90,13 @@ class Common
         $headers[] = "From: $name <$from>";
 
         $bcc = MAIL_BCC;
-        $bcc_name = explode('@', $bcc)[0];
         $headers[] = "Bcc: $name <$bcc>";
         
         $reply = MAIL_REPLY;
         $reply_name = explode('@', $reply)[0];
 
         $headers[] = "Reply-To: $name <$reply>";
-        $headers[] = "Subject: {$subject}";
+        // $headers[] = "Subject: {$subject}";
 
         if (strlen($add_header) > 0) {
             $headers[] = $add_header;

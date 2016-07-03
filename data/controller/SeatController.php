@@ -97,12 +97,12 @@ class SeatController extends BaseController
                     if (!array_key_exists($value, $checkTickets)) {
                         echo '<script type="text/javascript">alert("Ghế bạn chọn không phù hợp, xin hãy chọn lại");
                         window.location.href="'.$url.'";</script>';
-                        return;
+                        return 0;
                     }
                     if ($checkTickets[$value]['status']) {
                         echo '<script type="text/javascript">alert("Ghế bạn chọn đã hết thời gian chờ, xin hãy chọn ghế khác");
                         window.location.href="'.$url.'";</script>';
-                        return;
+                        return 0;
                     }
                     // key: ticket id, value: seat
                     $arrTicketSelected[$value] = $arrSeat[$checkTickets[$value]['seat_id']];
@@ -117,7 +117,7 @@ class SeatController extends BaseController
                 $TicketModel->sendBookMail($arrTicketSelected, $arrCustomer);
                 echo '<script type="text/javascript">alert("Bạn đã đặt vé thành công!!! Bạn có thể tiếp tục đặt vé!!!");
                     window.location.href="'.$url.'";</script>';
-                return;
+                return 0;
             } else {
                 // return value to view when error
                 $arrErrorVal = $Customer->getArray($arrForm);

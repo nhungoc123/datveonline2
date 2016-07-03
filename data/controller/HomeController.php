@@ -44,10 +44,10 @@ class HomeController extends BaseController
                 }
             } else {
                 // return value to view when error
-                $arrErrorVal = $Contact->getArray($arrForm);
-                $arrForm = array_merge($arrForm, $arrErrorVal);
+                // $arrErrorVal = $Contact->getArray($arrForm);
+                // $arrForm = array_merge($arrForm, $arrErrorVal);
                 echo '<script type="text/javascript">alert("'.array_pop($arrError).'");
-                window.location.href="'.HTTP_HOST.'";</script>';
+                window.location.href="'.HTTP_HOST.'#section-contact";</script>';
                 echo '<script type="text/javascript">document.getElementById("section-contact").scrollIntoView()</script>';
             }
         }
