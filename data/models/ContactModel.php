@@ -50,6 +50,11 @@ class ContactModel extends BaseModel
     public function contactMail()
     {
         $to = $this->name . "<$this->email>";
+        
+        if (strlen($this->message) > 70) {
+           $this->message = wordwrap($this->message, 70, "\r\n");
+        }
+
         return Common::sendMail($to, $this->subject, $this->message);
     }
 }
