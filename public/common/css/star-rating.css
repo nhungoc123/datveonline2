@@ -21,7 +21,7 @@
  * Stars
  */
 .rating-container .rating {
-    cursor: default;
+    cursor: pointer;
     position: relative;
     vertical-align: middle;
     display: inline-block;
@@ -30,7 +30,8 @@
 }
 
 .rating-disabled .rating {
-    cursor: not-allowed;
+    /*cursor: not-allowed;*/
+    cursor: default;
 }
 
 .rating-container .star {

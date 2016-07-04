@@ -64,7 +64,7 @@ class TicketModel extends BaseModel
         }
     }
 
-    public function sendBookMail(array $arrTicket, $arrCustomer)
+    public function sendBookMail(array $arrTicket, $arrCustomer, $Cinema, $Movie)
     {
         $total = $arrCustomer['payment'];
         $msg = "Dear ".$arrCustomer['name'].",\r\n";
@@ -72,6 +72,9 @@ class TicketModel extends BaseModel
         $msg .= "------------------\r\n";
         $msg .= "Thông tin đặt hàng\r\n";
         $msg .= "------------------\r\n";
+        $msg .= "Tên phim: ".$Movie['name']." ". $Movie['durations'] ." phút\r\n";
+        $msg .= "Tên rạp: ".$Cinema['name']."\r\n";
+        $msg .= "Giờ chiếu: ".$Movie['performance_time']." ngày ".$Movie['date']."\r\n";
         $msg .= "Số ghế đã đặt: ".count($arrTicket)."\r\n";
         $msg .= "Ghế: ";
         foreach ($arrTicket as $key => $value) {

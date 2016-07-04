@@ -47,7 +47,8 @@ class SeatController extends BaseController
         $arrValue = array(sprintf("%d", $showtime));
         $Movie = $MovieModel->getMovie('all', null, null, $where, $arrValue);
         $Movie[0]['date'] = $date;
-
+        $Movie = $Movie[0];
+        $Movie['performance_time'] = $arrPerformance[$Movie['performance_id']];
         // get seat
         $SeatModel = new SeatModel($Cinema);
         $arrSeat = $SeatModel->getSeat();
@@ -114,7 +115,7 @@ class SeatController extends BaseController
 
                 // đặt vé
                 $TicketModel->bookTickets($arrTicketPrice, $customerId);
-                $TicketModel->sendBookMail($arrTicketSelected, $arrCustomer);
+                $TicketModel->sendBookMail($arrTicketSelected, $arrCustomer, $Cinema, $Movie);
                 echo '<script type="text/javascript">alert("Bạn đã đặt vé thành công!!! Bạn có thể tiếp tục đặt vé!!!");
                     window.location.href="'.$url.'";</script>';
                 return 0;
@@ -140,8 +141,8 @@ class SeatController extends BaseController
             'row' => $row,
             'column' => $column,
             'arrTicketPrice' => $arrTicketPrice,
-            'Movie' => $Movie[0],
-            'arrPerformance' => $arrPerformance,
+            'Movie' => $Movie,
+            // 'arrPerformance' => $arrPerformance,
             'arrForm' => $arrForm,
             'arrError' => $arrError,
             );

@@ -12,6 +12,13 @@
     .section-title {
         margin-bottom: 10px;
     }
+    .rating .btn-default {
+        background: linear-gradient(#d9de28, #85c342);
+    }
+
+    .rating .btn-default:hover {
+        background: linear-gradient(#969a18, #4e7425);
+    }
 
 </style>
     <!--=== Header section Starts ===-->
@@ -53,11 +60,14 @@
                         </a>
                     </div>
                     <div class="col-sm-12 rating">
-                        <div class="col-sm-9" style="padding-left: 0px;">
+                        <div class="col-sm-8" style="padding-left: 0px;">
                             <input class="rating-disabled" value="<?php echo ($movie['avg_rate']) ? $movie['avg_rate'] : 5; ?>" type="number" min=0 max=5 step=0.5 data-size="ss"/>
                             <span class="rate"><?php echo ($movie['avg_rate']) ? $movie['avg_rate'] : 5; ?> trên <?php echo $movie['rate_times']?></span> lượt đánh giá
                         </div>
-                        <div class="col-sm-3" style="padding-right: 0px;">
+                        <div class="col-sm-4" style="padding-right: 0px;">
+                            <a class="btn btn-default open-model" href="#" data-toggle="modal" data-target="#myModal" data-id="<?php echo $movie['id'];?>">
+                                Xem chi tiết
+                            </a>
                             <a href="<?php echo HTTP_HOST;?>showtime/" class="btn btn-primary">Xem lịch chiếu</a>
                         </div>
                     </div>

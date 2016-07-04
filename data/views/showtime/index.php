@@ -1,6 +1,12 @@
 <?php include VIEW_DIR . 'include/head.php';?>
 
 <style type="text/css">
+  #movie-slider .well {
+    color: #ffffff;
+    background: no-repeat;
+    border: none;
+  }
+
     /*#section-showtime {
         background-color: #333;
         color: #e5e5e5;
@@ -188,7 +194,7 @@
                       $disable = 'disabled';
                     }
                     ?>
-									<li ><a href="<?php echo HTTP_HOST?>/seat/?st=<?php echo $showtime;?>&date=<?php echo $key;?>" class="btn btn-default <?php echo $disable ?>"><?php echo $arrPerformance[$performance] ?></a></li>
+									<li ><a href="<?php echo HTTP_HOST?>seat/?st=<?php echo $showtime;?>&date=<?php echo $key;?>" class="btn btn-default <?php echo $disable ?>"><?php echo $arrPerformance[$performance] ?></a></li>
 									<?php } ?>
 									</ul>
 								</div>

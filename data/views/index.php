@@ -98,7 +98,7 @@
     <!--=== Features section Ends ===-->
 
     <!--=== Upcoming section Starts ===-->
-    <?php if (count($arrUpcoming) > 0) {?>
+    <?php //if (count($arrUpcoming) > 0) {?>
     <section id="section-upcoming" class="pricing-wrap">
         <div class="container pricing">
             <div class="row">
@@ -131,7 +131,7 @@
             </div>
         </div>
     </section>
-    <?php }?>
+    <?php //}?>
     <!--=== Upcoming section Ends ===-->
 
     <!--=== Services section Starts ===-->
@@ -242,7 +242,7 @@
                             <textarea class="textarea-field form-item" rows="10" required="required" name="contact[message]" placeholder="Lời nhắn (ít nhất 30 ký tự)" min="30" maxlength="999"><?php echo $arrForm['message']?></textarea>
                         </div>
                         <button type="submit" class="fancy-button button-line button-white large zoom">
-                            Send message
+                            Gửi
                             <span class="icon">
                                 <i class="fa fa-paper-plane-o"></i>
                             </span>

@@ -61,7 +61,7 @@
       <div class="col-sm-4 payment">
             <div class="center section-title">
                 <div><h4><?php echo $Movie['name']?></h4></div>
-                <div class="right"><button class="btn btn-default disabled"><?php echo $arrPerformance[$Movie['performance_id']]?></button>
+                <div class="right"><button class="btn btn-default disabled"><?php echo $Movie['performance_time']?></button>
                 <button class="btn btn-default disabled"><?php echo $Movie['date']?></button>
             </div>
             </div>
@@ -84,11 +84,11 @@
                     if (isset($arrError[$key])) echo($value.'<br/>');
                 ?>
                 <p>
-                <input id="name" class="input-field form-item field-name" type="text" name="customer[name]" placeholder="Name" value="<?php echo $arrForm['name'];?>" required/>
+                <input id="name" class="input-field form-item field-name" type="text" name="customer[name]" placeholder="Tên" value="<?php echo $arrForm['name'];?>" required/>
 
                 <input id="email" class="input-field form-item field-email" type="email" required name="customer[email]" placeholder="Email" value="<?php echo $arrForm['email'];?>"/>
 
-                <input id="tel" class="input-field form-item field-tel" type="tel" required name="customer[tel]" placeholder="Tel" value="<?php echo $arrForm['tel'];?>"/>
+                <input id="tel" class="input-field form-item field-tel" type="tel" required name="customer[tel]" placeholder="Số điện thoại" value="<?php echo $arrForm['tel'];?>"/>
               </div>
               <div class="center paid">
                 <button type="submit" id="paid" class="fancy-button button-line button-white large zoom">
