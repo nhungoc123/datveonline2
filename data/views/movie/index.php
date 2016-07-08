@@ -20,6 +20,7 @@
         background: linear-gradient(#969a18, #4e7425);
     }
 
+
 </style>
     <!--=== Header section Starts ===-->
     <?php include VIEW_DIR . 'include/header.php';?>
@@ -116,17 +117,19 @@ $(function() {
                     var trailer = value.trailer;
                     if (trailer.indexOf('http') == -1 && trailer.indexOf('www') == -1) {
                         trailer = '<?php echo VIDEO_DIR;?>'+ trailer;
+                        var video = $('.detail video');
+                        var videoSrc = $('source', video).attr('src', trailer);
+                        video.load();
+                        $('.video').show();
+                    } else {
+                        if (trailer.indexOf('watch?v=') == -1 && trailer.indexOf('embed') == -1) {
+                        trailer = trailer.replace('youtu.be', 'youtube.com/embed');
+                        } else {
+                            trailer = trailer.replace('watch?v=', 'embed/');
+                        }
+                        $('iframe.embed-responsive-item').attr('src', trailer);
+                        $('.iframe').show();
                     }
-                    var video = $('.detail video');
-                    var videoSrc = $('source', video).attr('src', trailer);
-                    video.load();
-                    // var trailer = value.trailer;
-                    // if (trailer.indexOf('watch?v=') == -1 && trailer.indexOf('embed') == -1) {
-                    //     trailer = trailer.replace('youtu.be', 'youtube.com/embed');
-                    // } else {
-                    //     trailer = trailer.replace('watch?v=', 'embed/');
-                    // }
-                    // $('iframe.embed-responsive-item').attr('src', trailer);
 
                     var html = '<div class="col-sm-8">';
                     html += '<div class="row"><div class="w29 left">Khởi chiếu</div><div class="w70 right">';
@@ -162,9 +165,11 @@ $(function() {
     });
 
     $('#myModal').on('hidden.bs.modal', function () {
-        // $('iframe.embed-responsive-item').attr('src', '');
+        $('iframe.embed-responsive-item').attr('src', '');
+        $('.iframe').hide();
         $('.detail video').each(function () { this.pause() });
         $('.detail video source').attr('src', '');
+        $('.video').hide();
     });
 
     $(".rating-disabled").rating({

@@ -1171,3 +1171,7 @@ margin-right: 8px;
 .sub-title {
 	border: 1px solid;
 }
+
+.iframe, .video {
+	display: none;
+}

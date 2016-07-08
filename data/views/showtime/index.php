@@ -7,6 +7,18 @@
     border: none;
   }
 
+  .well {
+      border-color: #7F8C8D;
+  }
+  .well .panel-heading {
+      color: #ffffff;
+      background-color: #7F8C8D;
+      border-color: #7F8C8D;
+  }
+  .well .panel {
+      border-color: #7F8C8D; 
+  }
+
     /*#section-showtime {
         background-color: #333;
         color: #e5e5e5;

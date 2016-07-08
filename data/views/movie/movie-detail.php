@@ -8,10 +8,10 @@
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-        <!-- <div class="embed-responsive embed-responsive-16by9">
+        <div class="embed-responsive embed-responsive-16by9 iframe">
             <iframe class="embed-responsive-item" src="" frameborder="0" allowfullscreen></iframe>
-        </div> -->
-        <div align="center" class="embed-responsive embed-responsive-16by9">
+        </div>
+        <div align="center" class="embed-responsive embed-responsive-16by9 video">
           <video class="embed-responsive-item" controls>
               <source src="" type="video/mp4">
           </video>
