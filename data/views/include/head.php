@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="<?php echo COMMON_DIR ?>images/favicon.png"/>
+
     <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/bootstrap.css" rel="stylesheet"/>
         <!-- <link rel="stylesheet"  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
 

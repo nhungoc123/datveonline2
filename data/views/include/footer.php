@@ -20,7 +20,7 @@
                         </ul>
                     </div>
                     
-                    <p class="copyright">All rights reserved &copy; 2015</p>
+                    <p class="copyright">&copy; 2016 <?php echo WEBNAME?></p>
                 </div>
             </div>
         </div>
