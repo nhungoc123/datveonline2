@@ -1,0 +1,54 @@
+/*
+
+ * Author - Harshen Amarnath Pandey
+ * Version - 1.0.5
+ * Release - 09th June 2014
+ * Copyright (c) 2014 - 2018 Harshen Pandey
+*/
+
+/* jquery.countdownTimer.css*/
+
+.style {  
+   font-family: helvetica ,Arial,sans-serif;
+   
+}
+
+.colorDefinition {
+	  background:url("../images/Clock.png") no-repeat scroll left bottom transparent;
+	  display:block;
+	  width:100px;
+	  height:50px;
+	  position:absolute;
+	  left:-47px;
+}
+
+.size_xl {
+   font-size:50px;
+   border-width: 8px;
+   border-radius: 6px;
+}
+
+.size_lg {
+   font-size:40px;
+   border-width: 7px;
+   border-radius: 5px;
+}
+
+.size_md {
+   font-size:30px;
+   border-width: 5px;
+   border-radius: 4px;
+}
+
+.size_sm {
+   font-size:30px; 
+	line-height:49px;
+   border-radius: 5px;
+   color:#fff;
+}
+
+.size_xs {
+   font-size:15px;
+   border-width: 2px;
+   border-radius: 2px;
+}

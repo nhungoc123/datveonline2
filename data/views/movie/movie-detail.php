@@ -8,9 +8,14 @@
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-        <div class="embed-responsive embed-responsive-16by9">
+        <!-- <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
+        </div> -->
+        <div align="center" class="embed-responsive embed-responsive-16by9">
+          <video class="embed-responsive-item" controls>
+              <source src="" type="video/mp4">
+          </video>
+      </div>
         <div class="clearfix"></div>
         
         <input id="rating" value="" type="number" min=0 max=5 step=0.5 data-size="ss" >

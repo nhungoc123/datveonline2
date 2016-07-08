@@ -19,6 +19,8 @@ define('VIEW_DIR', HTML_REALDIR . 'data/views/');
 define('COMMON_DIR', ROOT_URLPATH . 'common/');
 // upload folder
 define('UPLOAD_DIR', ROOT_URLPATH . 'common/images/upload/');
+// video folder
+define('VIDEO_DIR', ROOT_URLPATH . 'common/upload/');
 
 define('TICKET_NORMAL', 50);
 define('TICKET_VIP', 70);

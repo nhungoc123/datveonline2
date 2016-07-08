@@ -1,0 +1,4649 @@
+fieldset{
+	margin: 20px !important;
+} 
+/*======================== MAX - WIDTH : 1024px ============================*/
+@media only screen and (max-width :1024px) {	
+	.mtw_banner_right{
+		display:none;
+	}
+}
+/* ------------------------ Min - width :981px ----------------------------*/
+
+/*======================== MAX - WIDTH : 980px =============================*/
+@media only screen and (max-width :979px) {	
+	/*===============login===============*/
+	.home-event > .toggle-tabs > li > span{
+		font-size:10px; 
+		padding:0 5px;
+	}
+	.block-content li a{
+		font-size:9px;
+	}
+	.account-wrap{
+		padding:0 20px;
+	}
+	#captcha-image-box-user_create #captcha-reload , #captcha-image-box-user_login .captcha-reload{
+		margin-right: 10px;
+		margin-top: 13px;
+		float:left;
+	}
+	/*==============End login===========*/
+	.mtw_banner_top{display:none;}
+	#header-search {
+		display: block;
+		position: absolute;
+		top: 41px;
+		right: 0;
+		width: 25%;
+		padding: 0;
+		text-align: right;
+	}
+	.header-search-newsoffer, .header-search-booking {
+		display: block;
+	}
+	#header-search > div {
+		display: inline-block;
+	}
+	.nav-primary a.level0 {
+		padding: 0 12px;  
+	}
+	.header-search-right img{
+		display:none;
+	}
+	.top-container{
+		display:none;
+	}
+  /*===============End header================*/
+	.cms-index-index .main-container-full{
+		background:none;
+	}
+	.home-movie-selection .feature_slide_show{
+		margin: 0 auto;
+		width: 732px;
+	}
+	.slideshow-containe-movier{
+		position:relative;
+	}  
+	.home-title{height:47px;}
+	.home-movie-selection .home-title h2{
+		background:url("../images/h3_movie_selection.gif") no-repeat scroll center center / 88% auto #FDFCF0;	
+		height:47px;
+		width:40%;
+	}
+	.home-event{
+		display:block;
+	}
+	.home-event .home-title h2{
+		background:url("../images/h3_event.gif") no-repeat scroll center center / 88% auto #fdfcf0;		
+		height:39px;
+		width:21%;
+	}
+	.home-movie-selection .slideshow-containe-movier span.feature_slide_show_next{
+		top:47%;
+		right:3px;
+		z-index:99;
+	}
+	.home-movie-selection .slideshow-containe-movier span.feature_slide_show_prev{
+		top:47%;
+		left:3px;
+		z-index:99;
+	}
+	.home-show-event{
+		position:relative;
+		padding:15px 0;
+	}
+	.home-show-event ul{
+		width:732px;
+		margin:auto;
+		padding:0;
+		border-bottom:none;
+	}
+	.home-show-event span.slide_home_event_next{
+		right:3px;
+		top:37%
+	}
+	.home-show-event span.slide_home_event_prev{
+		left:3px;
+		top:37%
+	}
+	.promotion-card{
+		display:none;
+	}
+  /*================End home===============*/
+	.catalog-category-view .col-main{padding:0 20px;}
+	.category-title{padding:0 10px;}
+	.category-products{/*padding:0 30px;*/}	
+	.category-products .btn-more{
+		margin-top:10px;
+		margin-right: 56px;
+	}
+	.sub-category{right:10px;}
+	.category-products .products-grid .product-image img{
+		width:100% !important;
+		height:100% !important;
+	}
+	.product-info .actions .fb-like{
+		margin-bottom:2%;
+	}
+	 /* ============================ */	
+	.products-grid > li:nth-child(even),
+	.products-grid > li:nth-child(4n),
+	.products-grid > li {
+		width: 21.5%;
+		margin-right: 4.5%;
+	}
+	.products-grid > li:nth-child(odd) {
+		clear: left;
+	}
+	.products-grid > li:nth-child(even) {
+		margin-right: 0;
+	}
+	.products-grid > li:nth-child(4n+1) {
+		clear: none;
+	}	
+	/*=====================*/
+	  /* Undo three-column config */
+	.info-hdxh-cgv{
+		padding:0 5% 7%;
+	}
+	.hdxh-icon img{
+		width:100%;
+	}
+	.content-hdxh{
+		margin-left:3%;
+	}
+	.community-wrapper{
+		padding:0 5%;
+	}
+	/*--------------------------------*/
+	.products-grid--max-3-col > li{
+		width:31%;
+		margin-right:3.33333%;
+	   }
+	.products-grid--max-3-col > li:nth-child(odd) {
+		clear: none;
+	}
+	.products-grid--max-3-col > li:nth-child(3n+1) {
+		clear: none;
+	}
+	.products-grid--max-3-col > li:nth-child(even),
+	.products-grid--max-3-col > li:nth-child(3n) {
+		margin-right: 3.33333%;
+		width: 31%;
+	}
+	.products-grid--max-3-col > li:nth-child(3n){
+		margin-right:0;		
+	}
+	 /* Undo four-column config */
+	.products-grid--max-4-col > li:nth-child(odd) {
+		clear: none;
+	}
+	.products-grid--max-4-col > li:nth-child(3n+1) {
+		clear: none;
+	}
+	.products-grid--max-4-col > li:nth-child(even),
+	.products-grid--max-4-col > li:nth-child(3n) {
+		margin-right: 4.5%;
+	}	
+	/* Set column config */
+	  /* Set column config */
+	.products-grid--max-4-col > li {
+		margin-right: 3.5%;
+	}
+
+	.products-grid--max-4-col > li {
+		width: 21.5%;
+		margin-right: 4.5%;
+	}
+
+	.products-grid--max-4-col > li:nth-child(8n+1) {
+		clear: left;
+	}
+	.products-grid--max-4-col > li:nth-child(4n) {
+		margin-right: 0;
+	}
+	.products-grid--max-4-col > li:nth-child(8n) {
+		margin-right: 0;
+	}
+
+  /*=====================End catalog=============*/
+	#colorbox, #cboxWrapper, #cboxContent, #cboxLoadedContent{
+		width:96%!important;
+		left:7px !important;
+	}
+	.cboxPhoto{
+		width:100% !important;
+	}
+	/*======================detail================*/
+	.product-img-box .product-image img{
+		width:100%;
+		height:100%;
+	}
+	.catalog-product-view .col-main{
+		padding:0 20px;
+	}
+	.product-tabs{
+		width:100%;
+	}
+	.session-tabs .toggle-tabs{height:auto;}
+	/*================checkout===============*/
+	#checkout-progress-wrapper, #checkout-review-load{
+		float:left;
+		width:100%;
+	}
+	.checkout-agreements .agreement-content{
+		MAX - WIDTH :100%;
+	}
+	.waitting{width:100% !important}
+	/*=====================CMS page==================*/
+		/*-------------------social-------------*/
+	.postWrapper{padding:0 2%;}
+		/*-------------------End social-------------*/		
+	.theater-feature .feature-grid{
+			height:auto;
+	}
+	.theater-feature .feature-grid li{
+		margin:0;
+	}
+	.feature-trailer iframe{
+		width:100%;
+	}
+	.feature-description img, .content-mcinema img{width:100%;}
+	.content-about-sweetbox{background:none;}
+	.sw-content h3{color:#222;margin-top:0;padding:0 2%;}
+	.sw-content p{width:100%;color:#222;padding:0 2%;}
+	.content-about-sweetbox{height:auto;}
+		/*-------------------about us------------*/
+	.col-right-about-us iframe{
+		width:100%;
+	}
+	.cms-about-cgv .col-main{
+		padding:0 2%;
+	}
+	.about-cgv-list-dev li span{
+		width:auto;
+	}
+	 /* Undo three-column config */
+	.about-image-cgv ul > li{
+		width:30%;
+		margin-right:3.33333%;
+	   }
+	.about-image-cgv ul > li:nth-child(odd) {
+		clear: none;
+	}
+
+	.about-image-cgv ul > li:nth-child(3n+1) {
+		clear: none;
+	}
+	.about-image-cgv ul > li:nth-child(even),
+	.about-image-cgv ul > li:nth-child(3n) {
+		margin-right: 3.33333%;
+		width: 30%;
+	}
+	.about-image-cgv ul > li:nth-child(3n){
+		margin-right:0;		
+	}
+		/*--------------------contact cgv---------------*/
+	.contact-cgv{
+		padding-right:5%;
+	}
+		/*-------------------career-----------*/
+	.cms-career .col-main{
+		padding:0 2%;
+	}	
+		/*--------------term & condition--------------*/
+	.cms-terms-conditions .col-main{
+		padding:0 2%;
+	}
+	.cms-terms-conditions .icon-title-term-condition img{
+		width:40%;
+	}
+	.term-condition-title span strong{
+		margin-left: 45%;
+		font-size:2em;
+	}
+		/*-----------------------faq-------------*/
+	.cms-faq .col-main{
+		padding:0 2%;
+	}
+	.cms-faq .col-main .block-title{
+		float:left;
+	}
+		/*----------------membership---------------*/
+	.membersip-content{
+		padding:0 2%;
+	}		/* Undo tow-column config */
+	.card-member-cgv ul > li, .list-partner-cgv ul > li{
+		width:48%;
+		margin-right:4%;
+		margin-left:0;
+		margin-bottom:4.5%;
+	   }
+	.card-member-cgv ul > li:nth-child(odd), .list-partner-cgv ul > li:nth-child(old) {
+		clear: none;		
+	}
+	.card-member-cgv ul > li:nth-child(2n+1), .list-partner-cgv ul > li:nth-child(2n+1) {
+		clear: left;
+	}
+	.card-member-cgv ul > li:nth-child(even), .list-partner-cgv ul > li:nth-child(even),
+	.card-member-cgv ul > li:nth-child(2n), .list-partner-cgv ul > li:nth-child(2n) {
+		margin-right:4%;		
+		width: 48%;
+	}
+	.sort-des-partner-cgv > p{
+		padding:0 5px;
+	}
+	.card-member-cgv ul > li:nth-child(2n), .list-partner-cgv ul > li:nth-child(2n){
+		margin-right:0;		
+	}
+	.cms-cgv-member .card-member-cgv img{
+		width:100%;
+	}
+		/*--------------section time------*/
+	.theatre-wrap .theatre-list, .movies-wrap .movies-filter-session{
+		background-size:100%;
+	}
+	.cinemas-cinema-index .theatre-city-tabs{
+		width:100%;
+	}
+	.wrap-city{
+		height:90px;
+		margin:0 6%;
+		width:87%;
+	}
+	.wrap-city .toggle-tabs{
+		height:100%;
+		width:100% !important;
+		margin:0;
+	}
+	.wrap-city .center{display:none}
+	.wrap-city li{width:19%;}
+	/*------------*/
+	.tab-content > .theatre-tabs > li{
+		width:32%;
+		margin-right:1%;
+		display:inline-block;
+	   }
+	.tab-content > .theatre-tabs > li:nth-child(odd) {
+		clear: none;
+	}
+	.tab-content > .theatre-tabs > li:nth-child(3n+1) {
+		clear: none;
+	}
+	.tab-content > .theatre-tabs > li:nth-child(even),
+	.tab-content > .theatre-tabs > li:nth-child(3n) {
+		margin-right:1%;
+		width: 32%;
+	}
+	.tab-content > .theatre-tabs > li:nth-child(3n){
+		margin-right:0;		
+	}		
+	.theatre-wrap .theatre-tabs li span{ 
+		width:100%;
+		padding:0 10px;
+		font-size:12px;
+	}	
+	.theatre-wrap .theatre-tabs li.current span, .theatre-wrap .theatre-tabs li:hover span{
+		background:none;
+	}
+	.theatre-wrap .theatre-tabs li.current  > span:after{
+		border-color: transparent -moz-use-text-color transparent #fff;
+		border-style: solid none solid solid;
+		border-width: 5px medium 5px 5px;
+		content: "";
+		display: block;
+		height: 0;
+		left: 0px;
+		margin-top: -5px;	
+		right: auto;
+		top: 50%;
+		width: 0;
+		position:absolute;
+	}
+	.theatre-wrap .theatre-tabs{	margin:10px 0 50px 31px}
+	.cinemas-filter-index .label-red .theatre-city-tabs .theatre-tabs .session-tabs, .movies-wrap .movies-session-view{
+		width:100%;
+	} 	
+	/*------------------------Theater----------------------*/
+	.product-view .movies-tabs > ul{width:100%;}	
+	.movies-filter-session .movies-tabs{
+		padding:0 3%;
+		margin-top:8%;
+	}	
+	.movies-filter-session .movies-tabs .movies-filter-image{
+		margin-left:5%;
+		margin-right:1%;
+		width:26%;
+		padding:0;
+	}
+	.movies-filter-session .movies-tabs .movies-filter-image img{
+		width:76%;
+		height:auto;
+	}
+	.movies-filter-session .movies-tabs .toggle-tabs{
+		width:38%;
+		margin-right:2%;
+		height:240px;
+	}
+	.movies-filter-session .movies-tabs .collateral-movies-tabs{
+		width:27%;
+		padding:2% 2% 2% 4%;
+	}
+	.movies-features-type li{
+		width:100%;
+		margin:0;
+	}		
+	.information-ticket{
+		margin-right:1%;
+	}
+		/*filter*/
+	.sect-guide .nav{
+		position:relative;
+		width:100%;
+		background:none;
+		color:#222;
+	}
+	.nav-cinema ul{
+		display:block;
+	}
+	.nav-cinema ul.level0 > li{
+		width:33.3333%;
+		float:left;
+	}
+	.nav-cinema ul.level0 > li input{
+		float:left;
+		margin-top:3px;
+	}
+	.nav-cinema ul.level0 > li label{
+		float:left;
+		margin-left:5px;
+		width:90%;
+	}
+	.nav-cinema ul.level0 > li:nth-child(old){
+		clear:none;
+	}
+	.nav-cinema ul.level0 > li:nth-child(3n+1){
+		clear:left;
+	}
+	.nav-cinema ul.level0 > li:nth-child(event),
+	.nav-cinema ul.level0 > li:nth-child(3n){	
+		width:33.3333%;
+		margin-top:10px;
+	}
+	/*-------------gift card-------------*/
+	.page-gift-card{padding:0 5%;}
+	.page-gift-card, .img-gf-card img{width:100%;}
+	.img-gf-card{margin-top:-157px;}
+	.title-gift-card h1{text-align:center;}
+}
+/* ------------------------ Min - width :800px ----------------------------*/
+
+/*========================MAX - WIDTH : 800px ==============================*/
+@media only screen and (max-width :800px) {
+	/* ======================= Membership Page ======================= */
+	.col-left-content-member{
+		display:none;
+	}
+	.col-right-content-member{
+		width:95%;
+	}
+	.cgv-membership > div {
+		margin: 10px 20px 0 85px;
+	}
+	/* ------------------------  End Membership page ----------------- */
+	
+	/* ========================== CGV CINEMAS ======================== */
+	.title-cgv-cinema {
+		padding-top: 30px;
+	}
+	.title-cgv-cinema h1 {
+		font-size: 38px;
+		margin-bottom:20px;
+	}
+	.product-collateral .toggle-tabs li > span {
+		height: 36px;
+		line-height: 36px;
+	}
+	.wrap-city {
+		height: 80px;
+	}
+	.theatre-wrap .theatre-tabs {
+		margin: 10px 0 50px 48px;
+	}
+	.theatre-wrap .theatre-list, .movies-wrap .movies-list {
+		height: 360px;
+	}
+	.theater-container {
+		margin: 0px auto;
+		width: 100%;
+	}
+	.heater-head .page-title{
+		padding-left: 0px !important;
+		margin-top:0px;
+	}
+	.theater-content-tab {
+		padding:0px 15px;
+	}
+	
+	/* ------------------------ End cgv cinema ----------------------- */
+	.header-language-container-left{
+		display:none;
+	}
+	.header-language-container-right{
+		width:100%;
+	}
+	.category-now-showing .category-title .sub-category ul li a{
+		font-size:14px;
+	} 
+	
+	.add-to-cart-wrapper {
+		float:left;
+		width:100%;
+	}
+	.add-to-cart-wrapper  .add-to-box{
+		float:left;
+		width:100%;
+	}
+	.add-to-cart-wrapper .movie-technology-icons {
+		float:left;
+		width:100%;
+		position:relative;
+	}
+	.catalog-product-view .product-tabs {
+		width: 100%;
+	}
+	
+	/* ==================== Game Film Distribution ==================== */
+	.community-sidebar{
+		width:100%;	
+	}
+	.community-sidebar .block-title{
+		width:100%;	
+		margin:10px 0px 0px;
+	}
+	.community-sidebar .block-title span{
+		margin-left:10px;
+	}
+	.community-sidebar .block-content{
+		width:100%;	
+		padding:0px 10px;
+	}
+	.community-sidebar .block-content ol{
+		width:100%;	
+	}
+	.community-sidebar .block-content ol li{
+		width:25%;	
+		margin-bottom:0px;
+	}
+	.community-sidebar .block-content ol li .thumb-left {
+		float: left;
+		width: 100%;
+	}
+	.social-community-index-view  .postWrapper .more-view{
+		width:100%;		
+	}
+	.social-community-index-view  .postWrapper .more-view ul.product-image-thumbs{
+		width:100%;		
+	}
+	.social-community-index-view  .postWrapper .more-view ul.product-image-thumbs li{
+		width:30%;		
+		margin:10px 1%;
+	}
+	.social-community-index-view  .postWrapper .more-view ul.product-image-thumbs li a{
+		width:100%;		
+	}
+	.social-community-index-view  .postWrapper .more-view ul.product-image-thumbs li a img{
+		width:100%;		
+	}
+	
+	/* ---------------------------- End Game Film Distribution ------------------------ */
+	
+	/* ==============================Banner Scroll ==================================== */
+	/* --------------- 18/11/2015------------------- */
+	.mtw_banner_left{
+		display:none;
+	}
+	.mtw_banner_right{
+		display:none;
+	}	
+	/* -------------------------- End Banner scroll ----------------------------------- */
+	
+	/* ===============================  Art House ==================================== */
+	/* --------------- 10/12/2015------------------- */
+	.catalog-category-view .page-title{
+		float:left;
+		width:100%;
+	}
+	.catalog-category-view .page-title h1{
+		float:left;
+		width:45%;
+	}
+	.catalog-category-view .page-title .sub-category{
+		float:right;
+		width:50%;
+	}
+	.catalog-category-view .home-movie-selection{
+		float:left;
+	}
+	#arthouse-home{
+		float:left;
+		width:100%;
+	}
+	.sect-arthouse-visual{
+		float:left;
+		width:100%;
+	}
+	.sect-arthouse-visual img{
+		float:left;
+		width:100%;
+	}
+	.category-description{
+		float:left;
+		width:100%;
+	}
+	.category-description .thumb{
+		float:left;
+		width:30%;
+	}
+	.category-description .thumb img{
+		float:left;
+		width:100%;
+	}
+	.category-description .player_area{
+		float:right;
+		width:68%;
+	}
+	.category-description .player_area iframe{
+		float:left;
+		width:100%;
+		height:286px;
+	}
+	.content-art-house-1{
+		margin-top:0px;
+	}
+	.content-art-house-left{
+		width:30%;
+		float:left;
+	}
+	.content-art-house-left img{
+		width:100%;
+		float:left;
+	}
+	.content-art-house-right{
+		width:68%;
+		float:right;
+	}
+	.category-arthouse .category-title{
+		margin-top:0px;
+	}
+	.location-hcm img{
+		width:100%;
+	}
+	.location-hn img{
+		width:100%;
+	}
+	/* ---------------------------- End Art House ----------------------------------- */
+	
+	/* ============================== CGV Special Page ============================== */
+	/* ----------------- 23/12/2015 ------------------ */
+	/* -------------- Toolbar ------------- */
+	.specialtheater-list{
+		width:100%;
+	}
+	.specialtheater-list ul{
+		width:100%;
+	}
+	.specialtheater-list .special-items li{
+		margin:0px;
+	}
+	.theaters-special-view .main-container{
+		margin-top:0px;
+	}
+	
+	/* ------------- Sweetbox ------------- */
+	.specialtheater-content .page-title h1{
+		font-size:45px;
+	}
+	.content-about-sweetbox {
+		background: transparent url("../images/bg-body.png") no-repeat scroll right top;
+		height: 537px;
+		margin-bottom: 15px;
+	}
+	.sw-content h3 {
+		color: #fff;
+		float: left;
+		font-size: 22px;
+		font-weight: bold;
+		margin-bottom: 20px;
+		margin-top: 30px;
+		padding-left:10px;
+		text-transform: capitalize;
+		width: 100%;
+	}
+	.sw-content p {
+		color: #fff;
+		padding-left: 10px;
+		width: 46%;
+		text-align:justify;
+		font-size:12px;
+	}
+	.img-about-sweetbox{
+		display:none;
+	}
+	/* ---------------- 48FS --------------- */
+	.content-48fs{
+		width:100%;
+		padding:0px 10px;
+		margin-top:-30px;
+	}
+	/* ---------------- 4DX ---------------- */
+	.specialtheater-4dx .std iframe{
+		height: 400px !important;
+		width: 100% !important;
+	}
+	.specialtheater-4dx .std{
+		width:100%;
+		padding:0px 10px;
+	}
+	/* ------------ Dolby Atmos ------------ */
+	.specialtheater-dolby-atmos .std iframe{
+		height: 400px !important;
+		width: 100% !important;
+	}
+	.specialtheater-dolby-atmos .std{
+		width:100%;
+		padding:0px 10px;
+	}
+	/* --------------- Imax --------------- */
+	.recent-imax p img{
+		width:100%;
+	}
+	.slide-imax-baner{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul li{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul li .image-cinema-imax{
+		float:left;
+		width:100%;
+	}
+	.image-cinema-imax img{
+		width:100% !important;
+		height:345px;
+	}
+	.text-content-imax{
+		width:45%;
+		height:345px;
+	}
+	.text-content-imax > p {
+		font-size: 12px;
+		text-align: justify;
+	}
+	.specialtheater-imax{
+		padding:0px 5px;
+	}
+	/* -------------------------- End CGV Special Page ------------------------------ */
+	
+}
+/* ------------------------ Min - width :771px ----------------------------*/
+
+/*======================== MAX - WIDTH : 770px =============================*/
+@media only screen and (max-width :770px) {
+	/*====================login==================*/
+	.account-wrap .product-collateral .toggle-tabs{display:block;}
+	.customer-account-login .product-collateral > dl.collateral-tabs > dt, .customer-account-create .product-collateral > dl.collateral-tabs > dt{
+		display:block;
+	}
+	.customer-account-login .home-event ul.toggle-tabs, .customer-account-create .home-event ul.toggle-tabs{
+		display:none;
+	}
+	.customer-account-login .product-collateral > dl.collateral-tabs > dt.current, .customer-account-create .product-collateral > dl.collateral-tabs > dt.current{
+		background:#E71A0F;
+		color:#fff;
+	}	
+	.customer-account .col-main{
+		padding:0 5%
+	}
+	.product-collateral > dl > dt:after, .product-collateral.accordion-open > dl > dt.current:after{
+		border-style:none;
+	}
+	.account-create #form-validate .buttons-set .back-link{display:block;}
+	.account-create #form-validate .buttons-set{float:left;}
+	.button > span{border:none;}
+	#my-orders-table thead th{font-size:10px;padding:5px;}
+	/*====================End login==================*/
+	.ticket-qty-box .ticket-qty{width:100%;margin:5px 0;}
+	.minus, .plus{margin:0;}	
+	.ticket-list-table{font-size:12px;}
+	.ticket-content-bottom{position:relative;}
+	.booking-actions{top:10px;}
+	.ticket-content-bottom{
+		display:block;
+		overflow:hidden;
+		content:"";
+		background:none;
+	}
+	.ticket-movie-info{float:left;display:none;}
+	.ticket-theater-info{		
+		float:left;
+		clear:both;
+		display:none;
+	}
+	.main-container-full{
+		border-top:1px solid #ccc;
+	}
+	/*========================End booking==============*/
+	.page-header-container a.logo{
+		float:left;
+		width:100%;
+		background:url("../images/bg-top.png") repeat-x scroll left bottom / 10px 135px transparent;
+		height:137px;
+		padding:30px;
+	}
+	.logo .small{
+		display:inline;
+	}
+	#header-search {
+		display:none;
+	}
+	.skip-link.skip-active{
+		background: none repeat scroll 0 0 #ededed;
+		color: inherit;
+	}
+	#header-search {
+    padding: 20px;
+	position:static;
+	}
+	#header-search > div{
+		display:block;
+	}
+	#header-search.skip-content.skip-active {
+		background: none repeat scroll 0 0 #ededed;
+		display: block;
+		width:100%
+	}
+	.header-search-newsoffer, .header-search-booking{
+		display:none;
+	}
+	.page-header-container .skip-links{
+		border:none;
+	}
+	.nav-primary a.level0 {
+		padding: 0 15px;  
+	}
+	.store-language-container{
+		display:none;
+	}
+	/*=========================End header=============*/
+	.home-movie-selection .feature_slide_show{
+		margin: 0 auto;	
+		width:95%;
+		float:none;
+	}
+	.slideshow-containe-movier{
+		position:relative;
+	}  
+	.home-movie-selection .slideshow-containe-movier span.feature_slide_show_next{
+		top:40%;
+		right:3px;
+		z-index:99;
+	}
+	.home-movie-selection .slideshow-containe-movier span.feature_slide_show_prev{
+		top:40%;
+		left:3px;
+		z-index:99;
+	}		
+	.product-collateral > dl > dt{
+		display:block;
+	}
+	.home-event{
+		display:block;
+	}	
+	.home-show-event ul{
+		width:95%;
+		margin:auto;		
+	}
+	.cms-home .product-collateral .toggle-tabs li {
+		float: none; 
+	}
+	.home-show-event span.slide_home_event_next{
+		right:3px;
+		top:35%;
+	}
+	.home-show-event span.slide_home_event_prev{
+		left:3px;
+		top:35%;
+	}
+	.promotion-card{
+		display:none;
+	}
+	.footer-before-container{
+		display:none;
+	}	
+	/*===================footer=================*/
+	.links .logo-footer-cgv{
+			margin:5px;
+	}
+	.links .address-text{
+		width:80%;
+	}
+	.footer-link-social{
+		display:none;
+	}
+	.footer address{
+		padding:0 10px;
+	}
+	.footer .links li{
+		float:left;
+		padding:0 5px;
+	}	
+	/*===================End home=================*/
+	
+	/* ---------------------- Category ------------------------ */
+	.category-title h1, .category-title h1{
+		font-size:28px;
+	}
+	.sub-category ul li a{
+		font-size:16px;
+	}	
+	.category-products .products-grid{
+		margin-bottom: 10px;
+	}
+	.category-products .btn-more{
+		margin-right:0px;
+	}
+	.products-grid > li{
+		margin-bottom:0px;
+	}
+
+	/* Undo three-column config */	
+	.products-grid > li:nth-child(even),
+	.products-grid > li:nth-child(3n),
+	.products-grid > li {		
+		margin-right: 4.5%;
+	}
+	.products-grid > li:nth-child(odd) {
+		clear: left;
+	}
+	.products-grid > li:nth-child(even) {
+		margin-right: 0;
+	}
+	.products-grid > li:nth-child(3n+1) {
+		clear: none;
+	}	
+	/*=====================*/
+	/* Undo three-column config */
+	.hdxh-icon img{
+		width:100%;
+	}
+	.content-hdxh{
+		margin-left:3%;
+	}
+	.community-wrapper{
+		padding:0 5%;
+	}
+	.products-grid--max-3-col > li{
+		width:31%;
+		margin-right:3.33333%;
+	   }
+	.products-grid--max-3-col > li:nth-child(odd) {
+		clear: none;
+	}
+	.products-grid--max-3-col > li:nth-child(3n+1) {
+		clear: none;
+	}
+	.products-grid--max-3-col > li:nth-child(even),
+	.products-grid--max-3-col > li:nth-child(3n) {
+		margin-right: 3.33333%;
+		width: 31%;
+	}
+	.products-grid--max-3-col > li:nth-child(3n){
+		margin-right:0;		
+	}
+	 /* Undo four-column config */
+	.products-grid--max-4-col > li:nth-child(odd) {
+		clear: none;
+	}
+	.products-grid--max-4-col > li:nth-child(3n+1) {
+		clear: none;
+	}
+	.products-grid--max-4-col > li:nth-child(even),
+	.products-grid--max-4-col > li:nth-child(4n) {
+		margin-right: 3.5%;
+		width: 31%;
+	}	
+	/* Set column config */
+	  /* Set column config */
+	.products-grid--max-4-col > li {
+		margin-right: 3.5%;
+	}
+
+	.products-grid--max-4-col > li {
+		width: 31%;
+		margin-right: 3.5%;
+	}
+
+	.products-grid--max-4-col > li:nth-child(3n+1) {
+		clear: left;
+	}
+	.products-grid--max-4-col > li:nth-child(3n) {
+		margin-right: 0;
+	}
+	.products-grid--max-4-col > li:nth-child(6n) {
+		margin-right: 0;
+	}
+	
+    /*=====================End catalog=============*/	
+	.product-img-box{
+		float:left;
+		padding-right:20px;
+	}
+	.product-img-box .product-name{
+		display:none;
+	}
+	.product-view .product-shop .product-name{
+		display:block;
+	}
+	.product-view .product-shop{
+		float:left;
+		margin:0;
+	}  
+	.product-view .add-to-cart-wrapper, .product-view .block-related{
+		clear: right;
+		float: right;
+	}
+	.product-view .add-to-cart-wrapper{
+		top:0;
+		margin:10px 0;
+	}
+	.movie-technology-icons{
+		bottom:0;	
+	}
+  /*============================================detail====================*/
+	.catalog-product-view .product-collateral .toggle-tabs {
+		display: block;
+		width: 100%;
+		position: relative;  
+		background-color: #FDFCF0;
+	}
+	.catalog-product-view .product-collateral .toggle-tabs li {
+		float: left; 
+	}
+	.catalog-product-view .product-collateral .toggle-tabs li > span {
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-webkit-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+		display: inline-block;
+		padding: 0 7px;
+		cursor: pointer;
+		font-size: 12px;
+		position: relative;
+	}
+	.product-collateral .toggle-tabs li:first-child {
+		border-left: none;
+	}
+	.product-collateral .toggle-tabs:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+	.product-collateral > dl {
+		width: 100%;
+	}
+	.product-collateral > dl > dt {
+		display: none;
+	}
+	.product-collateral > dl > dd {
+		width: 100%;
+		display: none;		
+		border-top: 0;
+	}
+	.product-collateral > dl > dd.current {
+		display: block;
+	}
+	/*checkout*/
+	.header-language-container-right .links li{margin:0 5px;} 
+	/*=========================popup================*/
+	.combo-content-left{display:none;}
+	/*======================CMS page==================*/
+		/*-------------------social--------------*/
+	.des-smile-link-youtobe .smile-youtobe iframe{
+		width:100%;
+	}
+		/*------------------------contact-cgv---------------*/
+	#contactForm{padding-left:5%;}
+		/*-----------------------faq-------------*/
+	.cms-faq .col-left-first .block-title strong{
+		float:left;
+	}
+		/*-----------------memmbership-------------*/
+	.membership-left, .membersip-content{
+		float: none;
+		margin-bottom: 10px;
+		padding: 0 2%;
+		width: auto;
+	}
+	.membersip-content{		
+		display:block;
+		overflow:hidden;
+		content:"";
+	}
+	.title-membership-cgv h3{
+		background:url("../images/member-title.png") no-repeat scroll center center / 70% auto transparent;
+	}	
+	
+	/*---------------section time-----------------*/
+	
+	.cinemas-filter-index  .label-red  .toggle-tabs{display:block;}
+	.theatre-city-tabs .title-cgv-cinema h1{margin-bottom:10px;}
+	.product-view .product-tabs > .toggle-tabs > li {
+		background: url("../images/bg_tebmenu-line.gif") no-repeat scroll 0 16px #e71a0f;
+		border: medium none;
+		color: #fff;
+		display: inline-block;
+		float: none;
+	}
+	.theatre-city-tabs .wrap-city  {height:65px;}
+	.theatre-city-tabs .wrap-city .toggle-tabs li{width:19%;height:30px;line-height:30px;}
+	.theatre-city-tabs .wrap-city .toggle-tabs li span{height:30px;line-height:30px;}	
+	/**/
+	.product-view .toggle-tabs > li.current {
+		border: medium none;
+	}
+	.product-view .product-tabs > .toggle-tabs > li:first-child {
+		background: url("../images/ribon_left_menu.png") no-repeat scroll left 0 #e71a0f;
+		padding-left: 19px;
+		height:40px;
+	}
+	.product-view .product-tabs > .toggle-tabs > li.current > span:before {
+		background: url("../images/ico_finger.png") no-repeat scroll 0 50% #e71a0f;
+		content: "";
+		height: 39px;
+		padding-left: 40px;
+	}
+	.product-view .product-tabs > .toggle-tabs > li > span {
+		background: url("../images/bg_tebmenu-line.gif") no-repeat scroll left 15px #e71a0f;
+		height:40px;
+		line-height:40px;	
+		font-size:12px;
+	}
+	.product-view .product-tabs > .toggle-tabs > li.last {
+		background: url("../images/ribon_right-transparent.png") no-repeat scroll right 0 transparent;
+		padding-right: 19px;
+		height:40px;
+	}
+	.product-collateral .toggle-tabs li > span {
+		cursor: pointer;
+		display: inline-block;
+		font-size: 12px;
+		height: 39px;
+		line-height: 40px;
+		padding: 0 12px;
+		position: relative;
+	}
+	.cinemas-filter-index .label-red > .toggle-tabs{
+		top:5px;;
+	}
+	.tab-content .theatre-tabs li > span{		
+		font-size:10px;
+		height:auto;
+		line-height:30px;
+	}
+	.theatre-wrap .tabs{
+		margin-top:0;
+	}	
+		/*-------------------------------*/	
+	.movies-filter-session .movies-tabs .toggle-tabs{
+		height:196px;
+		margin-bottom:0;
+	}
+	.toggle-tabs li{
+		float:left;
+	}
+	.movies-filter-session .movies-tabs .toggle-tabs li span{
+		font-size:11px;
+	}
+	.movies-filter-session .movies-tabs .collateral-movies-tabs{
+		height:190px;
+	}
+	.theater-session-tabs > .toggle-tabs > li{
+		float:left;
+	}
+		/*-----------------------Theaters----------------*/
+	.cinemas-cinema-index .product-collateral .toggle-tabs{ 
+		display:block;
+	}		
+	.cinemas-cinema-index .main-container-full{
+		background:none;
+	}		
+	.theatre-wrap .theatre-list, .movies-wrap .movies-filter-session{}
+	.top-table h2{
+		left:20px;
+	}
+	.top-table img{
+		display:none;
+	}	
+	.information-ticket table{
+		font-size:10px;
+	}
+	.value-1{
+		font-size:11px;
+	}
+	.value{
+		font-size:14px;
+	}
+	.value .seat p.vip, .value .seat p{
+		background:none;
+	}
+	.information-ticket{
+		margin:0 1%;
+	}
+	.value-1 .text .d3, .value-1 .text .d2{background:none;padding-left:0;}
+	/*----------------------gift card--------------------*/
+	.img-gf-card{margin-top:-120px;}
+	.img-gf-card{display:none;}	
+	.content-term-con-gift-card ul{width:100%;}	
+	.row-1-about-gift-card img{display:none;}
+	.row-1-about-gift-card p, .row-2-about-gift-card p{float:left;width:100%;}	
+	
+	/* ======================= Membership Page ======================= */
+	.col-left-content-member{
+		display:none;
+	}
+	.col-right-content-member{
+		width:95%;
+	}
+	.cgv-membership > div {
+		margin: 10px 20px 0 85px;
+	}
+	
+	/* ========================== CGV CINEMAS ======================== */
+	.title-cgv-cinema {
+		padding-top: 30px;
+	}
+	.title-cgv-cinema h1 {
+		font-size: 38px;
+		margin-bottom:20px;
+	}
+	.product-collateral .toggle-tabs li > span {
+		height: 36px;
+		line-height: 36px;
+	}
+	.wrap-city {
+		height: 80px;
+	}
+	.theatre-wrap .theatre-tabs {
+		margin: 10px 0 50px 48px;
+	}
+	.theatre-wrap .theatre-list, .movies-wrap .movies-list {
+		height: 360px;
+	}
+	.theater-container {
+		margin: 0px auto;
+		width: 100%;
+	}
+	.heater-head .page-title{
+		padding-left: 0px !important;
+		margin-top:0px;
+	}
+	.theater-content-tab {
+		padding:0px 15px;
+	}
+	.theaters-cinema-index .theater-content-tab .tab-content{
+		float: left;
+		width: 100%;
+	}
+	.theaters-cinema-index .theater-content-tab .session-list li.area{
+		float: left;
+		width: 100%;
+	}
+	
+	/* ------------------------ End cgv cinema ----------------------- */
+	
+	/* ==============================Banner Scroll ==================================== */
+	/* --------------- 18/11/2015------------------- */
+	.mtw_banner_left{
+		display:none;
+	}
+	.mtw_banner_right{
+		display:none;
+	}	
+	/* -------------------------- End Banner scroll ----------------------------------- */
+	
+	/* ===============================  Art House ==================================== */
+	/* --------------- 10/12/2015------------------- */
+	.catalog-category-view .page-title{
+		float:left;
+		width:100%;
+	}
+	.catalog-category-view .page-title h1{
+		float:left;
+		width:45%;
+	}
+	.catalog-category-view .page-title .sub-category{
+		float:right;
+		width:50%;
+	}
+	.catalog-category-view .home-movie-selection{
+		float:left;
+	}
+	#arthouse-home{
+		float:left;
+		width:100%;
+	}
+	.sect-arthouse-visual{
+		float:left;
+		width:100%;
+	}
+	.sect-arthouse-visual img{
+		float:left;
+		width:100%;
+	}
+	.category-description{
+		float:left;
+		width:100%;
+	}
+	.category-description .thumb{
+		float:left;
+		width:30%;
+	}
+	.category-description .thumb img{
+		float:left;
+		width:100%;
+	}
+	.category-description .player_area{
+		float:right;
+		width:68%;
+	}
+	.category-description .player_area iframe{
+		float:left;
+		width:100%;
+		height:275px;
+	}
+	#arthouse-home .products-grid--max-4-col > li {
+		margin-right: 4%;
+		width: 21%;
+	}
+	#arthouse-home .products-grid--max-4-col > li:nth-child(3n+1) {
+		clear: none;
+	}
+	.category-arthouse .movie-technology .icon-arthouse{
+		display:none;
+	}
+	/* ------------ Vê Art_house -------------*/
+	.content-art-house-left{
+		width:25%;
+		margin-right:0px;
+	}
+	.content-art-house-left img{
+		width:100%;
+	}
+	.content-art-house-right{
+		width:73%;
+	}
+	.location-hcm img{
+		width:100%;
+	}
+	.location-hn img{
+		width:100%;
+	}
+	.category-arthouse .category-title{
+		margin-top:15px;
+	}
+	/* ---------------------------- End Art House ----------------------------------- */
+	
+	/* ============================== CGV Special Page ============================== */
+	/* ----------------- 23/12/2015 ------------------ */
+	/* -------------- Toolbar ------------- */
+	.specialtheater-list{
+		width:100%;
+	}
+	.specialtheater-list ul{
+		width:100%;
+	}
+	.specialtheater-list .special-items li{
+		margin:0px;
+		width:120px;
+	}
+	.theaters-special-view .main-container{
+		margin-top:0px;
+	}
+	.special-items .item-sweetbox a {
+		background-position: -382px 9px;
+	}
+	.special-items .item-sweetbox a:hover, .special-items .item-sweetbox.actived a {
+		background-position: -382px 139px;
+	}
+	.special-items .item-48-fs a {
+		background-position: -774px 2px;
+	}
+	.special-items .item-48-fs a:hover, .special-items .item-48-fs.actived a {
+		background-position: -774px 136px;
+	}
+	.special-items .item-4dx a {
+		background-position: -11px 7px;
+	}
+	.special-items .item-4dx a:hover, .special-items .item-4dx.actived a {
+		background-position: -10px 143px;
+	}
+	.special-items .item-dolby-atmos a {
+		background-position: -195px 5px;
+	}
+	.special-items .item-dolby-atmos a:hover, .special-items .item-dolby-atmos.actived a {
+		background-position: -195px 138px;
+	}
+	.special-items .item-imax a {
+		background-position: -925px 5px;
+	}
+	.special-items .item-imax a:hover, .special-items .item-imax.actived a {
+		background-position: -925px -145px;
+	}
+	.special-items .item-gold-class a {
+		background-position: -1060px 5px;
+	}
+	.special-items .item-gold-class a:hover, .special-items .item-gold-class.actived a {
+		background-position: -1060px -145px;
+	}
+	/* ------------- Sweetbox ------------- */
+	.specialtheater-content .page-title h1{
+		font-size:45px;
+	}
+	.content-about-sweetbox {
+		background: transparent url("../images/bg-body.png") no-repeat scroll right top;
+		height: 537px;
+		margin-bottom: 15px;
+	}
+	.sw-content h3 {
+		color: #fff;
+		float: left;
+		font-size: 22px;
+		font-weight: bold;
+		margin-bottom: 20px;
+		margin-top: 30px;
+		padding-left:10px;
+		text-transform: capitalize;
+		width: 100%;
+	}
+	.sw-content p {
+		color: #fff;
+		padding-left: 10px;
+		width: 46%;
+		text-align:justify;
+		font-size:12px;
+	}
+	.img-about-sweetbox{
+		display:none;
+	}
+	/* ---------------- 48FS --------------- */
+	.content-48fs{
+		width:100%;
+		padding:0px 10px;
+		margin-top:-30px;
+	}
+	/* ---------------- 4DX ---------------- */
+	.specialtheater-4dx .std iframe{
+		height: 400px !important;
+		width: 100% !important;
+	}
+	.specialtheater-4dx .std{
+		width:100%;
+		padding:0px 10px;
+	}
+	/* ------------ Dolby Atmos ------------ */
+	.specialtheater-dolby-atmos .std iframe{
+		height: 400px !important;
+		width: 100% !important;
+	}
+	.specialtheater-dolby-atmos .std{
+		width:100%;
+		padding:0px 10px;
+	}
+	/* --------------- Imax --------------- */
+	.recent-imax p img{
+		width:100%;
+	}
+	.slide-imax-baner{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul li{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul li .image-cinema-imax{
+		float:left;
+		width:100%;
+	}
+	.image-cinema-imax img{
+		width:100% !important;
+		height:345px;
+	}
+	.text-content-imax{
+		width:45%;
+		height:345px;
+	}
+	.text-content-imax > p {
+		font-size: 12px;
+		text-align: justify;
+	}
+	.specialtheater-imax{
+		padding:0px 5px;
+	}
+	/* -------------------------- End CGV Special Page ------------------------------ */
+	
+}
+/*------------------------- Min - width 641px -----------------------------*/
+
+/*======================== MAX - WIDTH :640px ==============================*/
+@media only screen and (max-width :640px) {
+	/*==================== CGV Special - 21/04/2016 ==================*/
+	.specialtheater-list .special-items li {
+		margin: 0;
+		width: 100px;
+		margin:15px 0px;
+	}
+	.special-items li a {
+		background-image: url("../images/cgv-special-reponsive.png");
+		display: block;
+		height: 100px;
+		text-indent: -99999px;
+		width: 100px;
+	}
+	.special-items .item-sweetbox a {
+		background-position: -133px -19px;
+	}
+	.special-items .item-48-fs a {
+		background-position: -468px -19px;
+	}
+	.special-items .item-4dx  a {
+		background-position: -243px -19px;
+	}
+	.special-items .item-dolby-atmos  a {
+		background-position: -356px -19px;
+	}
+	.special-items .item-imax  a {
+		background-position: -20px -19px;
+	}
+	.special-items .item-gold-class  a {
+		background-position: -580px -19px;
+	}
+	.specialtheater-list .special-items li.item-arthouse{
+		display:none;
+	}
+	
+	.special-items .item-sweetbox a:hover, .special-items .item-sweetbox.actived a {
+		background-position: -133px 117px;
+	}
+	.special-items .item-48-fs  a:hover, .special-items .item-48-fs.actived a {
+		background-position: -468px 117px;
+	}
+	.special-items .item-4dx a:hover, .special-items .item-4dx.actived a {
+		background-position: -243px 117px;
+	}
+	.special-items .item-dolby-atmos a:hover, .special-items .item-dolby-atmos.actived a {
+		background-position: -356px 117px;
+	}
+	.special-items .item-imax a:hover, .special-items .item-imax.actived a {
+		background-position: -20px 117px;
+	}
+	.special-items .item-gold-class a:hover, .special-items .item-dolby-atmos.actived a {
+		background-position: -580px 117px;
+	}
+}
+/*------------------------- Min - width :601px ----------------------------*/
+
+/*======================== MAX - WIDTH :600px ==============================*/
+@media only screen and (max-width :600px) {
+	/*=========================== LOGIN PAGE ================================*/
+	.account-create{
+		margin-left:0;
+	}
+	.format-login-page{
+		padding:0;
+	}
+	#captcha-image-box-user_create #captcha-reload , #captcha-image-box-user_login .captcha-reload{
+		margin-right: 0;	
+	}	
+	.header-language-container-right .header-career{
+		display:none;
+	}
+	/*---------------------------- End login page ---------------------------*/
+	
+	
+	/*============================= HOME PAGE ===============================*/
+	.home-movie-selection .home-title h2{
+		width:50%;
+	}
+	.home-movie-selection .feature_slide_show{
+		width:80% !important;
+	}
+	.home-show-event ul{
+		width:80% !important;
+	}
+	.cms-home .product-collateral > dl > dt {
+		background-color: #898987;
+		border: medium none;
+		color: #fff;
+	}
+	.home-event .home-title h2{
+		width:19%;
+		height:48px;
+	}
+	/*-------------------------------- End home -----------------------------*/
+	
+	/*================================ HEADER ===============================*/
+	.page-header-container .skip-account{
+		display:block;
+	}
+	.skip-link{
+		width:25%;
+	}
+	.skip-nav{
+		width:25%;
+	}
+	.header-language-container-left{display:none;}
+	.header-language-container-right .welcome-msg{
+		display:none;
+	}
+	.header-language-container-right .header-top-account{
+		display:none;
+	}		
+	.header-container-full{position:relative;}
+	.header-language-background{
+		top:160px;
+		height: 44px;
+		position: absolute;
+		right: 0;
+		width: 25%;
+		z-index: 999;		
+	}
+	.page-header .page-header-container .skip-links .skip-nav .label{
+		display:none;
+	}
+	.header-language-container-right{
+		width:99%;
+	}
+	.switcher-language, .store-language-container{
+		width:100%;
+	}
+	.switcher-language ul li.active{
+		display:none;
+	}
+	.switcher-language ul li:first-child, .switcher-language ul li:last-child{
+		border-radius:0;
+		margin:0;
+	}
+	.switcher-language ul li{
+		height:44px;
+		width:99%;
+		background:#fdfcf0;
+	}
+	.switcher-language ul li a{
+		height:44px;
+		width:100%;
+		color:#898987;
+		text-align:center;
+		line-height:40px;
+	}
+	.switcher-language ul li a:hover{
+		color:#3399CC;
+	}
+	.header-language-background{
+		top: 137px;
+	}
+	.page-header-container .store-language-container{
+		display:none;
+	}
+	.main-container-full{
+		border-top:1px solid #ccc;
+	}
+	.header-career{
+		display:none;
+	}
+	.store-language-container{
+		display:none;
+	}
+	/*-------------------------------- End header -----------------------------*/
+	
+	/*================================ CMS PAGE ===============================*/
+	.cms-home .product-collateral .toggle-tabs{
+		display:none;
+	} 
+	.cms-home .product-collateral > dl > dt{
+		display:block;
+	}
+	.cms-home .product-collateral > dl > dt.current{
+		background:#E71A0F;
+		color:#fff;
+	}
+	.home-movie-selection .feature_slide_show{
+		margin: 0 auto;	
+		width:240px;
+		float:none;
+	}
+	.home-show-event ul{
+		width:240px;
+		margin:auto;		
+	}
+	/*------------------------------ End cms page ---------------------------*/
+	
+	/*================================ FOOTER ===============================*/
+	.links .address-text{
+		width:78%;
+	}
+	.footer-link-social{
+		display:none;
+	}	
+	
+	/*------------------------------- End footer ----------------------------*/
+	
+	/*=========================== CATEGORY PAGE =============================*/
+	.movie-technology{
+		display:none;
+	}
+	/*---------------------------- End category page ------------------------*/
+	
+	/*============================= DETAIL PAGE =============================*/	
+	.product-view .add-to-cart-wrapper{
+		width:100%;
+	}		
+	.product-collateral .toggle-tabs li > span {
+		font-size:10px;
+	}
+	.theatre-city-tabs > .toggle-tabs > li{width:auto;}
+	.product_view_trailer iframe{width:100%;}
+	/*========== Popup ===========*/
+	.combo-content-left{display:none;}
+	.messages_product_view, .my-popupmessage{
+		width:480px !important;
+	}
+	
+	/*========= Booking ===========*/
+	
+	.ticket-movie-info{float:left;width:100%}	
+	/*---------------------------- End category page ------------------------*/
+	
+	/*=============================== CMS PAGE ==============================*/	
+	/*=========== Social ============*/
+	.description-trang-cuoi .des-smile-moon-1 .des-smile-moon-1-left,
+	.description-trang-cuoi .des-smile-moon-1 .des-smile-link-youtobe,
+	.postWrapper .content-top .short-description,
+	.postWrapper .content-top .gallery-image{width:100%;}
+	.postTitle h2{font-size:16px;}
+	
+	.products-grid--max-3-col > li{
+		width:48%;
+		margin-right:4%;
+		margin-bottom:4.5%;
+   }
+	.products-grid--max-3-col > li:nth-child(odd){
+		clear: none;		
+	}
+	.products-grid--max-3-col > li:nth-child(2n+1){
+		clear: left;
+	}
+	.products-grid--max-3-col > li:nth-child(even),
+	.products-grid--max-3-col > li:nth-child(3n) {
+		margin-right:4%;		
+		width: 48%;
+	}
+	.products-grid--max-3-col > li:nth-child(2n){
+		margin-right:0;
+	}
+	/*------- End social --------*/
+	.hdxh-title{
+		font-size:40px;
+	}
+	.info-hdxh-cgv{
+		padding:0 5% 15%;
+	}
+	/*============= Term & Condition ===========*/
+	.cms-terms-conditions .col-main{
+		padding:0 2%;
+		display:block;
+		overflow:hidden;
+	}
+	.cms-terms-conditions .icon-title-term-condition img{
+		width:40%;
+		margin-top:0;
+	}
+	.term-condition-title span strong{
+		margin-left: 45%;
+		font-size:1.5em;
+	}
+	/*----------------------------- End cms page ----------------------------*/
+	
+	/*============================= THEATER PAGE ============================*/	
+	.tab-content .theatre-tabs li > span{
+		line-height:20px;
+	}
+	.theatre-wrap .theatre-list, .movies-wrap .movies-filter-session{
+		height:300px;
+	}
+	.theater-infomation{
+		padding:15px 5px;
+	}
+	.theater-infomation .left-info-theater{
+		width:63%;
+	}
+	.theater-infomation .left-info-theater .theater-left-content{
+		padding-right:10px;
+	}
+	.theater-infomation .left-info-theater .theater-left-content{
+		font-size:10px;
+	}
+	.right-info-theater{
+		width:37%;
+	}
+	.right-info-theater .theater-right-content{
+		padding-left:7px;
+	}
+	.title-cgv-cinema{
+		padding-top:42px;
+	}	
+	.value-1, .title-day, .title-time td p{
+		font-size:9px;
+	}
+	.right-info-theater .contact-us a, .right-info-theater .location a{
+		font-size:9px;
+	}
+	.theater-gallery{
+		height:160px;
+	}
+	.theater-thumb-image{
+		display:none;
+	}
+	.theater-container .heater-head .theater-title h3{
+		font-size:28px;
+	}	
+	.cinemas-filter-index .label-red .theatre-city-tabs .theatre-tabs .session-tabs{
+		width:100%;
+	}
+	.nav-cinema ul.level0 > li{
+		width:100%;
+	}
+	/*---------------------------- End theater page -------------------------*/
+	
+	/*========================== SESSTION TIME PAGE =========================*/	
+	.cinemas-filter-index .label-red > .toggle-tabs{
+		top:0;
+	}
+	.theatre-city-tabs .title-cgv-cinema h1{
+		display:none;
+	}
+	.tab-content  .theatre-tabs{
+		margin:5px 30px 50px;
+	}		
+	.theatre-wrap .theatre-tabs > ul li span{
+		width:100%;
+	}
+	/**/
+	.movies-filter-session .movies-tabs .movies-filter-image{
+		display:none;
+	}
+	.movies-filter-session .movies-tabs{
+		padding:0 8%;
+	}
+	.movies-filter-session .movies-tabs .toggle-tabs{
+		width:50%;
+		height:163px;
+	}
+	.movies-filter-session .movies-tabs .collateral-movies-tabs{
+		width:45%;
+		height:158px;
+		padding:10px 20px;
+	}	
+	.cinemas-filter-index .main-container-full{
+		background:none;
+	}
+	/*--------------------------------- End sesstion time ----------------------------*/	
+	
+	/*================================== MEMBERSHIP PAGE =============================*/
+	.col-left-content-member {
+		display:none;
+	}
+	.col-right-content-member{
+		float: right;
+		width: 100%;
+	}
+	.title-cgv-member-bg h1 {
+		background: url("../images/member-title.png") no-repeat scroll center center / 320px auto transparent;
+		color: #ff0000;
+		font-size: 0;
+		height: 65px;
+		margin: 0;
+	}
+	.cgv-membership > ul.ui-tabs-nav li {
+		width: 45%;
+	}
+	.cgv-membership > ul.ui-tabs-nav li.membership-manager-account {
+		width: 45%;
+	}
+	.cgv-membership > div {
+		background: #e5decc;
+		float: left;
+		margin: 10px 20px 0 18px;
+		padding-top: 52px;
+		width: 91%;
+	}
+	.cgv-membership > div .outer .inner {
+		background:none;
+	}
+	.cgv-membership > div .outer .inner .lyt-heading {
+		font-size:16px;
+	}
+	.cgv-membership > div .outer{
+		background:none;
+	}
+	.des-card-member-cgv{
+		padding:0 5px;
+	}
+	/* -------------------------- End membership ---------------------- */
+	
+	/* ========================== CGV CINEMAS ======================== */
+	.title-cgv-cinema {
+		padding-top: 20px;
+	}
+	.title-cgv-cinema h1 {
+		font-size: 30px;
+		margin-bottom:20px;
+	}
+	.product-collateral .toggle-tabs li > span {
+		height: 36px;
+		line-height: 36px;
+	}
+	.wrap-city {
+		height: 80px;
+	}
+	.theatre-wrap .theatre-tabs {
+		margin: 10px 0 50px 48px;
+	}
+	.theatre-wrap .theatre-list, .movies-wrap .movies-list {
+		height: 360px;
+	}
+	.theater-container {
+		margin: 0px auto;
+		width: 100%;
+	}
+	.heater-head .page-title{
+		padding-left: 0px !important;
+		margin-top:0px;
+	}
+	.theater-content-tab {
+		padding:0px 15px;
+	}
+	.theaters-cinema-index .theater-content-tab .tab-content{
+		float: left;
+		width: 100%;
+	}
+	.theaters-cinema-index .theater-content-tab .session-list li.area{
+		float: left;
+		width: 100%;
+	}
+	.theatre-wrap .theatre-list, .movies-wrap .movies-list {
+		height: 280px;
+	}
+	.theaters-cinema-index .theatre-city-tabs .title-cgv-cinema h1 {
+		display: block;
+	}
+	.product-collateral .toggle-tabs li > span {
+		font-size: 11px;
+	}
+	.tab-content .theatre-tabs li > span {
+		font-size: 11px;
+	}
+	.theatre-wrap .home-title h3 {
+		background: url("../images/h3_theater.gif") no-repeat scroll center center / 190px 30px transparent;
+	}
+	.theater-container .heater-head {
+		margin-top: 15px;
+	}
+	.theater-thumb-image {
+		display: block;
+	}
+	.theater-thumb-image .slideshow-theater ul li.cycle-slide img {
+		width:100% !important; 
+		height:auto !important;
+	}
+	.theater-thumb-image .slideshow-theater ul li img {
+		width:100%;
+		height:auto;
+	}
+	.theater-gallery{
+		position:relative;
+	}
+	.theater-infomation {
+		background: rgba(0, 0, 0, 0) url("../images/bg-box-content-info-theater.png") repeat scroll 0 0;
+		color: #fdfcf0;
+		display: inline-block;
+		float: left;
+		min-height: 70px;
+		padding: 15px 10px;
+		width: 100%;
+		position:relative;
+		overflow: hidden;
+	}
+	.theaters-cinema-index .slideshow-container{
+		margin:0px;
+	}
+	/* --------------------------------- End cgv cinema ------------------------------ */
+	
+	/* ================================= SEATMAP PAGE ================================  */
+	/*============ 5/6/2015 ==========  */
+	.seatmap-content-main .seatmap-theater-content {
+		width:100%;
+	}
+	.seatmap-theater-minimap-content {
+		padding: 0 10px;
+	}
+	.theater-desc {
+		width:100%;
+		min-height:110px;
+	}
+	.theater-desc .seat-icon-desc {
+		width:49%;
+		float:left;
+		margin-top:20px;
+		padding-left:20px;
+	}
+	.theater-desc .seat-type{
+		width:49%;
+		float:left;
+	}
+	/* ------------------------------ End seatmap page -------------------------------- */
+	
+	/* =============================== SESSTION TIME PAGE ============================= */
+	.theaters-showtimes-index .main-container-full{
+		background:none;
+	}
+	.theaters-showtimes-index .showtimes-header {
+		left: 0;
+		margin-top: 10px;
+		position: relative;
+		text-align: center;
+		width: 100%;
+		z-index: 30;
+	}
+	.theaters-showtimes-index .showtimes-container {
+		float: left;
+		position: relative;
+		top: -20px;
+		width: 100%;
+		z-index: 15;
+	}
+	.theaters-showtimes-index .theatre-wrap .theatre-list{
+		background:#000;
+	}
+	.theatre-city-tabs .title-cgv-cinema h1 {
+		display: block;
+	}
+	.theaters-showtimes-index .theatre-city-tabs .wrap-city{
+		margin: 0;
+		width: 100%;
+	}
+	.theaters-showtimes-index .theatre-wrap .theatre-tabs {
+		margin: 10px;
+	}
+	.theaters-showtimes-index .collateral-theatre-city-tabs .theatre-tabs li.current{
+		background:#fff;
+		border-radius:3px;
+	}
+	.theaters-showtimes-index .collateral-theatre-city-tabs .theatre-tabs li.current span{
+		color:#000;
+	}
+	.theaters-showtimes-index .theater-content-tab{
+		margin-top:0px;
+	}
+	.theaters-showtimes-index .tab-container .tab-content{
+		float:left;
+		width:100%;
+	}
+	.theaters-showtimes-index .tab-container .tab-content .sect-guide .descri-timezone > span{
+		float:left;
+		width:49%;
+	}
+	.theaters-showtimes-index .tab-content > .theatre-tabs > li:nth-child(2n),
+	.theaters-showtimes-index .tab-content > .theatre-tabs > li:nth-child(3n) {
+		margin-bottom: 5px;
+	}
+	
+	.theaters-showtimes-movies .showtimes-wrap .showtimes-container{
+		float: left;
+		margin-top: 30px;
+		width: 100%;
+	}
+	.theaters-showtimes-movies .main-container-full{
+		background:none;
+	}
+	.theaters-showtimes-movies .movies-wrap .movies-list{
+		background:url("../images/bg-sesstion-time-600.png") repeat scroll center center transparent ;
+		padding:15px;
+	}
+	.theaters-showtimes-movies .movies-wrap .movies-list {
+		height:485px;
+	}
+	.theaters-showtimes-movies .movie-poster {
+		margin-top:20px;
+	}
+	.theaters-showtimes-movies .slimScrollDiv{
+		top:-300px;
+		right:-200px;
+	} 
+	.theaters-showtimes-movies .movies-tabs .collateral-movies-tabs{
+		width:100%;
+		background:url("../images/bg-box-movie-600.PNG") repeat scroll center center transparent ;
+		top:-265px;
+		height:auto;
+		padding:20px;
+	}
+	.theaters-showtimes-movies .showtimes-wrap .movies-container{
+		padding:0px 15px;
+	}
+	.theaters-showtimes-movies .movie-session-tabs > .toggle-tabs {
+		height:auto;
+	}
+	/* ---------------------------- End session time page ----------------------------- */	
+	
+	/* ================================= CONTACT PAGE ================================= */
+	/* ============ 19/06/2015 =========== */
+		
+	.sidebar .block:not(.block-layered-nav) .block-content {
+		border:none;
+	}
+	.sidebar .block:last-of-type {
+		border-bottom: none;
+	}
+	.location-ho-cgv{
+		width:66%;
+		margin-top:-15px;
+	}	
+	.contact-cgv {
+		padding:0px 15px;
+	}
+	/* ----------------------------- End contact page --------------------------------- */	
+	
+	/* ============================= NEW & OFFER ====================================== */
+	/* ----------------- 19/11/2015 --------------- */
+	.col-left-detail-content-new-offer{
+		width:100%;
+	}
+	.col-right-detail-content-new-offer{
+		width:100%;
+		padding:0px 5px 20px 5px;
+	}
+	.cate-new-offer.products-grid--max-4-col > li{
+		width:80% !important;
+		margin-left:10%;
+		margin-bottom:10px;
+	}
+	.col-left-detail-content-new-offer img{
+		width:100% !important;
+	}
+	/* -------------------------------- End New & Offer ------------------------------- */
+	
+	/* ==============================Banner Scroll ==================================== */
+	/* --------------- 18/11/2015------------------- */
+	.mtw_banner_left{
+		display:none;
+	}
+	.mtw_banner_right{
+		display:none;
+	}	
+	/* -------------------------- End Banner scroll ----------------------------------- */
+	
+	/* ===============================  Art House ==================================== */
+	/* --------------- 10/12/2015------------------- */
+	.catalog-category-view .page-title{
+		float:left;
+		width:100%;
+	}
+	.catalog-category-view .page-title h1{
+		float:left;
+		width:55%;
+	}
+	.catalog-category-view .page-title .sub-category{
+		float:right;
+		width:45%;
+	}
+	.catalog-category-view .home-movie-selection{
+		float:left;
+	}
+	#arthouse-home{
+		float:left;
+		width:100%;
+	}
+	.sect-arthouse-visual{
+		float:left;
+		width:100%;
+	}
+	.sect-arthouse-visual img{
+		float:left;
+		width:100%;
+	}
+	.category-description{
+		float:left;
+		width:100%;
+	}
+	.category-description .thumb{
+		display:none;
+	}
+	.category-description .player_area{
+		float:right;
+		width:100%;
+	}
+	.category-description .player_area iframe{
+		float:left;
+		width:100%;
+		height:300px;
+	}
+	#arthouse-home .products-grid--max-4-col > li {
+		margin-right: 4%;
+		width: 21%;
+	}
+	#arthouse-home .products-grid--max-4-col > li:nth-child(3n+1) {
+		clear: none;
+	}
+	.category-arthouse .movie-technology .icon-arthouse{
+		display:none;
+	}
+	.catalog-category-view .page-title .sub-category{
+		width:35%;
+	}
+	.catalog-category-view .page-title h1{
+		width:55%;
+	}
+	.content-art-house-1{
+		margin-top:0px;
+	}
+	.content-art-house-left img{
+		width:100%;
+	}
+	.content-art-house-right{
+		width:73%;
+	}
+	.location-hcm img{
+		width:100%;
+	}
+	.location-hn img{
+		width:100%;
+	}
+	.category-arthouse .category-title{
+		margin-top:15px;
+	}
+	.content-art-house-left {
+		width:30%;
+	}
+	.content-art-house-left img {
+		width:100%;
+	}
+	.content-art-house-right{
+		width:67%;
+	}
+	/* ---------------------------- End Art House ----------------------------------- */
+	
+	/* ============================== CGV Special Page ============================== */
+	/* ----------------- 23/12/2015 ------------------ */
+	/* -------------- Toolbar ------------- */
+	.specialtheater-list{
+		width:100%;
+	}
+	.specialtheater-list ul{
+		width:100%;
+	}
+	.theaters-special-view .main-container{
+		margin-top:0px;
+	}
+	/*==================== CGV Special - 21/04/2016 ==================*/
+	.specialtheater-list .special-items li {
+		margin: 0;
+		width: 95px;
+		margin:15px 0px;
+	}
+	.special-items li a {
+		background-image: url("../images/cgv-special-reponsive-600.png");
+		display: block;
+		height: 90px;
+		text-indent: -99999px;
+		width: 90px;
+	}
+	.special-items .item-sweetbox a {
+		background-position: -122px -19px;
+	}
+	.special-items .item-48-fs a {
+		background-position: -430px -19px;
+	}
+	.special-items .item-4dx  a {
+		background-position: -224px -19px;
+	}
+	.special-items .item-dolby-atmos  a {
+		background-position: -328px -19px;
+	}
+	.special-items .item-imax  a {
+		background-position: -20px -19px;
+	}
+	.special-items .item-gold-class  a {
+		background-position: -533px -19px;
+	}
+	.specialtheater-list .special-items li.item-arthouse{
+		display:none;
+	}
+	
+	.special-items .item-sweetbox a:hover, .special-items .item-sweetbox.actived a {
+		background-position: -121px 107px;
+	}
+	.special-items .item-48-fs  a:hover, .special-items .item-48-fs.actived a {
+		background-position: -430px 107px;;
+	}
+	.special-items .item-4dx a:hover, .special-items .item-4dx.actived a {
+		background-position: -225px 107px;
+	}
+	.special-items .item-dolby-atmos a:hover, .special-items .item-dolby-atmos.actived a {
+		background-position: -327px 107px;
+	}
+	.special-items .item-imax a:hover, .special-items .item-imax.actived a {
+		background-position: -20px 107px;
+	}
+	.special-items .item-gold-class a:hover, .special-items .item-gold-class.actived a{
+		background-position: -1174px 107px;
+	}
+	/* ------------- Sweetbox ------------- */
+	.specialtheater-content .page-title h1{
+		font-size:40px;
+	}
+	.content-about-sweetbox {
+		background: transparent url("../images/bg-body.png") no-repeat scroll right top;
+		height: 537px;
+		margin-bottom: 10px;
+	}
+	.sw-content h3 {
+		color: #fff;
+		float: left;
+		font-size: 22px;
+		font-weight: bold;
+		margin-bottom: 20px;
+		margin-top: 30px;
+		padding-left:10px;
+		text-transform: capitalize;
+		width: 100%;
+	}
+	.sw-content p {
+		color: #fff;
+		padding-left: 10px;
+		width: 46%;
+		text-align:justify;
+		font-size:12px;
+	}
+	.img-about-sweetbox{
+		display:none;
+	}
+	/* ---------------- 48FS --------------- */
+	.content-48fs{
+		width:100%;
+		padding:0px 10px;
+		margin-top:-30px;
+	}
+	/* ---------------- 4DX ---------------- */
+	.specialtheater-4dx .std iframe{
+		height: 400px !important;
+		width: 100% !important;
+	}
+	.specialtheater-4dx .std{
+		width:100%;
+		padding:0px 10px;
+	}
+	/* ------------ Dolby Atmos ------------ */
+	.specialtheater-dolby-atmos .std iframe{
+		height: 400px !important;
+		width: 100% !important;
+	}
+	.specialtheater-dolby-atmos .std{
+		width:100%;
+		padding:0px 10px;
+	}
+	/* --------------- Imax --------------- */
+	.recent-imax p img{
+		width:100%;
+	}
+	.slide-imax-baner{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul li{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul li .image-cinema-imax{
+		float:left;
+		width:100%;
+	}
+	.image-cinema-imax img{
+		width:100% !important;
+		height:345px;
+	}
+	.text-content-imax{
+		width:50%;
+		height:345px;
+	}
+	.text-content-imax > h2 {
+		font-size: 18px;
+	}
+	.text-content-imax > p {
+		font-size: 10px;
+		text-align: justify;
+	}
+	.specialtheater-imax{
+		padding:0px 5px;
+	}
+	/* -------------------------- End CGV Special Page ------------------------------ */
+	
+	/*==================== CGV Special - 21/04/2016 ==================*/
+	.specialtheater-list .special-items li {
+		margin: 0;
+		width: 76px;
+		margin:15px 0px;
+	}
+	.special-items li a {
+		background-image: url("../images/cgv-special-reponsive-600.png");
+		display: block;
+		height: 76px;
+		text-indent: -99999px;
+		width: 76px;
+	}
+	.special-items .item-sweetbox a {
+		background-position: -98px -15px;
+	}
+	.special-items .item-48-fs a {
+		background-position: -353px -15px;
+	}
+	.special-items .item-4dx  a {
+		background-position: -184px -15px;
+	}
+	.special-items .item-dolby-atmos  a {
+		background-position: -269px -15px;
+	}
+	.special-items .item-imax  a {
+		background-position: -16px -15px;
+	}
+	.special-items .item-gold-class  a {
+		background-position: -439px -15px;
+	}
+	.specialtheater-list .special-items li.item-arthouse{
+		display:none;
+	}
+	
+	.special-items .item-sweetbox a:hover, .special-items .item-sweetbox.actived a {
+		background-position: -98px 89px;
+	}
+	.special-items .item-48-fs  a:hover, .special-items .item-48-fs.actived a {
+		background-position: -353px 89px;
+	}
+	.special-items .item-4dx a:hover, .special-items .item-4dx.actived a {
+		background-position: -184px 89px;
+	}
+	.special-items .item-dolby-atmos a:hover, .special-items .item-dolby-atmos.actived a {
+		background-position: -269px 89px;
+	}
+	.special-items .item-imax a:hover, .special-items .item-imax.actived a {
+		background-position: -16px 89px;
+	}
+	.special-items .item-gold-class a:hover, .special-items  .item-gold-class.actived a {
+		background-position: -439px 89px;
+	}
+}
+/*------------------------- Min - width: 481px ----------------------------*/
+
+/*======================== MAX - WIDTH : 480px =============================*/	
+@media only screen and (max-width :480px) {
+	/*============================= LOGIN PAGE =============================*/
+	.format-login-page{
+		padding:0;
+	}
+	.from-login-account{width:auto;}
+	.from-login-account .form-list{
+		width:100%;
+	}
+	.from-login-account .form-list li input{
+		width:100%;;
+	}
+	.login-button-submit button{
+		height:40px;
+	}
+	.login-button-submit button > span{
+		height:37px;
+		line-height:25px;
+		border:none;
+	}
+	.from-login-account .login-button-submit{
+		width:100%;
+	}
+	.account-create{
+		margin-left:0;
+		width:100%;
+	}	
+	.customer-account-login .home-event ul.toggle-tabs, .customer-account-create .home-event ul.toggle-tabs{
+		display:none;
+	}
+	.customer-account-login .product-collateral > dl.collateral-tabs > dt.current, .customer-account-create .product-collateral > dl.collateral-tabs > dt.current{
+		background:#E71A0F;
+		color:#fff;
+	}	
+	.account-create #form-validate .buttons-set{
+		width:100%;
+	}
+	.account-create #form-validate .buttons-set .button span{
+		border:none;
+	}
+	#captcha-image-box-user_create #captcha-reload , #captcha-image-box-user_login .captcha-reload{
+		margin-right: 20px;	
+	}	
+	.account-create .create-account-from .fieldset{
+		width:100%;
+	}
+	.customer-account-create .buttons-set{
+		margin-left:0px;
+	}
+	.fieldset p.required {
+		float:left;
+	}
+	/* ------------------------------ End login page ----------------------------------- */
+	
+	/*================================== HEADER ========================================*/
+	.header-language-background{
+		top:155px;
+	}
+	.page-header .page-header-container .skip-links .skip-nav .label{
+		display:none;
+	}
+	.page-header-container a.logo {
+		background: url("../images/bg-top.png") repeat-x scroll left bottom / 10px 135px transparent;
+		float: left;
+		height: 137px;
+		padding: 30px;
+		width: 100%;
+	}
+	.header-language-background{
+		top: 137px;
+	}
+	.page-header-container .store-language-container{
+		display:none;
+	}
+	.header-career{
+		display:none;
+	}	
+	/*----------------------------------- End header ---------------------------*/
+	
+	/*================================= HOME PAGE ==============================*/
+	.breadcrumbs span{
+		padding:0 8px;
+	}
+	.category-title h1, .category-title .h1{
+		font-size:15px;
+		font-weight:bold;
+	}
+	.home-movie-selection .home-title h2{
+		height:40px;
+	}
+	.home-title{
+		height:40px;
+	}
+	.main-container-full{
+		border-top:1px solid #ccc;
+	}
+	.home-movie-selection .home-title h2{
+		width:55%;
+	}
+	.cms-home .product-collateral > dl > dt {
+		background-color: #898987;
+		border: medium none;
+		color: #fff;
+	}
+	/*------------------------------------ End Home Page ---------------------------*/
+	
+	/*==================================== FOOTER ==================================*/
+	.footer{
+		border-top:none;
+	}
+	.links .address-text{
+		width:62%;
+		margin:0;
+	}
+	.footer address{
+		display:inline-block;
+		left:auto;
+		text-align:center;
+		width:auto;
+		margin:0;
+	}
+	.footer-container .links-company {
+		background: #f2f0e5;
+		margin: 0;
+		overflow: hidden;
+		padding: 10px 0;
+	}
+	.footer-container .links-company ul {
+		padding: 0 10px;
+		width: 95%;
+	}
+	.footer-container .links-company ul li {
+		background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+		float: left;
+		padding: 2px 0 0;
+		width: 33%;
+	}
+	.footer-container-full{
+		margin-top:0px;
+	}
+	.footer .address-text {
+		width: 100%;
+	}
+	.footer .address-text p {
+		padding: 0 10px;
+		text-align: center;
+		width: 100%;
+	}
+	.logo-footer-cgv {
+		background-image: url("../images/common_sprite_area.png");
+		background-position: -145px -319px;
+		float: left;
+		height: 43px;
+		left: 40%;
+		position: relative;
+		width: 90px;
+	}
+	.footer .links{
+		margin-top:0px;
+	}
+	/* ------------------------------------- End footer ------------------------------ */
+	
+	/*================================= CATEGORY PAGE ================================*/
+	.catalog-category-view .col-main{
+		padding:0;
+	}
+	.sub-category ul li{
+		margin-left:0;
+	}
+	.sub-category a{
+		padding-left:0;
+		font-size:10px;
+	}
+	.sub-category a:hover{
+		background:none;
+	}
+	.category-title h1, .category-title .h1{
+		font-size:12px;
+	}
+	.category-products{
+		padding:0 60px;
+	}
+	.products-grid{
+		margin-bottom:0;
+	}	
+	/*------------- Undo tow-column config ----------*/
+	.hdxh-icon {
+		display:none;
+	}
+	.content-hdxh{
+		margin-left:0%;
+		width:100%;	
+	}
+	.community-wrapper{
+		padding:0 5%;
+	}	
+	/*----------- Undo tow-column config ------------*/
+	.products-grid--max-4-col > li:nth-child(odd) {
+		clear: left;
+	}
+	.products-grid--max-4-col > li:nth-child(2n) {
+		clear: none;
+	}
+	.products-grid--max-4-col > li:nth-child(even),
+	.products-grid--max-4-col > li:nth-child(2n+1) {
+		width: 47.72727%;
+		margin-right: 4.54545%;
+	}
+	.products-grid--max-4-col > li:nth-child(2n) {
+		margin-right: 0;
+	}
+	.products-grid--max-4-col > li:nth-child(4n) {
+		margin-right: 0;
+	}
+	.category-products{padding:0 10px; overflow: hidden;}
+	/*------------------------------- End category ---------------------------------*/
+	
+	/*=================================== DETAIL PAGE ==============================*/
+	.movie-technology-icons{
+		top:43px;
+		left:0;
+	}
+	.product-view .product-tabs .toggle-tabs{
+		display:none;
+	}	
+	.product-view .product-collateral > dl.collateral-tabs > dt{
+		display:block;
+	}	
+	.product-view .product-collateral > dl.collateral-tabs > dt.current{
+		background:#E71A0F;
+		color:#fff;
+	}
+	.category-now-showing .product-tabs .tab-container .movies-list .product-collateral ul.toggle-tabs{
+		display:block;
+	}
+	.category-now-showing .product-tabs .tab-container .movies-list dl > dd{
+		padding:0;
+	}
+	.category-now-showing .product-tabs .tab-container .movies-list .product-collateral .collateral-movies-tabs dl > dt{
+		display:none;
+	}
+	.theatre-city-tabs > .toggle-tabs > li{
+		width:50%;
+	}	
+	/*================ POPUP ==================*/
+	.messages_product_view, .my-popupmessage{
+		width:320px !important;
+	}
+	#colorbox .product-collateral > dl.collateral-tabs > dt{
+		display:none;
+	}
+	#colorbox .product-collateral .tab-container {
+		padding:0;
+	}
+	#colorbox .product-collateral .tab-container .movies-list dl > dd{
+		padding:0;
+	}
+	#colorbox .product-collateral .tab-container .movies-list .product-collateral .collateral-movies-tabs dl > dt{
+		display:none;
+	}	
+	/* -------------------------------- End detail page -------------------------------- */
+	
+	/*================================= CHECKOUT PAGE ==================================*/
+	.seatmap-theater-content{width:100%;}
+	.seatmap-content-main .seatmap-theater-content{padding:0;width:100%;}
+	.seatmap-theater-minimap-content{padding:0 10px 0;}
+	.seats{overflow-x:scroll;overflow-y:hidden;padding-bottom:30px;}
+	.theater-desc{width:100%;}
+	.seat-icon-desc, .seat-type{
+		float:left;
+		width:48%;
+		margin-top : 20px;
+	}
+	.tickets-detail{width:100%;}
+	.button > span{border:none;}
+	/*================ POPUP ==================*/
+	.combo-content-left{display:none;}
+	/* ------------------------------------ End Checkout ------------------------------------ */
+	
+	/*==================================== CMS PAGE =========================================*/
+	.cinemas-technology-view .page-title h1{font-size:35px;}
+	.theater-feature .feature-grid li{
+		margin:0;
+	}
+	/*================ SOCIAL ==================*/
+	.hdxh-title{
+		font-size:27px;
+	}
+	/*========= Undo tow-column config =========*/	
+	.about-image-cgv ul > li{
+		width:45%;
+		margin-right:5%;
+	   }
+	.about-image-cgv ul > li:nth-child(odd) {
+		clear: none;
+	}
+
+	.about-image-cgv ul > li:nth-child(2n+1) {
+		clear: left;
+	}
+	.about-image-cgv ul > li:nth-child(even),
+	.about-image-cgv ul > li:nth-child(3n) {
+		margin-right:5%;
+		width: 45%;
+	}
+	.about-image-cgv ul > li:nth-child(2n){
+		margin-right:0;		
+	}	
+	/*================ CAREER PAGE ================*/
+	.cms-career .col-main  .std  p  > span {
+		font-size:21px !important;
+	}
+	/*============= TERM & CONDITION ==============*/	
+	.cms-terms-conditions .icon-title-term-condition {
+		display:none;
+	}
+	.term-condition-title span{
+		width:100%;
+		float:left;
+		text-align:center;
+	}
+	.term-condition-title span strong{
+		margin-left: 0%;
+		font-size:1.5em;
+	}
+	/* --------------------------------  End Cms page --------------------------------------- */
+	
+	/*====================================== THEATER PAGE ====================================*/	
+	.top-table h2{
+		width:65%;
+	}
+	.value-1, .title-day, .title-time td p, .value{
+		font-size:9px;
+	}	
+	.box-2 table{
+		-ms-transform: rotate(90deg); /* IE 9 */
+		-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+		transform: rotate(90deg);		
+		margin-left: -72px;
+		margin-top: 110px;
+		margin-bottom: 120px;
+	}
+	.box-4 table{
+		-ms-transform: rotate(90deg); /* IE 9 */
+		-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+		transform: rotate(90deg);		
+		margin-left: -72px;
+		margin-top: 130px;
+		margin-bottom: 120px;
+	}	
+	.box-1 .top-table ,.box-2 .top-table, .box-4 .top-table {
+		height:30px;
+	}
+	.box-1 .top-table h2{
+		top:5px
+	}
+	.box-2 .top-table h2, .box-4 .top-table  h2{
+		top:25px;
+	}
+	.theater-content-tab .collateral-tabs .session-tabs .toggle-tabs{
+		height:auto;
+	}
+	.heater-head .theater-title{
+		margin-bottom:30px;
+	}
+	.detail-format-film .toggle-tabs li.last{display:none;}
+	.detail-format-film .collateral-tabs .toggle-tabs li.last{display:block;}
+	.detail-format-film > .toggle-tabs li:first-child > span{
+		background:url("../images/ribon_right.png") no-repeat scroll right 0 #e71a0f;
+		padding-right:35px;
+	}	
+	.collateral-movies-tabs .theatre-city-tabs{border:none;}  
+	/* --------------------------------  End theater page --------------------------------------- */
+	
+	/*====================================== SESSTION TIME ====================================*/
+	.theatre-wrap .theatre-list, .movies-wrap .movies-filter-session{
+		background:none;
+	}
+	.catalog-product-view .product-view .toggle-tabs, .cinemas-filter-index .product-collateral{
+		padding-top:10px;
+	}
+	.cinemas-filter-index .label-red > .toggle-tabs > li:first-child, .cinemas-filter-index .label-red > .toggle-tabs > li.last{
+		background:none;
+		padding:0;
+	}
+	.cinemas-filter-index .label-red > .toggle-tabs > li > span{
+		background:url("../images/bg_tebmenu-line.gif") no-repeat scroll left 14px #e71a0f;
+		font-size:10px;
+		padding:0 5px;
+	}
+	.theatre-city-tabs .wrap-city {
+		left: 0;
+		margin:10px 0 0;
+		width: 100%;
+		background:#363234;
+		height:126px;
+	}	
+	.theatre-city-tabs .wrap-city .toggle-tabs li{
+		width:30%;
+	}
+	.theatre-wrap .theatre-city-tabs{
+		border:none;
+	}
+	.tab-container .theatre-tabs {
+		margin-bottom:20px;
+	}
+	.tab-container .theatre-tabs li{
+		width:100% !important;
+	}
+	.tab-content .theatre-tabs li > span{
+		padding:2% 3%;
+	}	
+	.cinemas-filter-index .label-red .theatre-city-tabs .theatre-tabs .session-tabs{
+		width:100%;
+	}
+	.collateral-theatre-city-tabs .theatre-tabs{
+		padding:0;
+	}
+	.theatre-wrap .theatre-tabs{
+		background: none repeat scroll 0 0 #363234;
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: -3px;
+		padding: 0 5px;
+	}
+	.wrap-city .center a#prev{
+		top:3px;
+	}
+	.wrap-city .center a#next{
+		top:6px;
+	}	
+	.session-tabs .toggle-tabs, .theatre-wrap .theatre-list, .movies-wrap .movies-filter-session{
+		height:auto;
+	}
+	.descri-timezone li{
+		display:block;
+		padding:0 5px;
+	}
+	.session-tabs .session-list .col-theater{
+		padding:14px 0 0 5px;
+		font-size:12px;		
+	}
+	.session-tabs .session-list .col-times{
+		margin-left: 0;
+		padding-left: 5px;
+		width:75%;
+	}
+	.cinemas-filter-index .label-red .collateral-theatre-city-tabs .collateral-theatre-tabs .tab-container .heater-head .theater-title h3{
+		text-align:center;
+		font-size:19px;
+	}
+	.cinemas-filter-index .main-container-full{
+		background:none;
+	}	
+	.theatre-wrap .theatre-list, .movies-wrap .movies-filter-session{
+		background:none;
+	}
+	.movies-wrap .movies-filter-session .movies-tabs{
+		background:#363234;
+	}
+	.movies-filter-session .movies-tabs{
+		margin-top:19%;
+		padding:10px 0;
+	}
+	.movies-filter-session .movies-tabs .toggle-tabs{
+		height:153px;
+		width:56%;
+		margin:0;
+	}
+	.movies-filter-session .movies-tabs .collateral-movies-tabs{
+		width:42%;
+		padding:17px;
+	}
+	.movies-features-type li{
+		float: left;
+		font-size: 10px;
+		width: 100%;
+	}
+	.movies-filter-session .movies-tabs .toggle-tabs li span{
+		font-size:10px;
+	}	
+	.movies-wrap .movie-title h3{
+		font-size:20px;
+		text-align:center;
+	}
+	/* --------------------------------  End sesstion time --------------------------------------- */
+	
+	/*======================================= GIFT CARD PAGE =====================================*/
+	.term-gift-card h2{font-size:22px;}
+	
+	/* --------------------------------  End gift card --------------------------------------- */
+	
+	/*=================================== MEMBERSHIP PAGE ====================================*/
+	.col-left-content-member {
+		display:none;
+	}
+	.col-right-content-member{
+		float: right;
+		width: 100%;
+	}
+	.title-cgv-member-bg h1 {
+		background: url("../images/member-title.png") no-repeat scroll center center / 320px auto transparent;
+		color: #ff0000;
+		font-size: 0;
+		height: 65px;
+		margin: 0;
+	}
+	.cgv-membership > ul.ui-tabs-nav li {
+		width: 45%;
+	}
+	.cgv-membership > ul.ui-tabs-nav li.membership-manager-account {
+		width: 45%;
+	}
+	.cgv-membership > div {
+		background: #e5decc;
+		float: left;
+		margin: 10px 20px 0 18px;
+		padding-top: 52px;
+		width: 91%;
+	}
+	.cgv-membership > div .outer .inner {
+		background:none;
+	}
+	.cgv-membership > div .outer .inner .lyt-heading {
+		font-size:16px;
+	}
+	.cgv-membership > div .outer{
+		background:none;
+	}
+	/*============ Undo one-column config =========*/
+	.header-content-member-left{
+		display:none;
+	}
+	.header-content-member-right{
+		width:100%;
+		padding:0 2%;
+	}
+	.card-member-cgv ul > li:nth-child(odd), .list-partner-cgv ul > li:nth-child(old), .products-grid--max-3-col > li:nth-child(old) {
+		clear: none;
+		width:75%;
+	}
+	.card-member-cgv ul > li:nth-child(n+1), .list-partner-cgv ul > li:nth-child(n+1), .products-grid--max-3-col > li:nth-child(n+1) {
+		clear: none;
+		width:75%;
+	}
+	.card-member-cgv ul > li:nth-child(even), .list-partner-cgv ul > li:nth-child(even),.products-grid--max-3-col > li:nth-child(even),
+	.card-member-cgv ul > li:nth-child(n), .list-partner-cgv ul > li:nth-child(n), .products-grid--max-3-col > li:nth-child(n) {
+		margin:0 12% 5%;
+		width:75%;
+	}
+	.col-3-member h3{font-size:12px;line-height:20px;}
+	/* --------------------------------  End membership page ------------------------------------- */
+	
+	/*===================================== CGV CINEMAS PAGE =====================================*/
+	.theatre-wrap .theatre-list, .movies-wrap .movies-list{
+		background:#000;
+	} 
+	.theaters-cinema-index .theatre-city-tabs .wrap-city{
+		background:none;
+	}
+	.theaters-cinema-index .theatre-city-tabs .theatre-tabs{
+		background:none;
+	}
+	.theaters-cinema-index .theatre-list .wrap-city {
+		padding:10px 0px;
+	}
+	.theatre-wrap .theatre-city-tabs .toggle-tabs li.current {
+		border: medium none;
+		background:#fff;
+	}
+	.theatre-wrap .theatre-city-tabs .toggle-tabs li.current span
+	{
+		color: #000;
+	}
+	.tab-container .theatre-tabs li {
+		width: 49% !important;
+	}
+	.theater-infomation .left-info-theater {
+		width: 100%;
+	}
+	.theater-infomation .left-info-theater {
+		border-right: none;
+		float: left;
+		width: 100%;
+	}
+	.right-info-theater {
+		width: 100%;
+		text-align:center;
+		
+	}
+	.right-info-theater .contact-us, .right-info-theater .location {
+		clear: left;
+		display: inline-block;
+		margin: 0px;
+		float:none;
+		width:49%;
+	}
+	.right-info-theater .contact-us a, .right-info-theater .location a {
+		display:inline-block;
+	}
+	.detail-format-film .toggle-tabs li.last {
+		display: inline-block;
+	}
+	.theater-address{
+		font-size:12px;
+	}
+	.detail-format-film > .toggle-tabs li:first-child > span {
+		background:#e71a0f;
+		padding-right: 15px !important;
+	}
+	/* ------------------------------- End cgv cinemas ------------------------------- */
+	
+	/* ================================ BOOKING PAGE ================================= */
+	.booking-ticket-index .main-container{
+		margin-top: 0px;
+	}
+	.booking-ticket-index .main-container .ticket-content-top .page-title{
+		margin-top: 0px;
+		padding:5px 0px;
+	}
+	.booking-ticket-index .ticket-content-top .ticket-info{
+		padding: 10px 5px;
+	}
+	.booking-ticket-index .ticket-content-top .ticket-info > * {
+		display: inline-block;
+	}
+	.booking-ticket-index .movie-notice{
+		white-space: normal;
+	}
+	.ticket-list-content .ticket-name em {
+		background: transparent url("../images/help_icon.png") no-repeat scroll center bottom;
+		cursor: pointer;
+		float: left;
+		font-size: 0;
+		height: 22px;
+		width: 100%;
+	}
+	/* --------------------------------- End booking page ---------------------------- */
+	
+	/* ================================= SAETMAP PAGE ================================  */
+		/*============ 5/6/2015 ==========  */
+	.seatmap-content-main .seatmap-theater-content {
+		width:100% !important;
+	}
+	.seatmap-theater-minimap-content {
+		padding: 0 10px;
+	}
+	.theater-desc {
+		width:100%;
+		min-height:110px;
+	}
+	.theater-desc .seat-icon-desc {
+		width:49%;
+		float:left;
+		margin-top:20px;
+		padding-left:20px;
+	}
+	.theater-desc .seat-type{
+		width:49%;
+		float:left;
+	}
+	/* ------------------------------ End seatmap page ------------------------------- */
+	
+	/* ============================== SESSTION TIME PAGE ============================= */
+	.theaters-showtimes-index .main-container-full{
+		background:none;
+	}
+	.theaters-showtimes-index .main-container-full .showtimes-wrap .showtimes-header {
+		position:relative;
+	}
+	.theaters-showtimes-index .theatre-city-tabs .wrap-city{
+		background:none;
+		border-top:none;
+		border-bottom:none;
+	}
+	.theaters-showtimes-index .collateral-theatre-city-tabs ul.theatre-tabs li.current{
+		background:#fff;
+	}
+	.theaters-showtimes-index .collateral-theatre-city-tabs ul.theatre-tabs li.current span{
+		color:#000;
+	}
+	.theaters-showtimes-index .collateral-theatre-city-tabs .theatre-tabs {
+		 padding: 10px 5px;
+	}
+	.theaters-showtimes-index .tab-container .theatre-tabs {
+		margin-bottom: 0;
+	}
+	.theaters-showtimes-index .showtimes-container .theater-container .heater-head .theater-title {
+		margin-bottom: 0;
+	}
+	.theaters-showtimes-index .showtimes-container .theater-container .theater-content-tab {
+		margin-top: 0;
+	}
+	.theaters-showtimes-index .showtimes-container .theater-container .tab-content {
+		float:left;
+		width:100%;
+	}
+	.theaters-showtimes-index .showtimes-container .theater-container .session-list {
+		margin-top:10px;
+		float:left;
+	}
+	.theaters-showtimes-index .tab-container .tab-content .sect-guide .descri-timezone > span{
+		float:left;
+		width:49%;
+	}
+	.theaters-showtimes-index .theatre-wrap .theatre-tabs {
+		margin: 0px;
+	}
+	.theaters-showtimes-movies .main-container-full{
+		background:none;
+	}
+	.theaters-showtimes-movies .theatre-wrap .theatre-list, .movies-wrap .movies-list {
+		height: auto;
+	}
+	.theaters-showtimes-movies .showtimes-container .movies-wrap .movies-list {
+		padding: 20px;
+	}
+	.theaters-showtimes-movies  .showtimes-header{
+		z-index:30;
+	}
+	.theaters-showtimes-movies .showtimes-wrap  .showtimes-container{
+		position: relative;
+		top: 30px;
+	}
+	.theaters-showtimes-movies .movies-tabs .collateral-movies-tabs {
+		background: transparent url("../images/bg-box-movie-600.PNG") repeat scroll center center;
+		height: auto;
+		padding: 20px;
+		top: -265px;
+		width: 100%;
+	}
+	.theaters-showtimes-movies .movie-poster {
+		width: 55%;
+		text-align:left;
+	}
+	.theaters-showtimes-movies .movies-container {
+		padding:0px 20px;
+	}
+	.theaters-showtimes-index .collateral-theatre-city-tabs .theatre-tabs li{
+		border-left:none;
+		border-right:none;
+		margin-right:0px;
+	}
+	.theaters-showtimes-movies .movies-wrap .movies-list {
+		background: transparent url("../images/bg-sesstion-time-600.png") repeat scroll center center;
+	}
+	/* ----------------------------- End session time page --------------------------- */
+	
+	/* ================================= CONTACT PAGE ================================= */
+	/* ---- 19 - 06 - 2015 ----- */
+		
+	.sidebar .block:not(.block-layered-nav) .block-content {
+		border:none;
+	}
+	.sidebar .block:last-of-type {
+		border-bottom: none;
+	}
+	.location-ho-cgv{
+		width:66%;
+		margin-top:-15px;
+	}	
+	.contact-cgv {
+		padding:0px 15px;
+	}
+	/* ----------------------------- End contact page --------------------------------- */
+	
+	/* ============================= NEW & OFFER ====================================== */
+	/* ----------------- 19/11/2015 --------------- */
+	.col-left-detail-content-new-offer{
+		width:100%;
+	}
+	.col-right-detail-content-new-offer{
+		width:100%
+	}
+	.cate-new-offer > li{
+		width:45% !important;
+		margin-bottom:10px;
+		margin-right:0px !important;
+		margin-left:10px;
+	}
+	/* -------------------------------- End New & Offer ------------------------------- */
+	
+	/* ==============================Banner Scroll ==================================== */
+	/* --------------- 18/11/2015------------------- */
+	.mtw_banner_left{
+		display:none;
+	}
+	.mtw_banner_right{
+		display:none;
+	}
+	
+	/* -------------------------- End Banner scroll ----------------------------------- */
+	
+	/* ===============================  Art House ==================================== */
+	/* --------------- 10/12/2015------------------- */
+	.catalog-category-view .page-title{
+		float:left;
+		width:100%;
+	}
+	.catalog-category-view .sub-category ul li a {
+		font-size: 14px;
+	}
+	.catalog-category-view .page-title .sub-category ul li a{
+		padding-left:14px;
+	}
+	.catalog-wrap .page-title .sub-category ul li a{
+		padding-left:10px;
+	}
+	.catalog-category10px;-view .home-movie-selection{
+		float:left;
+	}
+	#arthouse-home{
+		float:left;
+		width:100%;
+	}
+	.sect-arthouse-visual{
+		float:left;
+		width:100%;
+	}
+	.sect-arthouse-visual img{
+		float:left;
+		width:100%;
+	}
+	.category-description{
+		float:left;
+		width:100%;
+	}
+	.category-description .thumb{
+		display:none;
+	}
+	.category-description .player_area{
+		float:right;
+		width:100%;
+	}
+	.category-description .player_area iframe{
+		float:left;
+		width:100%;
+		height:300px;
+	}
+	#arthouse-home .products-grid--max-4-col > li {
+		margin-left: 3%;
+		width: 42%;
+	}
+	#arthouse-home .products-grid--max-4-col > li:nth-child(3n+1) {
+		clear: none;
+	}
+	.catalog-category-view  .main-container .category-title  .sub-category{
+		display:block;
+	}
+	/* ------------ Vê Art_house -------------*/
+	.about-cgv-art-house {
+		float: left;
+		width: 100%;
+	}
+	.about-cgv-art-house > div {
+		float: left;
+		width: 100%;
+	}
+	.about-cgv-art-house  .tittle-art-house h3 {
+		float: left;
+		width: 100%;
+		font-size:18px;
+		margin-top:20px;
+	}
+	.content-art-house-left{
+		display:none;
+	}
+	.content-art-house-1{
+		margin-top:0px;
+	}
+	.about-cgv-art-house .tittle-art-house h3{
+		margin-top:0px;
+	}
+	.content-art-house-right {
+		float: left;
+		padding: 0 10px;
+		text-align: justify;
+		width: 100%;
+	}
+	.location-hcm {
+		float: left;
+		width: 50%;
+	}
+	.location-hcm h2 img{
+		float: left;
+		width: 100%;
+	}
+	.location-hn {
+		float: right;
+		width: 49%;
+	}
+	.location-hn h2 img {
+		float: right;
+		width: 100%;
+	}
+	.content-art-house-2{
+		padding:0px 10px;
+		text-align: justify;
+	}
+	/* ---------------------------- End Art House ----------------------------------- */
+	
+	/* ============================== CGV Special Page ============================== */
+	/* ----------------- 23/12/2015 ------------------ */
+	/* -------------- Toolbar ------------- */
+	.specialtheater-list{
+		width:100%;
+	}
+	.specialtheater-list ul{
+		width:100%;
+		margin-top:10px;
+	}
+	.specialtheater-list .special-items li{
+		margin:0px;
+		width:75px;
+	}
+	.specialtheater-list {
+		margin-top:0px;
+	}
+	.special-items li a {
+		background-image: url("../images/cgv-special-reponsive-480.png");
+		display: block;
+		height: 80px;
+		text-indent: -99999px;
+		width: 80px;
+	}
+	.special-items .item-sweetbox a {
+		background-position: -99px -12px;
+	}
+	.special-items .item-48-fs a {
+		background-position: -352px -12px;
+	}
+	.special-items .item-4dx  a {
+		background-position: -183px -12px;
+	}
+	.special-items .item-dolby-atmos  a {
+		background-position: -267px -12px;
+	}
+	.special-items .item-imax  a {
+		background-position: -16px -12px;
+	}
+	.special-items .item-gold-class  a {
+		background-position: -436px -12px;
+	}
+	.specialtheater-list .special-items li.item-arthouse{
+		display:none;
+	}
+	
+	.special-items .item-sweetbox a:hover, .special-items .item-sweetbox.actived a {
+		background-position:  -99px 88px;
+	}
+	.special-items .item-48-fs  a:hover, .special-items .item-48-fs.actived a {
+		background-position: -353px 90px;;
+	}
+	.special-items .item-4dx a:hover, .special-items .item-4dx.actived a {
+		background-position: -183px 88px;
+	}
+	.special-items .item-dolby-atmos a:hover, .special-items .item-dolby-atmos.actived a {
+		background-position: -267px 88px;
+	}
+	.special-items .item-imax a:hover, .special-items .item-imax.actived a {
+		background-position: -14px 88px;
+	}
+	.special-items .item-gold-class a:hover, .special-items .item-gold-class.actived a{
+		background-position: -435px 88px;
+	}
+	.specialtheater-list{
+		height:120px;
+	}
+	.special-title{
+		margin-top:10px;
+	}
+	.special-title h1{
+		margin-bottom:0px;
+	}
+	/* ------------- Sweetbox ------------- */
+	.specialtheater-content .page-title h1{
+		font-size:40px;
+	}
+	.content-about-sweetbox {
+		background: transparent url("../images/bg-body.png") no-repeat scroll right top;
+		height: 537px;
+		margin-bottom: 10px;
+	}
+	.sw-content h3 {
+		color: #fff;
+		float: left;
+		font-size: 20px;
+		font-weight: bold;
+		margin-bottom: 20px;
+		margin-top: 30px;
+		padding-left:10px;
+		text-transform: capitalize;
+		width: 100%;
+	}
+	.sw-content p {
+		color: #fff;
+		padding-left: 10px;
+		width: 98%;
+		text-align:justify;
+		font-size:12px;
+	}
+	.img-about-sweetbox{
+		display:none;
+	}
+	/* ---------------- 48FS --------------- */
+	.content-48fs{
+		width:100%;
+		padding:0px 10px;
+		margin-top:-30px;
+	}
+	.specialtheater-content .content-48fs h2{
+		font-size:14px;
+		margin-bottom:0px;
+	}
+	.specialtheater-content .content-48fs p{
+		font-size:12px;
+		margin-top:5px;
+	}
+	/* ---------------- 4DX ---------------- */
+	.specialtheater-4dx .std iframe{
+		height: 400px !important;
+		width: 100% !important;
+	}
+	.specialtheater-4dx .std{
+		width:100%;
+		padding:0px 10px;
+	}
+	/* ------------ Dolby Atmos ------------ */
+	.specialtheater-dolby-atmos .std iframe{
+		height: 400px !important;
+		width: 100% !important;
+	}
+	.specialtheater-dolby-atmos .std{
+		width:100%;
+		padding:0px 10px;
+	}
+	/* --------------- Imax --------------- */
+	.recent-imax p img{
+		width:100%;
+	}
+	.slide-imax-baner{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul li{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul li .image-cinema-imax{
+		float:left;
+		width:100%;
+	}
+	.image-cinema-imax img{
+		width:100% !important;
+		height:345px;
+	}
+	.text-content-imax{
+		width:60%;
+		height:345px;
+	}
+	.text-content-imax > h2 {
+		font-size: 18px;
+	}
+	.text-content-imax > p {
+		font-size: 10px;
+		text-align: justify;
+	}
+	.specialtheater-imax{
+		padding:0px 5px;
+	}
+	/* -------------------------- End CGV Special Page ---------------------- */
+}	
+/* ------------------------ Min - width:400px -----------------------------*/ 
+
+/*======================== MAX - WIDTH : 400px =============================*/	
+@media only screen and (max-width :400px) {
+	/* ============================== CGV Special Page ============================== */
+	/* ----------------- 27/04/2016 ------------------ */
+	/* -------------- Toolbar ------------- */
+	.specialtheater-list{
+		width:100%;
+	}
+	.specialtheater-list ul{
+		width:100%;
+		margin-top:10px;
+	}
+	.specialtheater-list .special-items li{
+		margin:0px;
+		width:57px;
+		float:left;
+		margin-left:3px;
+	}
+	.specialtheater-list {
+		margin-top:0px;
+	}
+	.special-items li a {
+		background-image: url("../images/cgv-special-reponsive-400.png");
+		display: block;
+		height: 57px;
+		text-indent: -99999px;
+		width: 57px;
+	}
+	.special-items .item-sweetbox a {
+		background-position: -66px -3px;
+	}
+	.special-items .item-48-fs a {
+		background-position: -255px -3px;
+	}
+	.special-items .item-4dx  a {
+		background-position: -129px -3px;
+	}
+	.special-items .item-dolby-atmos  a {
+		background-position: -192px -3px;
+	}
+	.special-items .item-imax  a {
+		background-position: -4px -3px;
+	}
+	.special-items .item-gold-class  a {
+		background-position: -318px -3px;
+	}
+	.specialtheater-list .special-items li.item-arthouse{
+		display:none;
+	}
+	
+	.special-items .item-sweetbox a:hover, .special-items .item-sweetbox.actived a {
+		background-position:-66px 59px
+	}
+	.special-items .item-48-fs  a:hover, .special-items .item-48-fs.actived a {
+		background-position:-255px 59px;
+	}
+	.special-items .item-4dx a:hover, .special-items .item-4dx.actived a {
+		background-position: -128px 59px;
+	}
+	.special-items .item-dolby-atmos a:hover, .special-items .item-dolby-atmos.actived a {
+		background-position: -192px 59px;
+	}
+	.special-items .item-imax a:hover, .special-items .item-imax.actived a {
+		background-position: -4px 59px;
+	}
+	.special-items .item-gold-class a:hover, .special-items .item-gold-class.actived a{
+		background-position: -318px 59px;
+	}
+	.specialtheater-list{
+		height:120px;
+	}
+	.special-title{
+		margin-top:10px;
+	}
+	.special-title h1{
+		margin-bottom:0px;
+	}
+}
+/* ------------------------ Min - width:320px -----------------------------*/ 
+
+/*======================== MAX - WIDTH : 320px =============================*/	
+@media only screen and (max-width :320px) {
+	/*=============================== Page Membership ================================*/
+	.col-left-content-member {
+		display:none;
+	}
+	.col-right-content-member{
+		float: right;
+		width: 100%;
+	}
+	.title-cgv-member-bg h1 {
+		background: url("../images/member-title.png") no-repeat scroll center center / 320px auto transparent;
+		color: #ff0000;
+		font-size: 0;
+		height: 65px;
+		margin: 0;
+	}
+	.cgv-membership > ul.ui-tabs-nav li {
+		width: 45%;
+	}
+	.cgv-membership > ul.ui-tabs-nav li.membership-manager-account {
+		width: 45%;
+	}
+	.cgv-membership > div {
+		background: #e5decc;
+		float: left;
+		margin: 10px 20px 0 18px;
+		padding-top: 52px;
+		width: 91%;
+	}
+	.cgv-membership > div .outer .inner {
+		background:none;
+	}
+	.cgv-membership > div .outer .inner .lyt-heading {
+		font-size:16px;
+	}
+	.cgv-membership > div .outer{
+		background:none;
+	}
+	.qty-wrapper label{
+		font-size:18px;
+	}
+	.total-price-wrapper label{
+		font-size:18px;
+	}
+	.ticket-qty{
+		width: 35px;
+	}
+	.total-qty{
+		height: 30px;
+	}
+	.total-price-wrapper{
+		font-size:18px;
+	}
+	/* ------------------------------- End page member --------------------------------- */
+			
+	/* ============================== CHOOSE TICKET ===================================== */
+	/* ----------------- 2/10/2015 ----------------- */
+	.tickets-ticket-index .ticket-info{
+		padding:5px;
+	}
+	.tickets-ticket-index .ticket-info > *{
+		width:100%;
+	}
+	.ticket-info .ticket-info-left .movie-name .h1{
+		font-size:18px;
+	}
+	.movie-notice{
+		font-size:12px;
+	}
+	.booking-actions .button{
+		background-color: transparent;
+		background-image: url("../images/tnb_buttons_reponsive.png");
+		background-position: 0 -441px;
+		height:54px;
+		margin-top: 10px;
+		text-indent: -99999px;
+		width: 54px;
+	}
+	.booking-actions .actived{
+		 background-position: -74px -604px;
+	}
+	.booking-actions{
+		top:0px;
+	}
+	.ticket-content-bottom{
+		min-height: 75px;
+	}
+	/* ------------------------------- End chose ticket --------------------------------- */
+	
+	/* ============================== CHOOSE SEAT_MAP ===================================== */
+	/* ---------------- 2/10/2015 -------------- */
+	.booking-seats-index .ticket-info{
+		padding:5px;
+	}
+	.booking-seats-index .ticket-info > *{
+		width:100%;
+	}
+	.ticket-info .ticket-info-left .movie-name .h1{
+		font-size:18px;
+	}
+	.movie-notice{
+		font-size:12px;
+	}
+	.booking-button .back-to-ticket{
+		background-color: transparent;
+		background-image: url("../images/tnb_buttons_reponsive.png");
+		background-position: 0 -441px;
+		height:54px;
+		margin-top: 0px;
+		text-indent: -99999px;
+		width: 54px;
+	}
+	.booking-actions{
+		top:0px;
+	}
+	.ticket-content-bottom{
+		min-height: 75px;
+	}
+	.theater-desc .seat-icon-desc{
+		width:100%;
+		padding-left:0px;
+		margin-left:0px;
+	}
+	.seat-icon-desc span{
+		width:50%;
+	}
+	.theater-desc .seat-type{
+		width:100%;
+	}
+	.seat-icon-desc > span, .seat-type > span{
+		width:50%;
+	}
+	.seat-icon-desc, .seat-type{
+		margin-top:5px !important;
+	}
+	.seatmap-content-main{
+		padding-bottom:0px;
+	}
+	/* ------------------------------- End chose seat_map --------------------------------- */
+			
+	/* ============================== MOVIE DETAIL ===================================== */
+	.catalog-category-view .main-container .category-title .sub-category{
+		display:none;
+	}		
+	.product-essential .product-img-box {
+		float: left;
+		width: 100%;
+	}
+	.product-view .product-shop {
+		float: left;
+		margin-left: 30px;
+		width: 100%;
+	}
+	.category-title h1, .category-title .h1 {
+		font-size: 18px;
+	}
+	.product-view .category-title h1{
+		font-size:20px;
+	}
+	.product-view .category-title{
+		padding:0px;
+	}
+	.product-view .product-shop{
+		margin-left:0px;
+	}
+	.catalog-product-view .product-tabs {
+		width: 100%;
+	}
+	.product-view .product-collateral .collateral-tabs dt.current{
+		border:none;
+	}
+	.product-view .product-collateral .collateral-tabs dd.current{
+		padding:5px 0px 5px 0px;
+	}
+	.movie-technology-icons{
+		position:static;
+	}
+	.catalog-product-view .product-tabs > dl {
+		margin-top: 10px;
+	}
+	.catalog-product-view .product-collateral > dl > dt {
+		background-color: #898987;
+		border: 1px solid #f2f0e5;
+		color: #fff;	
+		padding-left:10px;
+	}
+	.product-view .movies-list {
+		margin-top: 0px;
+	}
+	/* ------------------------------- End Movie Detail -------------------------------- */
+
+	/* =============================== SESSTION TIME PAGE ============================== */
+	/* ------------------- 10 - 6 - 2015 ----------------------- */
+	.theaters-showtimes-index .theatre-city-tabs .wrap-city {
+		background:none;
+		top: 30px;
+	}
+	.theaters-showtimes-index .showtimes-header ul li{
+		width:50%;
+	}
+	.theaters-showtimes-index .showtimes-header li:first-child {
+		background: none;
+		padding-left: 0px;
+	}
+	.theaters-showtimes-index .showtimes-header li:last-child {
+		background: none;
+		padding-left: 0px;
+	}
+	.theaters-showtimes-index .showtimes-header li span{
+		font-size:11px;
+	}
+	.theaters-showtimes-index .showtimes-header li a{
+		font-size:11px;
+	}
+	.theaters-showtimes-index .showtimes-header li.current span::before {
+		background: none;
+		content: "";
+		height: 39px;
+		padding-left: 0px;
+	}
+	.theaters-showtimes-index .theatre-wrap .theatre-tabs{
+		margin-top: 35px;
+	}
+	.theaters-showtimes-index .tab-content > .theatre-tabs > li{
+		margin-right:0px;
+		float:none;
+	}
+	.theaters-showtimes-index .theater-container .heater-head .theater-title h3 {
+		font-size: 22px;
+	}
+	.theaters-showtimes-index .heater-head .theater-title {
+		margin-bottom:0px;
+	}
+	.theaters-showtimes-index .theater-content-tab {
+		margin-top:0px;
+	}
+	.theaters-showtimes-index .tab-content {
+		float: left;
+		overflow: hidden;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.theaters-showtimes-index .showtimes-header li:first-child{
+		border-top:2px solid #e71a0f;
+		border-bottom:2px solid #e71a0f;
+		border-left:2px solid #e71a0f;
+		background:#e71a0f;
+	}
+	.theaters-showtimes-index .showtimes-header li:last-child{
+		border-top:2px solid #e71a0f;
+		border-bottom:2px solid #e71a0f;
+		border-right:2px solid #e71a0f;
+		background:#e71a0f;
+	}
+	.theaters-showtimes-index .showtimes-header li:last-child a{
+		background:none;
+	}
+	.theaters-showtimes-index .showtimes-header li.last {
+		margin-left:-9px;
+	}
+	.theaters-showtimes-index .showtimes-header li.current span{
+		background:none;
+		color:#e71a0f;
+	}
+	.theaters-showtimes-index .showtimes-header li.current{
+		background:#fff;
+	}
+	.theaters-showtimes-index .collateral-theatre-city-tabs .tab-container .theatre-tabs li.current span{
+		background: #fff;
+		color: #000;
+	}
+	.theaters-showtimes-index  .theatre-city-tabs .title-cgv-cinema h1 {
+		margin-bottom: -15px;
+	}
+	.theaters-showtimes-index  .theatre-city-tabs  .title-cgv-cinema {
+		padding-top: 30px;
+	}
+	.theaters-showtimes-movies .showtimes-wrap .showtimes-header ul li{
+		width:50%;
+	}
+	.theaters-showtimes-movies .showtimes-header li:first-child {
+		background: none;
+		padding-left: 0px;
+	}
+	.theaters-showtimes-movies .showtimes-header li:last-child {
+		background: none;
+		padding-left: 0px;
+	}
+	.theaters-showtimes-movies .showtimes-header li span{
+		font-size:11px;
+	}
+	.theaters-showtimes-movies .showtimes-header li a{
+		font-size:11px;
+	}
+	.theaters-showtimes-movies .showtimes-header li.current span::before {
+		background: none;
+		content: "";
+		height: 39px;
+		padding-left: 0px;
+	}
+	.theaters-showtimes-movies .showtimes-header li:first-child{
+		border-top:2px solid #e71a0f;
+		border-bottom:2px solid #e71a0f;
+		border-left:2px solid #e71a0f;
+		background:#e71a0f;
+	}
+	.theaters-showtimes-movies .showtimes-header li:last-child{
+		border-top:2px solid #e71a0f;
+		border-bottom:2px solid #e71a0f;
+		border-right:2px solid #e71a0f;
+		background:#e71a0f;
+	}
+	.theaters-showtimes-movies .showtimes-header li.current span{
+		background:none;
+		color:#e71a0f;
+	}
+	.theaters-showtimes-movies .showtimes-header li.current{
+		background:#fff;
+	}
+	.theaters-showtimes-index .main-container-full, .theaters-showtimes-movies .main-container-full {
+		background: none;
+	}
+	.theaters-showtimes-movies .theatre-wrap .theatre-list, .movies-wrap .movies-list {
+		height: auto;
+		padding:20px;
+		position: relative;
+		top:65px;
+	}
+	.theaters-showtimes-movies .showtimes-wrap  .showtimes-container .movies-list .collateral-movies-tabs {
+		height: 260px;
+		padding: 20px;
+		position: absolute;
+		right: 0;
+		top: 20px;
+		width: 116px;
+		background: rgba(0, 0, 0, 0) url("../images/bg_box_movie.png") no-repeat scroll 0 0;
+	}
+	.theaters-showtimes-movies .movie-type li {
+		text-align: center;
+		width: 100%;
+	}
+	.theaters-showtimes-movies .movie-poster {
+		float: left;
+		margin-right: 5px;
+		margin-bottom: 20px;
+		width: 100%;
+		text-align:left;
+	}
+	.theaters-showtimes-movies .showtimes-wrap .movies-tabs .slimScrollDiv ul li{
+		width:82%;
+	}
+	.theaters-showtimes-movies .showtimes-wrap .movies-tabs .slimScrollDiv ul li.current{
+		background:#fff;
+		padding:3px 0px;
+	}
+	.theaters-showtimes-movies .showtimes-wrap .movies-tabs .slimScrollDiv ul li.current span{
+		color:#000;
+	}
+	.theaters-showtimes-movies .movie-type li.actived {
+		background: none;
+	}	
+	.theaters-showtimes-movies .movie-type li.actived span {
+		background: #000 none repeat scroll 0 0;
+		border-radius: 5px;
+		color: #fff;
+		padding: 5px 10px;
+	}
+	.theaters-showtimes-movies .movie-session-tabs > .toggle-tabs {
+		height: auto;
+	}
+	.theaters-showtimes-movies .showtimes-wrap .showtimes-header{
+		z-index:30;
+	} 
+	.theaters-showtimes-movies .movies-wrap .movies-container{
+		float: left;
+		margin-top: 65px;
+		padding: 0 10px;
+		width: 100%;
+	}
+	.theaters-showtimes-movies .slimScrollDiv {
+		right: 0;
+		top: 0;
+	}
+	.theaters-showtimes-movies .movies-wrap .movies-list{
+		height:auto;
+	}
+	.theaters-showtimes-movies .showtimes-wrap .showtimes-container{
+		top:0px;
+		margin-top:0px;
+	}
+	.theaters-showtimes-movies .movie-poster{
+		margin-top:0px;
+	}
+	.theaters-showtimes-movies .movie-genre, .theaters-showtimes-movies .movie-realease{
+		color:#fff;
+	}
+	.theaters-showtimes-index .theatre-wrap .theatre-tabs {
+		margin: 35px 0px 0px;
+	}
+	/* ------------------------------ End Sesstion Time Page --------------------------- */
+
+	/* ================================ FOOTER ======================================= */
+	.footer-container .links-company{
+		margin:0px;	
+		padding:10px 0px;
+		overflow:hidden;
+		background:#f2f0e5 ;
+	}
+	.footer-container .links-company ul{
+		width:95%;
+		padding:0px 20px;
+	}
+	.footer-container .links-company ul li{
+		width:49%;
+		background:none;
+		padding:2px 0px 0px 0px;
+		float:left;
+	}
+	.logo-footer-cgv{
+		background-image: url("../images/common_sprite_area.png");
+		background-position: -145px -319px;
+		float: left;
+		height: 43px;
+		left: 30%;
+		position: relative;
+		width: 90px;
+	}
+	.footer .address-text{
+		width:100%;
+	}
+	.footer .address-text p{
+		width:100%;
+		padding:0px 10px;
+		text-align:center;
+	}
+	.footer-container-full{
+		margin-top:0px;
+	}
+	.footer{
+		border-top:none;
+	}
+	.footer .links-company a {
+		font-size:12px;
+		color:#636363;
+	}
+	.footer .links{
+		margin:0px;
+	}
+	/* -------------------------------- End footer ----------------------------------- */
+
+	/*================================= HOME PAGE ==================================*/
+	.home-movie-selection .home-title h2 {
+		background: #fdfcf0 url("../images/h3_movie_selection.gif") no-repeat scroll center center / 88% auto;
+		width: 70%;
+	}
+	.home-event .home-title h2 {
+		background: #fdfcf0 url("../images/h3_event.gif") no-repeat scroll center center / 88% auto;
+		width: 27%;
+	}
+	.cms-home .product-collateral > dl > dt{
+		background-color:#898987;
+		color:#fff;
+		border:none;	
+	}
+	.home-show-event ul {
+		margin: auto;
+		width: 240px !important;
+	}
+	.home-movie-selection .feature_slide_show {
+		width: 240px !important;
+	}
+	/* ----------------------------- End home page -------------------------------- */
+
+	/*================================= CREATE ACCOUNT ==================================*/
+	.account-create .create-account-from .fieldset{
+		width:95% !important;
+	}
+	/* ----------------------------- End create account -------------------------------- */
+
+	/*================================= LOGIN PAGE ==================================*/
+	.customer-account-login .col2-set .col-1 {
+		padding-bottom: 0px;
+	}
+	.cgv-login-membership{
+		margin-top:0px;	
+	}
+	.login-forgot-pass{
+		margin-top:10px;
+	}
+	.content-event-login{
+		padding:10px;
+		background:#f4f4f4;
+		margin-bottom:2px;
+	}
+	.content-event-login h3{
+		font-size:16px;
+	}
+	.account-wrap .product-collateral > dl > dt {
+		background-color: #898987;
+		border: 1px solid #f2f0e5;
+		color: #fff;	
+		padding-left:10px;
+	}
+	.input-box-is_agree{
+		float:left;
+		width:100%;
+	}
+	.input-box-is_agree .is_agree{
+		margin-left:0px;
+	}		
+	/* ----------------------------- End login page -------------------------------- */
+
+	/*================================= CATEGORY PAGE ==================================*/
+	.catalog-category-view  .product-info .actions button{
+		margin-top:10px;
+	}
+
+	/* ----------------------------- End category page -------------------------------- */
+
+	/*================================= ARTHOUSE PAGE ==================================*/
+	.catalog-category-view  .product-info .actions button{
+		margin-top:10px;
+	}
+	.category-arthouse .category-title{
+		margin-bottom:0px;
+	}
+	.sect-arthouse-visual{
+		float:left;
+		width:100%
+	}
+	.sect-arthouse-visual img{
+		float:left;
+		width:100% !important;
+	}
+	#arthouse-home > div{
+		float:left;
+		width:100%;
+	}
+	/* ----------------------------- End Arthouse page -------------------------------- */
+
+	/* ======================= FUNCTION SESSTION TIME ================================= */
+	/* ----------------- 05/10/2015 --------------- */
+	.session-list li.area{
+		display: inline-block;
+		padding: 5px 0;
+		width: 100%;
+	}
+	.session-list{
+		padding:0px 5px;
+	}
+	.session-list .col-theater{
+		width:100%;
+		display: inline-block;
+		padding:5px 0px 10px 5px !important;
+	}
+	.session-tabs .session-list .col-times{
+		width:100%;
+		display: inline-block !important;
+	}
+	/* ------------------------- End Function sesstion time --------------------------- */
+	
+	/* ============================= NEW & OFFER ====================================== */
+	/* ----------------- 19/11/2015 --------------- */
+	.col-left-detail-content-new-offer{
+		width:100%;
+	}
+	.col-right-detail-content-new-offer{
+		width:100%;
+		padding:0px 5px 20px 5px;
+	}
+	.cate-new-offer.products-grid--max-4-col > li{
+		width:80% !important;
+		margin-left:10%;
+		margin-bottom:10px;
+	}
+	.col-left-detail-content-new-offer img{
+		width:100% !important;
+	}
+	/* -------------------------------- End New & Offer ------------------------------- */
+	
+	/* ==============================Banner Scroll ==================================== */
+	/* --------------- 18/11/2015------------------- */
+	.mtw_banner_left{
+		display:none;
+	}
+	.mtw_banner_right{
+		display:none;
+	}
+	
+	/* -------------------------- End Banner scroll ----------------------------------- */
+	
+	/* ===============================  Art House ==================================== */
+	/* --------------- 10/12/2015------------------- */
+	.category-arthouse .page-title{
+		float:left;
+		width:100%;
+	}
+	.category-arthouse .page-title h1{
+		float:left;
+		width:185px;
+		font-size:18px;
+	}
+	.category-arthouse .page-title .sub-category{
+		float:left;
+		width:35%;
+		position:relative;
+		right:70;
+	}
+	.category-arthouse .sub-category ul li a {
+		font-size: 14px;
+	}
+	.category-arthouse .page-title .sub-category ul li a{
+		padding-left:14px;
+	}
+	.catalog-wrap .page-title .sub-category ul li a{
+		padding-left:10px;
+	}
+	.catalog-category10px;-view .home-movie-selection{
+		float:left;
+	}
+	.category-arthouse .category-title{
+		border-bottom:1px solid #241d1e;
+	}
+	.content-art-house-1{
+		margin-top:0px;
+	}
+	#arthouse-home{
+		float:left;
+		width:100%;
+	}
+	.sect-arthouse-visual{
+		float:left;
+		width:100%;
+	}
+	.sect-arthouse-visual img{
+		float:left;
+		width:100%;
+	}
+	.category-description{
+		float:left;
+		width:100%;
+	}
+	.category-description .thumb{
+		display:none;
+	}
+	.category-description .player_area{
+		float:right;
+		width:100%;
+	}
+	.category-description .player_area iframe{
+		float:left;
+		width:100%;
+		height:300px;
+	}
+	#arthouse-home .products-grid--max-4-col > li {
+		margin-left: 3%;
+		width: 42%;
+	}
+	#arthouse-home .products-grid--max-4-col > li:nth-child(3n+1) {
+		clear: none;
+	}
+	.catalog-category-view  .main-container .category-title  .sub-category{
+		display:block;
+	}
+	.category-arthouse .arthouse-category-wrap > ul li:first-child {
+		background:none;
+		padding-left: 0px;
+	}
+	.category-arthouse .arthouse-category-wrap > ul li:last-child {
+		background: #e71a0f;
+		margin-left: -5px;
+		padding-right: 0px;
+	}
+	.category-arthouse .arthouse-category-wrap > ul li a{
+		 padding: 0 10px;
+		 font-size:12px;
+	}
+	/* ------------ Vê Art_house -------------*/
+	.about-cgv-art-house {
+		float: left;
+		width: 100%;
+	}
+	.about-cgv-art-house > div {
+		float: left;
+		width: 100%;
+	}
+	.about-cgv-art-house  .tittle-art-house h3 {
+		float: left;
+		width: 100%;
+		font-size:18px;
+		margin-top:20px;
+	}
+	.content-art-house-left{
+		display:none;
+	}
+	.content-art-house-right {
+		float: left;
+		padding: 0 10px;
+		text-align: justify;
+		width: 100%;
+	}
+	.location-hcm {
+		float: left;
+		width: 50%;
+	}
+	.location-hcm h2 img{
+		float: left;
+		width: 100%;
+	}
+	.location-hn {
+		float: right;
+		width: 49%;
+	}
+	.location-hn h2 img {
+		float: right;
+		width: 100%;
+	}
+	.content-art-house-2{
+		padding:0px 10px;
+		text-align: justify;
+	}
+	/* ---------------------------- End Art House ----------------------------------- */
+	
+	/* ============================== CGV Special Page ============================== */
+	/* ----------------- 23/12/2015 ------------------ */
+	/* -------------- Toolbar ------------- */
+	.specialtheater-list{
+		width:100%;
+	}
+	.specialtheater-list ul{
+		width:100%;
+	}
+	.specialtheater-list .special-items li{
+		margin:0px;
+		width:60px;
+	}
+	.theaters-special-view .main-container{
+		margin-top:0px;
+	}
+	.special-items li a {
+		background-image: url("../images/cgv-icon-special-reponsive-480.png");
+		display: block;
+		height: 80px;
+		text-indent: -99999px;
+		width: 60px;
+	}
+	.special-items .item-sweetbox a {
+		background-position: -217px 4px;
+	}
+	.special-items .item-48-fs a {
+		background-position: -440px 3px;
+	}
+	.special-items .item-4dx a {
+		background-position: 0px 5px;
+	}
+	.special-items .item-dolby-atmos a {
+		background-position: -106px 1px;
+	}
+	.special-items .item-imax a {
+		background-position: -529px 4px;
+	}	
+	.special-items .item-sweetbox a:hover, .special-items .item-sweetbox.actived a{
+		background-position: -217px 78px;
+	}
+	.special-items .item-48-fs a:hover, .special-items .item-48-fs.actived a{
+		background-position: -440px 80px;
+	}
+	.special-items .item-4dx a:hover, .special-items .item-4dx.actived a{
+		background-position:  0px 83px;
+	}
+	.special-items .item-dolby-atmos a:hover, .special-items .item-dolby-atmos.actived a{
+		background-position: -106px 77px;
+	}
+	.special-items .item-imax a:hover, .special-items .item-imax.actived a{
+		background-position: -529px 78px;
+	}
+	.specialtheater-list{
+		height:90px;
+	}
+	.special-title{
+		margin-top:10px;
+	}
+	.special-title h1{
+		margin-bottom:0px;
+	}
+	.theaters-special-view .specialtheater-content .page-title{
+		margin:15px 0px;
+	}
+	.theaters-special-view .home-title{
+		margin-top:-10px !important;
+		margin-bottom:40px;
+	}
+	/* ------------- Sweetbox ------------- */
+	.specialtheater-content .page-title h1{
+		font-size:40px;
+	}
+	.content-about-sweetbox {
+		background: transparent url("../images/bg-body.png") no-repeat scroll right top;
+		height: 537px;
+		margin-bottom: 10px;
+	}
+	.sw-content h3 {
+		color: #fff;
+		float: left;
+		font-size: 20px;
+		font-weight: bold;
+		margin-bottom: 20px;
+		margin-top: 30px;
+		padding-left:10px;
+		text-transform: capitalize;
+		width: 100%;
+	}
+	.sw-content p {
+		color: #fff;
+		padding-left: 10px;
+		width: 98%;
+		text-align:justify;
+		font-size:12px;
+	}
+	.img-about-sweetbox{
+		display:none;
+	}
+	/* ---------------- 48FS --------------- */
+	.content-48fs{
+		width:100%;
+		padding:0px 10px;
+		margin-top:-30px;
+	}
+	.specialtheater-content .content-48fs h2{
+		font-size:14px;
+		margin-bottom:0px;
+	}
+	.specialtheater-content .content-48fs p{
+		font-size:12px;
+		margin-top:5px;
+	}
+	/* ---------------- 4DX ---------------- */
+	.specialtheater-4dx .std iframe{
+		height: 400px !important;
+		width: 100% !important;
+	}
+	.specialtheater-4dx .std{
+		width:100%;
+		padding:0px 10px;
+	}
+	.specialtheater-4dx .std p img{
+		width:100%;
+	}
+	.home-movie-selection .about-4dx-vn h2 {
+		background: #fdfcf0 url("../images/icon-ve-4dx.jpg") no-repeat scroll center center / 100px 30px;
+		display: inline-block;
+		width: 120px;
+	}
+	.specialtheater-4dx .page-title h1 {
+		background: transparent url("../images/logo-4dx-r.png") no-repeat scroll center center / 120px auto;
+		position: relative;
+		text-indent: -9999px;
+	}
+	.content-about-sweetbox {
+		background: transparent url("../images/bg-body.png") no-repeat scroll right top / 790px auto;
+	}
+	/* ------------ Dolby Atmos ------------ */
+	.specialtheater-dolby-atmos .std iframe{
+		height: 400px !important;
+		width: 100% !important;
+	}
+	.specialtheater-dolby-atmos .std{
+		width:100%;
+		padding:0px 10px;
+	}
+	.specialtheater-dolby-atmos .page-title h1{
+		font-size:30px;
+	}
+	.content-atmos h2{
+		font-size:16px;
+		color:#ff0000;	
+	}
+	.content-atmos p{
+		font-size:12px;
+		text-align:justify;
+	}
+	.content-atmos ul, .content-4dx ul {
+		padding: 0 10px 10px;
+		font-size:12px;
+	}
+	.content-atmos ul li, .content-4dx ul li{
+		padding:3px 0px;
+	}
+	/* --------------- Imax --------------- */
+	.recent-imax p img{
+		width:100%;
+	}
+	.slide-imax-baner{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul li{
+		float:left;
+		width:100%;
+	}
+	.slide-imax-baner .slideshow-container-imax ul li .image-cinema-imax{
+		float:left;
+		width:100%;
+	}
+	.image-cinema-imax img{
+		width:100% !important;
+		height:345px;
+	}
+	.text-content-imax{
+		width:100%;
+		height:345px;
+	}
+	.text-content-imax > h2 {
+		font-size: 18px;
+	}
+	.text-content-imax > p {
+		font-size: 10px;
+		text-align: justify;
+	}
+	.specialtheater-imax{
+		padding:0px 5px;
+	}
+	.specialtheater-imax .page-title h1 {
+		background: transparent url("../images/icon-imax-cgv-special.PNG") no-repeat scroll center center / 150px auto;
+	}
+	.imax-selection .about-title-imax-vn h2 {
+		background: #fdfcf0 url("../images/icon-ve-imax.png") no-repeat scroll center center / 120px auto;
+		width: 140px;
+	}
+	/* -------------------------- End CGV Special Page ---------------------- */
+	
+	/* ============================== CGV Header ============================== */
+	/* ----------------- 20/05/2016 ------------------ */
+	.page-header-container a.logo {
+		background: none;
+		border-bottom: 1px solid rgb(204, 204, 204);
+		float: left;
+		height: 44px;
+		padding: 30px;
+		width: 100%;
+	}
+	.page-header-container a.logo img{
+		margin-top: -25px;
+		width: 35%;
+	}
+	.store-language-container{
+		margin-top: -76px;
+	}
+	
+	
+	/* ---------------------------- End CGV Header ---------------------------- */
+}	
+/* ------------------------ Min - width:320px -----------------------------*/ 
+
