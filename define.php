@@ -52,3 +52,8 @@ define('MAIL_FROM', 'test.eccube3@gmail.com');
 define('MAIL_BCC', 'test.eccube3@gmail.com');
 define('MAIL_REPLY', 'test.eccube3@gmail.com');
 define('WEBNAME', 'Movie Theater');
+
+// TICKET BOOKED
+define('TICKET_BOOKED', 'BOOKED');
+// TICKET DISABLE
+define('TICKET_DISABLE', 'DISABLE');

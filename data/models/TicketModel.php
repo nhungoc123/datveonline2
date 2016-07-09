@@ -54,7 +54,7 @@ class TicketModel extends BaseModel
 
     public function bookTickets(array $arrTicket, $customer_id)
     {
-        $arrUpdate['status'] = 'BOOKED';
+        $arrUpdate['status'] = TICKET_BOOKED;
         $arrUpdate['updated_at'] = 'now()';
         $arrUpdate['customer_id'] = $customer_id;
         $where = 'id = ?';

@@ -36,7 +36,7 @@
                   <td class="index"><?php echo $lineChar = chr($Seat['row']+64);?>
                 <?php } ?>
                   
-                    <td class="seat <?php if ($Seat['type'] == VIP) echo "vip";?> <?php if ($arrTickets[$key]['status']) echo "unavailable";?>" id="seat-<?php echo $lineChar.sprintf('%02d', $Seat['column']);?>" data-tid='<?php echo $arrTickets[$key]["id"]; ?>' data-sid="<?php echo $key; ?>">
+                    <td class="seat <?php if ($Seat['type'] == VIP) echo "vip";?> <?php if ($arrTickets[$key]['status'] == TICKET_BOOKED) echo "unavailable"; elseif ($arrTickets[$key]['status'] == TICKET_DISABLE) echo "disable";?>" id="seat-<?php echo $lineChar.sprintf('%02d', $Seat['column']);?>" data-tid='<?php echo $arrTickets[$key]["id"]; ?>' data-sid="<?php echo $key; ?>">
                     <?php echo sprintf('%02d', $Seat['column']);?>
                     </td>
 
@@ -56,8 +56,19 @@
 
           </div>
         </div>
-      </div>
+        <div id="note">Giờ cao điểm (sau <?php echo NIGHT_TIME?>giờ): <span>+5,000đ</span>, Cuối tuần (thứ 7-CN): <span>+10,000đ</span>.</div>
+        <div class="col-sm-12 row seat-legend">
+                <!-- <strong style="position: absolute;">Ghi chú:</strong> <br /> -->
+                <span class="seat-legend-normal">Ghế trống</span>
+                <span class="seat-legend-vip">Ghế VIP</span>
+                <span class="seat-legend-selected">Ghế đang chọn</span>
+                <span class="seat-legend-unavailable">Ghế đã có người chọn</span>
+                <span class="seat-legend-disable">Ghế không thể chọn</span>
+                <span class="seat-legend-entrance">Lối vào/ra</span>
+        </div>
+        <div class="clearfix"></div>
 
+    </div>
       <div class="col-sm-4 payment">
             <div class="center section-title">
                 <div><h4><?php echo $Movie['name']?></h4></div>
@@ -113,7 +124,7 @@
     var date = new Date(), 
         _nowTime = date.getTime(), 
         _nowDay = date.getDay(), 
-        night = new Date(date.setHours(<?php echo NIGHT_TIME?>, 0, 0, 0));
+        night = new Date(date.setHours('<?php echo NIGHT_TIME?>', 0, 0, 0));
     var isWeeken = (_nowDay == 0) || (_nowDay == 6), 
         isNight = (_nowTime >= night.getTime()),
         isHappyDay = (_nowDay == <?php echo HAPPYDAY?>);
@@ -123,9 +134,8 @@
         window.location.href = "/#header";
       });
 
-
       $('.seat').click(function(e) {
-        if ($(this).hasClass('unavailable')) {
+        if ($(this).hasClass('unavailable') || $(this).hasClass('disable')) {
           return false;
         }
           var tid = $(this).data('tid');
@@ -149,7 +159,6 @@
             showTotal(_selected.length, _total);
           }
         }
-        console.log(_selected);
       });
 
 
