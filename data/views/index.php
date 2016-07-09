@@ -1,5 +1,4 @@
 <?php include VIEW_DIR . 'include/head.php';?>
-
     <!--=== Header section Starts ===-->
     <div id="header" class="header-section">
         
@@ -256,6 +255,9 @@
 <?php include VIEW_DIR . 'movie/movie-detail.php';?>
 
 <?php include VIEW_DIR . 'include/footer.php';?>
+
+<a href="#0" class="cd-top">Top</a>
+
 <script type="text/javascript">
     $(document).ready(function() {
     'use strict';

@@ -2,6 +2,7 @@
     <!--=== Footer section Starts ===-->
     <div id="section-footer" class="footer-wrap">
         <div class="container footer center">
+            <div id="histats_counter"></div>
             <div class="row">
                 <div class="col-lg-12">
                     <h4 class="footer-title"><!-- Footer Title -->
@@ -53,4 +54,3 @@
 
 <!--==== Custom Script files ====-->
 <script type="text/javascript" src="<?php echo COMMON_DIR ?>js/custom.js"></script>
-
