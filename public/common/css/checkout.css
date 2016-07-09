@@ -142,8 +142,8 @@
 .seat-legend {
     white-space: nowrap;
     margin: 0 auto;
-    width: 740px;
-    height: 40px;
+    /*width: 100%;*/
+    /*height: 40px;*/
     color: #989898
 }
 .seat-legend>strong {
@@ -185,6 +185,10 @@
 }
 .seat-legend .seat-legend-other-area {
     background-image: url(/common/images/seat-other-area.png)
+}
+
+#note {
+    text-align: center;
 }
 
 .main #seat-layout {
