@@ -209,6 +209,32 @@
         </div>
     </section>
     <!--=== Services section Ends ===-->
+
+    <!--=== Subscribe section Starts ===-->
+    <section id="section-subscribe" class="subscribe-wrap">
+        <div class="section-overlay"></div>
+        <div class="container subscribe center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="subscription-success"></p>
+                    <p class="subscription-failed"></p>
+                    <div class="col-md-10 col-md-offset-1 center section-title">
+                        <h3>Bản tin</h3>
+                    </div>
+                    <form id="subscription-form" method="post" action="?">
+                        <input type="email" name="news[email]" required="required" placeholder="Email" class="input-email" />
+                        <button type="submit" id="subscription-btn" class="fancy-button button-line button-white large zoom">
+                            Đăng ký
+                            <span class="icon">
+                                <i class="fa fa-sign-in"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=== Subscribe section Ends ===-->
     
     <!--=== Contact section Starts ===-->
     <section id="section-contact" class="contact-wrap">

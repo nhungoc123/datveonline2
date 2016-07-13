@@ -96,13 +96,15 @@ class SeatController extends BaseController
                 $arrTicketSelected = array();
                 foreach ($arrSelect as $value) {
                     if (!array_key_exists($value, $checkTickets)) {
-                        echo '<script type="text/javascript">alert("Ghế bạn chọn không phù hợp, xin hãy chọn lại");
-                        window.location.href="'.$url.'";</script>';
+                        echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+                            <script type="text/javascript">alert("Ghế bạn chọn không phù hợp, xin hãy chọn lại");
+                            window.location.href="'.$url.'";</script>';
                         return 0;
                     }
                     if ($checkTickets[$value]['status']) {
-                        echo '<script type="text/javascript">alert("Ghế bạn chọn đã hết thời gian chờ, xin hãy chọn ghế khác");
-                        window.location.href="'.$url.'";</script>';
+                        echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+                            <script type="text/javascript">alert("Ghế bạn chọn đã hết thời gian chờ, xin hãy chọn ghế khác");
+                            window.location.href="'.$url.'";</script>';
                         return 0;
                     }
                     // key: ticket id, value: seat
@@ -116,7 +118,8 @@ class SeatController extends BaseController
                 // đặt vé
                 $TicketModel->bookTickets($arrTicketPrice, $customerId);
                 $TicketModel->sendBookMail($arrTicketSelected, $arrCustomer, $Cinema, $Movie);
-                echo '<script type="text/javascript">alert("Bạn đã đặt vé thành công!!! Bạn có thể tiếp tục đặt vé!!!");
+                echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+                    <script type="text/javascript">alert("Bạn đã đặt vé thành công!!! Bạn có thể tiếp tục đặt vé!!!");
                     window.location.href="'.$url.'";</script>';
                 return 0;
             } else {

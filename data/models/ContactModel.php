@@ -50,11 +50,21 @@ class ContactModel extends BaseModel
     public function contactMail()
     {
         $to = $this->name . "<$this->email>";
-        
+        $message = "Xin chào $this->name, \r\n";
+        $message .= "\r\n";
+        $message .= "Cảm ơn những góp ý của bạn, chúng tôi sẽ xem xét và phản hồi sớm nhất có thể.\r\n";
+        $message .= "\r\n";
+        $message .= "--------------------------------\r\n";
         if (strlen($this->message) > 70) {
            $this->message = wordwrap($this->message, 70, "\r\n");
         }
+        $message = $message . $this->message;
+        $message .= "\r\n--------------------------------\r\n";
+        $message .= "\r\n";
+        $message .= "Sincerely,\r\n";
+        $message .= "[" .WEBNAME. "] Administrator\r\n";
+        $subject = "[" .WEBNAME. "] $this->subject";
 
-        return Common::sendMail($to, $this->subject, $this->message);
+        return Common::sendMail($to, $subject, $message);
     }
 }

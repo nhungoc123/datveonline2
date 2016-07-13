@@ -57,3 +57,8 @@ define('WEBNAME', 'Movie Theater');
 define('TICKET_BOOKED', 'BOOKED');
 // TICKET DISABLE
 define('TICKET_DISABLE', 'DISABLE');
+
+// ENABLE
+define('ENABLE', 1);
+// DISABLE
+define('DISABLE', 0);
