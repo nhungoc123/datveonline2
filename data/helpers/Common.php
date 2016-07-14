@@ -105,4 +105,18 @@ class Common
         // Mail it
         return mail($to, $subject, $msg, implode("\r\n", $headers), $add_msg);
     }
+
+    public static function calcDate()
+    {
+        $arrDate = array();
+        for ($i=0; $i < MAX_DAY; $i++) {
+            $now = new DateTime();
+            if ($i <= 1) {
+                $arrDate[] = $now->modify("+$i day")->format('d-m-Y');
+            } else {
+                $arrDate[] = $now->modify("+$i days")->format('d-m-Y');
+            }
+        }
+        return $arrDate;
+    }
 }

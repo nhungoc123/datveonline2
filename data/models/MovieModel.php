@@ -176,4 +176,17 @@ class MovieModel extends BaseModel
         $DB = new DB();
         return $DB->existCheck($this->table, $movie_id);
     }
+
+    public function checkShowtime($showtimes_id, $date)
+    {
+        $DB = new DB();
+        $select = $this->buildSelect();
+        $from = $this->buildFrom();
+        $groupBy = 'm.id';
+        $where = 'st.id = ? and (mc.start_date <= ?) and (mc.end_date >= ?)';
+        $arrValue[] = $showtimes_id;
+        $arrValue[] = date('Y-m-d', strtotime($date));
+        $arrValue[] = date('Y-m-d', strtotime($date));
+        return count($DB->select('m.id', $from, $where, $arrValue)) > 0;
+    }
 }

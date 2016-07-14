@@ -23,14 +23,32 @@ class SeatController extends BaseController
     {
         if (empty($_GET['st']) || empty($_GET['date'])) {
             $this->sendRedirect(HTTP_HOST . 'showtime/#section-showtime');
+            return false;
+            exit;
         }
 
         $showtime = Common::xssafe($_GET['st']);
         $ShowtimeModel = new ShowtimeModel();
         if (!$ShowtimeModel->existCheck($showtime)) {
             $this->sendRedirect(HTTP_HOST . 'showtime/#section-showtime');
+            return false;
+            exit;
         }
+        
         $date = Common::xssafe($_GET['date']);
+        $arrDate = Common::calcDate();
+        if (!in_array($date, $arrDate)) {
+            $this->sendRedirect(HTTP_HOST . 'showtime/#section-showtime');
+            return false;
+            exit;
+        }
+
+        $MovieModel = new MovieModel();
+        if (!$MovieModel->checkShowtime($showtime, $date)) {
+            $this->sendRedirect(HTTP_HOST . 'showtime/#section-showtime');
+            return false;
+            exit;
+        }
 
         // get performance
         $PerformanceModel = new PerformanceModel();
@@ -42,7 +60,6 @@ class SeatController extends BaseController
         $Cinema = $CinemaModel->getCinemas($showtime);
 
         // movie
-        $MovieModel = new MovieModel();
         $where = 'st.id = ?';
         $arrValue = array(sprintf("%d", $showtime));
         $Movie = $MovieModel->getMovie('all', null, null, $where, $arrValue);
