@@ -1089,7 +1089,7 @@ margin-right: 8px;
 
 /* Coustomize section */
 
-#section-list, #section-seat {
+#section-list, #section-seat, #section-checkout {
 	padding-top: 20px;
 	position: relative;
     background-color: #333333;

@@ -103,4 +103,31 @@ class CheckError
             $arrError["$title"] = "$title không đúng định dạng.";
         }
     }
+
+    public function checkExpireDate(&$arrError, $title, $val)
+    {
+        $regex = '/^(0[1-9]|1[0-2])\/(19|20|21)\d{2}$/';
+        $date = $val;
+        if (preg_match($regex, $date)) {
+            $todayMonth = date("m");
+            $todayYear = date("Y");
+            list($month, $year) = explode('/', $val);
+            if ($year < $todayYear) {
+                $arrError["$title"] = "$title đã hết hạn.";
+                return false;
+            } elseif ($year == $todayYear) {
+                if ($todayMonth > $month) {
+                    $arrError["$title"] = "$title đã hết hạn.";
+                    return false;
+                }
+            }
+
+            if (checkdate($month, 1, $year)) {
+                return true;
+            }
+        }
+
+        $arrError["$title"] = "$title không đúng định dạng."; 
+        return false;       
+    }
 }

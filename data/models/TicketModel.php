@@ -93,4 +93,26 @@ class TicketModel extends BaseModel
         
         return Common::sendMail($to, $subject, $msg);
     }
+
+    public function checkTicket($arrSelect)
+    {
+        $arrTickets = $this->getTickets();
+        if (count($arrTickets) == 0) {
+            return false;
+        }
+
+        $arrTickets = Common::convIdToKey($arrTickets);
+        foreach ($arrSelect as $key => $value) {
+            if (!array_key_exists($key, $arrTickets)) {
+                return false;
+            }
+            if ($arrTickets[$key]['status'] == TICKET_BOOKED 
+                || $arrTickets[$key]['status'] == TICKET_DISABLE) {
+                return false;
+            }
+        }
+        
+        return true;
+        
+    }
 }

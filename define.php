@@ -62,3 +62,19 @@ define('TICKET_DISABLE', 'DISABLE');
 define('ENABLE', 1);
 // DISABLE
 define('DISABLE', 0);
+
+
+define('API_VERSION', '85.0');
+define('API_ENDPOINT', 'https://api-3t.sandbox.paypal.com/nvp');
+define('API_USERNAME', 'dung3625-seller_api1.gmail.com');
+define('API_PASSWORD', '9Y7SQKRTQKS36CC9');
+define('API_SIGNATURE', 'An5ns1Kso7MWUdW4ErQKJJJ4qi4-AGjlJqYg--3vQ-yivJ0yCh-xueG4');
+
+define('API_STREET', '180 CAO LO');
+define('API_CITY', 'San Jose');
+define('API_STATE', 'CA');
+define('API_COUNTRYCODE', 'US');
+define('API_ZIP', '95131');
+
+// 1USD = 22VND
+define('VNDTOUSD', 22);

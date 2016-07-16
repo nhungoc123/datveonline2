@@ -119,4 +119,32 @@ class Common
         }
         return $arrDate;
     }
+
+    public static function convResponseApiToArray($response)
+    {
+        $arrRet = array();
+
+        while (strlen($response)) {
+            // key
+            $keypos= strpos($response, '=');
+
+            $keyval = substr($response, 0, $keypos);
+
+            //value
+            $valuepos = strpos($response, '&') ? strpos($response, '&') : strlen($response);
+            $valval = substr($response, $keypos+1, $valuepos-$keypos-1);
+
+            // giải mã chuỗi phản hồi
+            $arrRet[$keyval] = urldecode($valval);
+            $response = substr($response, $valuepos+1, strlen($response));
+        }
+
+        return $arrRet;
+    }
+
+    public static function convVNDToUSD($vnd)
+    {
+        $total = $vnd / VNDTOUSD;
+        return round($total, 2, PHP_ROUND_HALF_UP);
+    }
 }

@@ -16,6 +16,7 @@ class SeatController extends BaseController
 
     function __construct()
     {
+        session_unset();
         parent::__construct();
     }
 
@@ -118,7 +119,8 @@ class SeatController extends BaseController
                             window.location.href="'.$url.'";</script>';
                         return 0;
                     }
-                    if ($checkTickets[$value]['status']) {
+                    if ($checkTickets[$value]['status'] == TICKET_BOOKED 
+                        || $checkTickets[$value]['status'] == TICKET_DISABLE) {
                         echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
                             <script type="text/javascript">alert("Ghế bạn chọn đã hết thời gian chờ, xin hãy chọn ghế khác");
                             window.location.href="'.$url.'";</script>';
@@ -130,15 +132,25 @@ class SeatController extends BaseController
 
                 list($arrTicketPrice, $totalPayment) = $SeatModel->calcPrice($arrTicketSelected);
                 $arrCustomer['payment'] = $totalPayment;
-                $customerId = $Customer->save(Common::xssafe($arrCustomer));
+                
+                $_SESSION['arrCustomer'] = $arrCustomer;
+                $_SESSION['arrTicketSelected'] = $arrTicketSelected;
+                $_SESSION['arrTicketPrice'] = $arrTicketPrice;
+                $_SESSION['Cinema'] = $Cinema;
+                $_SESSION['Movie'] = $Movie;
+                $_SESSION['prevUrl'] = $url;
+                $_SESSION['showtime'] = $showtime;
+                $_SESSION['date'] = $date;
+                $this->sendRedirect(HTTP_HOST . 'checkout/');
+                // $customerId = $Customer->save(Common::xssafe($arrCustomer));
 
-                // đặt vé
-                $TicketModel->bookTickets($arrTicketPrice, $customerId);
-                $TicketModel->sendBookMail($arrTicketSelected, $arrCustomer, $Cinema, $Movie);
-                echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-                    <script type="text/javascript">alert("Bạn đã đặt vé thành công!!! Bạn có thể tiếp tục đặt vé!!!");
-                    window.location.href="'.$url.'";</script>';
-                return 0;
+                // // đặt vé
+                // $TicketModel->bookTickets($arrTicketPrice, $customerId);
+                // $TicketModel->sendBookMail($arrTicketSelected, $arrCustomer, $Cinema, $Movie);
+                // echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+                //     <script type="text/javascript">alert("Bạn đã đặt vé thành công!!! Bạn có thể tiếp tục đặt vé!!!");
+                //     window.location.href="'.$url.'";</script>';
+                // return 0;
             } else {
                 // return value to view when error
                 $arrErrorVal = $Customer->getArray($arrForm);

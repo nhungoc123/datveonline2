@@ -63,6 +63,8 @@
     
     <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
 
+    <!-- <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/jquery-ui.min.css" rel="stylesheet"/> -->
+
     <!--=== Main Stylesheets ===-->
     <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/style.css" />
 <link rel="stylesheet" href="<?php echo COMMON_DIR ?>css/responsive.css" />
