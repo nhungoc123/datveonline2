@@ -98,36 +98,34 @@ class MovieModel extends BaseModel
         return array($where, $arrValue);
     }
 
-    public function getMovie($type = null, $limit = null, $orderBy = null, $where = '1 = 1', $arrValue = array())
+    public function getMovie($type = null, $limit = null, $orderBy = null, $addWhere = '', $arrValue = array())
     {
         $DB = new DB();
         $select = $this->buildSelect();
         $from = $this->buildFrom();
         $groupBy = 'm.id';
-
+        $where = '';
         switch ($type) {
-            // get movie with showtime
-            case 'showtimes':
-                $select = 'm.*, DATE_FORMAT(mc.start_date, \'%d-%m-%Y\') as start_date, DATE_FORMAT(mc.end_date, \'%d-%m-%Y\') as end_date, st.performance_id, st.id as showtimes_id';
-                $where .= ' AND ' . $this->buildWhereMovieList();
-                $groupBy = 'm.id, st.performance_id';
-                break;
-
             // get showing
             case 'showing':
-                $where .= ' AND ' . $this->buildWhereMovieShowing();
+                $where = $this->buildWhereMovieShowing();
                 break;
 
             // get upcoming movie
             case 'upcoming':
-                $where .= ' AND ' . $this->buildWhereMovieUpcoming();
+                $where = $this->buildWhereMovieUpcoming();
                 break;
 
             default:
-                $where .= ' AND ' . $this->buildWhereMovieList();
+                $where = $this->buildWhereMovieList();
                 $orderBy = 'mc.start_date';
                 break;
         }
+        
+        if (strlen($addWhere) > 0) {
+            $where = $where . ' AND ' . $addWhere;
+        }
+
         if (strlen($groupBy) > 0) {
             $where .= ' GROUP BY ' . $groupBy;
         }
@@ -164,7 +162,7 @@ class MovieModel extends BaseModel
             foreach ($arrData as $key => $movie) {
                 if (strtotime($movie['start_date']) <= strtotime($date) &&
                     strtotime($movie['end_date']) >= strtotime($date)) {
-                    $arrTmp[$date][$movie['id']][$movie['showtimes_id']] = $movie['performance_id'];
+                    $arrTmp[$date][$movie['mc_id']][$movie['showtimes_id']] = $movie['performance_id'];
                 }
             }
         }
@@ -180,13 +178,63 @@ class MovieModel extends BaseModel
     public function checkShowtime($showtimes_id, $date)
     {
         $DB = new DB();
-        $select = $this->buildSelect();
         $from = $this->buildFrom();
+        $from .= ' join dtb_performances p on p.id = st.performance_id';
         $groupBy = 'm.id';
         $where = 'st.id = ? and (mc.start_date <= ?) and (mc.end_date >= ?)';
+        $current = date('d-m-Y');
+        if (strtotime($date) <= strtotime($current) ) {
+            $where .= ' AND CURTIME() < p.performance_time';
+        }
         $arrValue[] = $showtimes_id;
         $arrValue[] = date('Y-m-d', strtotime($date));
         $arrValue[] = date('Y-m-d', strtotime($date));
         return count($DB->select('m.id', $from, $where, $arrValue)) > 0;
+    }
+
+    public function getAllMovie($with = '')
+    {
+        switch ($with) {
+            case 'showtimes':
+                $groupBy = 'm.id, mc.id, st.performance_id';
+                break;
+            
+            default:
+                $groupBy = 'm.id, mc.id';
+                break;
+        }
+
+        return $this->getMovieByWhere('', array(), $groupBy);
+    }
+
+    public function getMovieByWhere($addWhere = '', $arrValue = array(), $groupBy = 'm.id, mc.id', $orderBy = 'mc.start_date', $limit = null)
+    {
+        $DB = new DB();
+        $select = $this->buildSelect();
+        $select .= ', mc.id as mc_id';
+        $from = $this->buildFrom();
+        
+        $where = $this->buildWhereMovieList();
+
+        if (strlen($addWhere) > 0) {
+            $where = $where . ' AND ' . $addWhere;
+        }
+
+        if (strlen($groupBy) > 0) {
+            $where .= ' GROUP BY ' . $groupBy;
+        }
+
+        if (strlen($orderBy) > 0) {
+            $orderBy = ' ORDER BY '.$orderBy;
+            $where .= $orderBy;
+        }
+
+        if (is_numeric($limit)) {
+            $limit = ' LIMIT '.$limit;
+            $where .= $limit;
+        }
+        // var_dump($select, $from, $where, $arrValue);
+        $arrData = $DB->select($select, $from, $where, $arrValue);
+        return $arrData;
     }
 }

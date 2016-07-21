@@ -201,8 +201,10 @@
 
 									<?php foreach ($arrShowtime[$key][$k] as $showtime => $performance) { ?>
                     <?php $nowtime = time();
+                      $current = date('d-m-Y');
                       $disable = '';
-                    if ($nowtime >= strtotime($arrPerformance[$performance])) {
+                    if (strtotime($current) >= strtotime($key)
+                      && $nowtime >= strtotime($arrPerformance[$performance])) {
                       $disable = 'disabled';
                     }
                     ?>

@@ -17,30 +17,28 @@ class ShowtimeController extends BaseController
 
     public function index()
     {
-        // $this->loadModel('MovieModel');
         $MovieModel = new MovieModel();
 
-        // $this->loadModel('PerformanceModel');
         $PerformanceModel = new PerformanceModel();
         $arrPerformance = $PerformanceModel->getPerformance();
         $arrRet['arrPerformance'] = Common::convKeyValue($arrPerformance, 'id', 'performance_time');
 
-        $arrMovie = $MovieModel->getMovie();
-        $arrMovie = Common::convIdToKey($arrMovie);
+        $arrMovie = $MovieModel->getAllMovie();
+        $arrMovie = Common::convIdToKey($arrMovie, 'mc_id');
 
         $arrDate = Common::calcDate();
-
         $arrTmp = array();
         foreach ($arrDate as $date) {
             foreach ($arrMovie as $key => $value) {
-                if (strtotime($value['start_date']) <= strtotime($date) && strtotime($value['end_date']) >= strtotime($date)) {
+                if (strtotime($value['start_date']) <= strtotime($date) 
+                    && strtotime($value['end_date']) >= strtotime($date)) {
                     $arrTmp[$date][$key] = $value;
                 }
             }
         }
         $arrRet['arrDate'] = $arrDate;
 
-        $arrShowtime = $MovieModel->getMovie('showtimes');
+        $arrShowtime = $MovieModel->getAllMovie('showtimes');
 
         $arrShowtime = $MovieModel->convShowtimeMovie($arrShowtime, $arrDate);
         $arrRet['arrShowtime'] = $arrShowtime;

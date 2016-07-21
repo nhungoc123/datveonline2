@@ -18,7 +18,6 @@ class HomeController extends BaseController
 
     public function index()
     {
-        // $this->loadModel('MovieModel');
         $model = new MovieModel();
 
         $arrRet['arrMovie'] = $model->getMovie('showing', 8, 'mc.start_date');

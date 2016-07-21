@@ -63,7 +63,7 @@ class SeatController extends BaseController
         // movie
         $where = 'st.id = ?';
         $arrValue = array(sprintf("%d", $showtime));
-        $Movie = $MovieModel->getMovie('all', null, null, $where, $arrValue);
+        $Movie = $MovieModel->getMovieByWhere($where, $arrValue);
         $Movie[0]['date'] = $date;
         $Movie = $Movie[0];
         $Movie['performance_time'] = $arrPerformance[$Movie['performance_id']];
