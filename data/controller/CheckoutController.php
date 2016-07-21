@@ -21,13 +21,15 @@ class CheckoutController extends BaseController
     public function index()
     {
         if (empty($_SESSION['arrTicketSelected'])) {
-            $url = $_SESSION['prevUrl'];
+            $url = HTTP_HOST . 'showtime/#section-showtime';
+
             session_unset();
             echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-                <script type="text/javascript">alert("Vui lòng chọn ghế và điền đầy đủ thông tin");
+                <script type="text/javascript">alert("Thông tin bị lỗi, vui lòng nhập lại!");
                 window.location.href="'.$url.'";</script>';
                 return false;
         }
+		
         $arrCustomer = $_SESSION['arrCustomer'];
         $arrTicketSelected = $_SESSION['arrTicketSelected'];
         $arrTicketPrice = $_SESSION['arrTicketPrice'];
@@ -58,9 +60,9 @@ class CheckoutController extends BaseController
                 return false;
             }
             if (count($arrError) == 0) {
+				
                 $response = $CheckoutModel->requestAPI($arrCustomer);
-                if ($response['ACK'] == 'Success') {
-
+                if (isset($response['ACK']) && $response['ACK'] == 'Success') {
                     $Customer = new CustomerModel();
                     $customerId = $Customer->save(Common::xssafe($arrCustomer));
 
@@ -76,7 +78,7 @@ class CheckoutController extends BaseController
                         <script type="text/javascript">alert("Bạn đã đặt vé thành công!!! Bạn có thể tiếp tục đặt vé!!!");
                         window.location.href="'.$url.'";</script>';
                 } else {
-                    var_dump($response);
+                    //var_dump($response);
                     $arrError['api'] = 'Có lỗi xảy ra, vui lòng nhập đúng thông tin.';
                 }
             }
