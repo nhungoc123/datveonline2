@@ -37,7 +37,6 @@ class ShowtimeController extends BaseController
             }
         }
         $arrRet['arrDate'] = $arrDate;
-
         $arrShowtime = $MovieModel->getAllMovie('showtimes');
 
         $arrShowtime = $MovieModel->convShowtimeMovie($arrShowtime, $arrDate);

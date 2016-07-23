@@ -65,11 +65,13 @@
                             <input class="rating-disabled" value="<?php echo ($movie['avg_rate']) ? $movie['avg_rate'] : 5; ?>" type="number" min=0 max=5 step=0.5 data-size="ss"/>
                             <span class="rate"><?php echo ($movie['avg_rate']) ? $movie['avg_rate'] : 5; ?> trên <?php echo $movie['rate_times']?></span> lượt đánh giá
                         </div>
-                        <div class="col-sm-4" style="padding-right: 0px;">
+                        <div class="col-sm-4" style="padding-right: 0px; text-align: right;">
                             <a class="btn btn-default open-model" href="#" data-toggle="modal" data-target="#myModal" data-id="<?php echo $movie['id'];?>">
                                 Xem chi tiết
                             </a>
-                            <a href="<?php echo HTTP_HOST;?>showtime/" class="btn btn-primary">Xem lịch chiếu</a>
+                            <?php if (!$movie['hidden']) { ?>
+                                <a href="<?php echo HTTP_HOST;?>showtime/?mid=<?php echo $movie['id']; ?>#section-showtime" class="btn btn-primary">Xem lịch chiếu</a>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="genre">
@@ -114,6 +116,13 @@ $(function() {
             var data = jQuery.parseJSON(data);
             if (data.success == true) {
                 $.each(data.movie, function(key, value) {
+                    // hidden button xem lich chieu
+                    if (value.hidden == true) {
+                        $('#showtime-btn').hide();
+                    } else {
+                        $('#showtime-btn').show();
+                    }
+
                     var trailer = value.trailer;
                     if (trailer.indexOf('http') == -1 && trailer.indexOf('www') == -1) {
                         trailer = '<?php echo VIDEO_DIR;?>'+ trailer;

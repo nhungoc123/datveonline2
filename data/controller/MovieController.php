@@ -17,7 +17,6 @@ class MovieController extends BaseController
 
     public function index()
     {
-        // $this->loadModel('MovieModel');
         $model = new MovieModel();
         $arrSearch = array();
         if (isset($_POST['search']) && !empty($_POST['search'])) {
@@ -26,7 +25,25 @@ class MovieController extends BaseController
             // $arrSearch['actor'] = $_POST['search'];
         }
         list($where, $arrValue) = $model->buildSearch($arrSearch);
-        $arrRet['arrList'] = $model->getMovie('all', null, null, $where, $arrValue);
+        $arrList = $model->getMovie('all', null, null, $where, $arrValue);
+
+        // ngay ban ve lon nhat
+        $arrTmpDate = Common::calcDate();
+        $maxSaleDate = end($arrTmpDate);
+
+        foreach ($arrList as $key => $value) {
+            // start date
+            $date = $value['start_date'];
+
+            $hidden = false;
+            if (strtotime($date) > strtotime($maxSaleDate)) {
+                $hidden = true;
+            }
+
+            $arrList[$key]['hidden'] = $hidden;
+        }
+
+        $arrRet['arrList'] = $arrList;
 
         $this->loadView($this->view_prefix . $this->mode, $arrRet);
     }
@@ -46,6 +63,20 @@ class MovieController extends BaseController
         $arrData = $model->getMovieById($id);
         if (count($arrData) > 0) {
             $arrRet['success'] = true;
+
+            // start date
+            $date = $arrData[0]['start_date'];
+
+            // ngay ban ve lon nhat
+            $arrTmpDate = Common::calcDate();
+            $maxSaleDate = end($arrTmpDate);
+
+            $hidden = false;
+            if (strtotime($date) > strtotime($maxSaleDate)) {
+                $hidden = true;
+            }
+            $arrData[0]['hidden'] = $hidden;
+
             $arrRet['movie'] = $arrData;
         }
         echo json_encode($arrRet);

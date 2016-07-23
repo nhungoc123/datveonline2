@@ -299,6 +299,13 @@
             var data = jQuery.parseJSON(data);
             if (data.success == true) {
                 $.each(data.movie, function(key, value) {
+                    // hidden button xem lich chieu
+                    if (value.hidden == true) {
+                        $('#showtime-btn').hide();
+                    } else {
+                        $('#showtime-btn').show();
+                    }
+
                     var trailer = value.trailer;
                     if (trailer.indexOf('http') == -1 && trailer.indexOf('www') == -1) {
                         trailer = '<?php echo VIDEO_DIR;?>'+ trailer;

@@ -224,7 +224,7 @@
 
 <?php include VIEW_DIR . 'include/footer.php';?>
 <script type="text/javascript">
-
+var arrDate = <?php echo json_encode($arrDate);?>;
 $(function() {
     $('#header').click(function() {
         window.location.href = "/#header";
@@ -240,7 +240,7 @@ $(function() {
 	    });
     });
 
-	hideMovie();
+	  hideMovie();
     showMovie();
     hideShowtime();
     showShowtime();
@@ -300,6 +300,25 @@ $(function() {
 
     function hideShowtime() {
     	$('div#movie-performance div.well').hide();
+    }
+
+    
+    var movie = <?php echo !empty($_GET['mid']) ? $_GET['mid'] : ''; ?>;
+
+    if (movie != null) {
+        $.each(arrDate, function(key, value) {
+          if ($('.'+ value).find('.panel').hasClass(movie)) {
+            $('.btn-date').each(function(index, element) {
+              if ($(element).attr('data-date') == value) {
+                $(element).trigger('click');
+              };
+            });
+
+            hideShowtime();
+            showShowtime(value, movie);
+            return false;
+          };
+        });
     }
 });
 </script>
