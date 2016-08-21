@@ -1,15 +1,3 @@
--- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server version:               10.1.13-MariaDB - mariadb.org binary distribution
--- Server OS:                    Win32
--- HeidiSQL Version:             9.3.0.4984
--- --------------------------------------------------------
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8mb4 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-
 -- Dumping database structure for movie_theater
 CREATE DATABASE IF NOT EXISTS `movie_theater` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `movie_theater`;
@@ -19,7 +7,7 @@ USE `movie_theater`;
 CREATE TABLE IF NOT EXISTS `dtb_cinemas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
-  `decription` text,
+  `description` text,
   `total_seat` smallint(6) NOT NULL,
   `seat_in_row` smallint(6) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -30,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `dtb_cinemas` (
 -- Dumping data for table movie_theater.dtb_cinemas: ~2 rows (approximately)
 DELETE FROM `dtb_cinemas`;
 /*!40000 ALTER TABLE `dtb_cinemas` DISABLE KEYS */;
-INSERT INTO `dtb_cinemas` (`id`, `name`, `decription`, `total_seat`, `seat_in_row`, `created_at`, `updated_at`) VALUES
+INSERT INTO `dtb_cinemas` (`id`, `name`, `description`, `total_seat`, `seat_in_row`, `created_at`, `updated_at`) VALUES
 	(1, 'Red', 'Vip', 50, 10, '2016-06-03 08:11:47', '2016-06-09 15:18:23'),
 	(2, 'Blue', 'Vip', 50, 10, '2016-06-03 08:11:47', '2016-06-09 15:18:23'),
 	(3, 'Yellow', 'Vip', 50, 10, '2016-06-03 08:11:47', '2016-06-09 15:18:23');
@@ -287,6 +275,8 @@ DELETE FROM `password_resets`;
 /*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
 
 
+
+
 -- Dumping structure for table movie_theater.users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -294,8 +284,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -305,7 +295,3 @@ DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 	(2, 'Nhu Ngoc', 'nhungoc@stu.vn', '$2y$10$7oHU9A1Jcv6WKyQMdvP2uulAzejancm0/ZbZmpUNxksWnQPEdVM4a', '5B0nfMsB1hzPBGlosne4pXTlZTh3e6P4KWb8QfvrQ3QajTFybgtOk9ZItgE1', '2016-06-01 03:21:00', '2016-06-02 02:00:23');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

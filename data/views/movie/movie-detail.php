@@ -26,7 +26,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-        <a id="showtime-btn" href="<?php echo HTTP_HOST;?>showtime/" type="button" class="btn btn-primary" >Xem lịch chiếu</a>
+        <a id="showtime-btn" href="<?php echo HTTP_HOST;?>showtime/?mid=<?php echo $movie['id']; ?>#section-showtime" type="button" class="btn btn-primary" >Xem lịch chiếu</a>
       </div>
     </div>
   </div>

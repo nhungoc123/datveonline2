@@ -3142,7 +3142,7 @@ form .form-instructions {
   height: 100%;
 }
 
-.wrapper {
+/*.wrapper {
   min-width: 320px;
   min-height: 100%;
   margin: 0 auto;
@@ -3153,7 +3153,7 @@ form .form-instructions {
   content: '';
   display: table;
   clear: both;
-}
+}*/
 
 /* ============================================ *
  * Header
